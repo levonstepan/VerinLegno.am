@@ -1,0 +1,177 @@
+export const hyContent = {
+  hero: {
+    title: "Un'anima sempre più green",
+    subtitle:
+      "VerinLegno — բարձր տեխնոլոգիաների, հուսալի և ավելի ու ավելի կանաչ ծածկանյութեր փայտի, մետաղի և ապակու համար։ Roots Furniture LLC — պաշտոնական ներկայացուցիչ Հայաստանում։",
+    cta: "Իմանալ ավելին",
+    ctaLink: "#products",
+  },
+  products: {
+    title: "I Nostri Prodotti",
+    subtitle: "Alta tecnologia, affidabilità e sostenibilità",
+    items: [
+      { name: "Effetti speciali", href: "#products" },
+      { name: "Idrosolubili esterno", href: "#products" },
+      { name: "Idrosolubili Interno", href: "#products" },
+      { name: "Ignifughi", href: "#products" },
+      { name: "Metallo", href: "#products" },
+      { name: "Parquet", href: "#products" },
+      { name: "Prodotti speciali", href: "#products" },
+      { name: "Solvente Esterno", href: "#products" },
+      { name: "Solvente Interno", href: "#products" },
+      { name: "Vetro", href: "#products" },
+    ] as const,
+  },
+  catalogues: {
+    title: "I Nostri Cataloghi",
+    items: [
+      { name: "2025 CATALOGO PRODOTTI LINEE SOLVENTE E IDRO", href: "/files/catalogue-2025.pdf" },
+      { name: "ACRYSTONE", href: "/files/acrystone.pdf" },
+      { name: "AG+", href: "/files/ag-plus.pdf" },
+      { name: "COLORANTI", href: "/files/coloranti.pdf" },
+      { name: "CRYSTAL EPOX", href: "/files/crystal-epox.pdf" },
+      { name: "EFFETTI SPECIALI", href: "/files/effetti-speciali.pdf" },
+      { name: "GARANZIA", href: "/files/garanzia.pdf" },
+      { name: "HYDRO OIL EFFECT", href: "/files/hydro-oil.pdf" },
+      { name: "MARKOLOR", href: "/files/markolor.pdf" },
+      { name: "PARQUET", href: "/files/parquet.pdf" },
+      { name: "PATINE", href: "/files/patine.pdf" },
+      { name: "VERIN-SEA FINISHING", href: "/files/verin-sea.pdf" },
+      { name: "VERNICI IGNIFUGHE", href: "/files/ignifughi.pdf" },
+      { name: "WOOD OIL", href: "/files/wood-oil.pdf" },
+      { name: "XILOVER", href: "/files/xilover.pdf" },
+    ] as const,
+    cta: "Scopri tutti i cataloghi",
+  },
+  services: {
+    title: "Verinchrome",
+    subtitle: "Verinchrome",
+    description:
+      "Il Sistema Tintometrico Verinchrome permette di riprodurre con il massimo livello di affidabilità una vasta gamma di fondi e finiture pigmentate ad acqua e a solvente in modo semplice, rapido e flessibile.",
+    cta: "Accedi subito",
+    ctaLink: "#contact",
+  },
+  about: {
+    title: "Azienda",
+    verinlegnoTitle: "VerinLegno S.p.A.",
+    verinlegnoText:
+      "Verinlegno è un'azienda italiana che sviluppa vernici ad alta tecnologia, affidabili e sempre più green per legno, metallo, vetro, interni ed esterni. Oltre 40 anni di esperienza, distribuzione in molti paesi, ampio catalogo.",
+    rootsTitle: "Roots Furniture LLC",
+    rootsText:
+      "Roots Furniture LLC-ը Հայաստանի կահույքի արտադրական ընկերություն է, որը շուկայում ներկայանում է Acobian Furniture ապրանքանիշով։ Roots LLC-ն հանդիսանում է VerinLegno Italy-ի պաշտոնական / exclusive ներկայացուցիչը Հայաստանում, հետևաբար VerinLegno-ի ամբողջ ներկերի, լաքերի և նախապատրաստման լուծումների մատակարարումը Հայաստանում իրականացվում է մեզնով։",
+    acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
+  },
+  contact: {
+    title: "Contatti",
+    rootsTitle: "Roots Furniture LLC",
+    rootsText: "Պաշտոնական ներկայացուցիչ VerinLegno S.p.A.-ի Հայաստանում",
+    address: "Երևան, Հայաստան",
+    phone: "+374 XX XXX XXX",
+    email: "info@roots.am",
+    newsletterTitle: "Iscriviti alla nostra newsletter!",
+    newsletterText:
+      "Non perderti nulla di VerinLegno, leggi l'informativa privacy e iscriviti alla nostra newsletter",
+  },
+  footer: {
+    companyInfo: "Roots Furniture LLC — Պաշտոնական ներկայացուցիչ VerinLegno S.p.A.-ի Հայաստանում",
+    address: "Երևան, Հայաստան",
+    email: "info@roots.am",
+    phone: "+374 XX XXX XXX",
+    links: [
+      { label: "Informativa Privacy", href: "#" },
+      { label: "Note Legali", href: "#" },
+      { label: "Disclaimer", href: "#" },
+      { label: "Cookie Policy", href: "#" },
+    ] as const,
+    copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia - Powered by Paralleloweb`,
+  },
+} as const;
+
+export const enContent = {
+  hero: {
+    title: "A soul increasingly green",
+    subtitle:
+      "VerinLegno — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
+    cta: "Discover more",
+    ctaLink: "#products",
+  },
+  products: {
+    title: "Our Products",
+    subtitle: "High technology, reliability and sustainability",
+    items: [
+      { name: "Special effects", href: "#products" },
+      { name: "Water-based exterior", href: "#products" },
+      { name: "Water-based interior", href: "#products" },
+      { name: "Fire retardant", href: "#products" },
+      { name: "Metal", href: "#products" },
+      { name: "Parquet", href: "#products" },
+      { name: "Special products", href: "#products" },
+      { name: "Solvent exterior", href: "#products" },
+      { name: "Solvent interior", href: "#products" },
+      { name: "Glass", href: "#products" },
+    ] as const,
+  },
+  catalogues: {
+    title: "Our Catalogues",
+    items: [
+      { name: "2025 CATALOGO PRODOTTI LINEE SOLVENTE E IDRO", href: "/files/catalogue-2025.pdf" },
+      { name: "ACRYSTONE", href: "/files/acrystone.pdf" },
+      { name: "AG+", href: "/files/ag-plus.pdf" },
+      { name: "COLORANTI", href: "/files/coloranti.pdf" },
+      { name: "CRYSTAL EPOX", href: "/files/crystal-epox.pdf" },
+      { name: "EFFETTI SPECIALI", href: "/files/effetti-speciali.pdf" },
+      { name: "GARANZIA", href: "/files/garanzia.pdf" },
+      { name: "HYDRO OIL EFFECT", href: "/files/hydro-oil.pdf" },
+      { name: "MARKOLOR", href: "/files/markolor.pdf" },
+      { name: "PARQUET", href: "/files/parquet.pdf" },
+      { name: "PATINE", href: "/files/patine.pdf" },
+      { name: "VERIN-SEA FINISHING", href: "/files/verin-sea.pdf" },
+      { name: "VERNICI IGNIFUGHE", href: "/files/ignifughi.pdf" },
+      { name: "WOOD OIL", href: "/files/wood-oil.pdf" },
+      { name: "XILOVER", href: "/files/xilover.pdf" },
+    ] as const,
+    cta: "Discover all catalogues",
+  },
+  services: {
+    title: "Verinchrome",
+    subtitle: "Verinchrome",
+    description:
+      "The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way.",
+    cta: "Access now",
+    ctaLink: "#contact",
+  },
+  about: {
+    title: "Company",
+    verinlegnoTitle: "VerinLegno S.p.A.",
+    verinlegnoText:
+      "Verinlegno is an Italian company that develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. Over 40 years of experience, distribution in many countries, wide catalogue.",
+    rootsTitle: "Roots Furniture LLC",
+    rootsText:
+      "Roots Furniture LLC is a furniture manufacturing company in Armenia, represented in the market by the Acobian Furniture brand. Roots LLC is the official / exclusive representative of VerinLegno Italy in Armenia, so the supply of VerinLegno coatings and preparation solutions in Armenia is carried out by us.",
+    acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
+  },
+  contact: {
+    title: "Contact",
+    rootsTitle: "Roots Furniture LLC",
+    rootsText: "Official representative of VerinLegno S.p.A. in Armenia",
+    address: "Yerevan, Armenia",
+    phone: "+374 XX XXX XXX",
+    email: "info@roots.am",
+    newsletterTitle: "Subscribe to our newsletter!",
+    newsletterText:
+      "Don't miss anything about VerinLegno, read the privacy policy and subscribe to our newsletter",
+  },
+  footer: {
+    companyInfo: "Roots Furniture LLC — Official representative of VerinLegno S.p.A. in Armenia",
+    address: "Yerevan, Armenia",
+    email: "info@roots.am",
+    phone: "+374 XX XXX XXX",
+    links: [
+      { label: "Privacy Policy", href: "#" },
+      { label: "Legal Notes", href: "#" },
+      { label: "Disclaimer", href: "#" },
+      { label: "Cookie Policy", href: "#" },
+    ] as const,
+    copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia - Powered by Paralleloweb`,
+  },
+} as const;
