@@ -6,21 +6,21 @@ import { Services } from "./components/Services";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { hyContent } from "./shared/content";
+import { enContent } from "./shared/content";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Header locale="hy" />
+      <Header locale="en" />
       <main>
-        <Hero content={hyContent.hero} />
-        <Products content={hyContent.products} />
-        <Catalogues content={hyContent.catalogues} />
-        <Services content={hyContent.services} />
-        <About content={hyContent.about} />
-        <Contact content={hyContent.contact} />
+        <Hero content={enContent.hero} />
+        <Products content={enContent.products} />
+        <Catalogues content={enContent.catalogues} />
+        <Services content={enContent.services} />
+        <About content={enContent.about} />
+        <Contact content={enContent.contact} />
       </main>
-      <Footer content={hyContent.footer} />
+      <Footer content={enContent.footer} />
     </div>
   );
 }
