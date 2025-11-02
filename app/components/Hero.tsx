@@ -52,7 +52,7 @@ export function Hero({
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white py-8 md:py-12 overflow-hidden wood-grain-oak">
+    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white pt-0 pb-8 md:pb-12 overflow-hidden wood-grain-oak">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-40"
@@ -63,7 +63,7 @@ export function Hero({
       <div className="absolute top-20 right-10 w-72 h-72 bg-[#D70000]/5 rounded-full blur-3xl" style={{ zIndex: 1 }} />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" style={{ zIndex: 1 }} />
       
-      <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6">
+      <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6 pt-8 md:pt-12">
         <div className="max-w-4xl">
           {/* Semi-transparent background for text readability */}
           <div className="relative backdrop-blur-sm bg-white/60 rounded-2xl p-6 md:p-8 shadow-lg">
