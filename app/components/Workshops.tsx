@@ -24,7 +24,7 @@ export function Workshops({
             <span className="text-sm font-medium text-[#D70000]">Professional Training</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
             {content.title}
           </h2>
           

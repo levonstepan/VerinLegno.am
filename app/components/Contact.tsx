@@ -1,6 +1,3 @@
-"use client";
-import { useState } from "react";
-
 export function Contact({
   content,
 }: {
@@ -15,20 +12,6 @@ export function Contact({
     newsletterText?: string;
   }>;
 }) {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-  };
-
   return (
     <section id="contact" className="py-8 md:py-12 bg-white relative">
       
@@ -37,14 +20,14 @@ export function Contact({
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Get In Touch</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
             {content.title}
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="flex justify-center">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-2xl w-full">
             <div className="bg-white rounded-2xl p-8 border-2 border-neutral-200 shadow-lg">
               <h3 className="text-2xl font-bold mb-4 text-neutral-900">{content.rootsTitle}</h3>
               <p className="text-neutral-700 mb-8 leading-relaxed">{content.rootsText}</p>
@@ -122,90 +105,6 @@ export function Contact({
                 </form>
               </div>
             )}
-          </div>
-          
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 border-2 border-neutral-200 shadow-lg">
-            <h3 className="text-2xl font-bold mb-6 text-neutral-900">Send us a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D70000] focus:border-[#D70000] transition-all"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D70000] focus:border-[#D70000] transition-all"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={5}
-                  className="w-full px-4 py-3 border-2 border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D70000] focus:border-[#D70000] transition-all resize-none"
-                  required
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={isSubmitting || submitted}
-                className={`w-full px-6 py-4 rounded-xl font-medium transition-all duration-300 ${
-                  submitted
-                    ? "bg-green-500 text-white"
-                    : isSubmitting
-                    ? "bg-neutral-400 text-white cursor-not-allowed"
-                    : "bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-[1.02]"
-                }`}
-              >
-                {submitted ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Message Sent!
-                  </span>
-                ) : isSubmitting ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    Sending...
-                  </span>
-                ) : (
-                  <span className="flex items-center justify-center gap-2">
-                    Send Message
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </span>
-                )}
-              </button>
-            </form>
           </div>
         </div>
       </div>
