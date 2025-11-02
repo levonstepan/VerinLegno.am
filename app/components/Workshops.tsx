@@ -22,7 +22,7 @@ export function Workshops({
       <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#D70000]/5 rounded-full blur-3xl -z-10" />
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Professional Training</span>
           </div>
@@ -36,7 +36,7 @@ export function Workshops({
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           {[
             {
               title: "Application Techniques",

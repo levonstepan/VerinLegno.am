@@ -36,7 +36,7 @@ export function Contact({
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl -z-10" />
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Get In Touch</span>
           </div>

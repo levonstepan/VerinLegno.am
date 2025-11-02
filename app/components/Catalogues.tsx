@@ -22,7 +22,7 @@ export function Catalogues({
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl -z-10" />
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Resources</span>
           </div>
@@ -84,7 +84,7 @@ export function Catalogues({
         </div>
         
         {/* Additional info */}
-        <div className="mt-16 text-center">
+          <div className="mt-8 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-100 rounded-full">
             <svg className="w-5 h-5 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />

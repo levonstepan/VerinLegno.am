@@ -22,7 +22,7 @@ export function About({
       </div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Our Story</span>
           </div>

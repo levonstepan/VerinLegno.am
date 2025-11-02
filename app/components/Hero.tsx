@@ -52,7 +52,7 @@ export function Hero({
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white py-20 md:py-32 overflow-hidden wood-grain-oak">
+    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white py-8 md:py-12 overflow-hidden wood-grain-oak">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-40"
@@ -103,7 +103,7 @@ export function Hero({
           </div>
           
           {/* Stats or highlights */}
-          <div className="mt-16 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 backdrop-blur-sm bg-white/60 rounded-2xl p-6 shadow-lg">
+          <div className="mt-8 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 backdrop-blur-sm bg-white/60 rounded-2xl p-6 shadow-lg">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">40+</div>
               <div className="text-sm text-neutral-600">Years Experience</div>
