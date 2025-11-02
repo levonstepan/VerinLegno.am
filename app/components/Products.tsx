@@ -50,7 +50,7 @@ export function Products({
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className={`grid ${showAll ? 'sm:grid-cols-2 md:grid-cols-4' : 'sm:grid-cols-2'} gap-6 md:gap-8`}>
           {displayedItems.map((item, index) => {
             const icon = productIcons[item.name] || "🎨";
             const isHovered = hoveredIndex === index;
@@ -61,19 +61,19 @@ export function Products({
                 href={item.href}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="group relative p-6 rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+                className={`group relative ${showAll ? 'p-6' : 'p-8 md:p-10'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''}`}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
                 
                 {/* Icon */}
-                <div className="relative z-10 mb-4 text-4xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <div className={`relative z-10 mb-4 ${showAll ? 'text-4xl' : 'text-5xl md:text-6xl'} transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
                   {icon}
                 </div>
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="font-semibold text-lg mb-2 group-hover:text-[#D70000] transition-colors duration-300">
+                  <h3 className={`font-semibold ${showAll ? 'text-lg' : 'text-xl md:text-2xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300`}>
                     {item.name}
                   </h3>
                   {item.desc && (
