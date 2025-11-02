@@ -29,7 +29,7 @@ export function About({
         
         <div className="grid md:grid-cols-5 gap-8 md:gap-12">
           {/* Partnership Image Frame - Takes 3 columns */}
-          <div className="md:col-span-3 group relative">
+          <div className="md:col-span-3 group relative flex flex-col">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#D70000] to-[#b30000] rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
             <div className="relative bg-white rounded-2xl p-4 border-2 border-neutral-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative w-full min-h-[400px]">
@@ -41,6 +41,18 @@ export function About({
                   sizes="(max-width: 768px) 100vw, 60vw"
                 />
               </div>
+            </div>
+            {/* Single More Button under the image */}
+            <div className="mt-4">
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center w-full px-6 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
+              >
+                <span>More</span>
+                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </div>
           </div>
           
@@ -75,39 +87,6 @@ export function About({
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Three Separate Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href="#"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
-          >
-            <span>More about VerinLegno</span>
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
-          
-          <Link
-            href="#"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
-          >
-            <span>More about Roots Furniture</span>
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
-          
-          <Link
-            href="#"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
-          >
-            <span>More about Partnership</span>
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
         </div>
         
         {/* Connection line visualization */}
