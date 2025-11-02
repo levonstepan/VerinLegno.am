@@ -12,7 +12,18 @@ export function Hero({
   }>;
 }) {
   return (
-    <section className="relative bg-white pt-0 pb-8 md:pb-12">
+    <section className="relative bg-white pt-0 pb-8 md:pb-12 overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: "url('/blue.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          zIndex: 0,
+        }}
+      />
       
       <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6 pt-4 md:pt-6">
         <div className="max-w-4xl">
