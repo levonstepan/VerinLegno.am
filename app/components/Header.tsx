@@ -52,7 +52,7 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               href={isEn ? "/en#catalogues" : "#catalogues"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
-              {isEn ? "Catalogues" : "Կատալոգներ"}
+              {isEn ? "Manuals" : "Կատալոգներ"}
             </Link>
             <Link
               href={isEn ? "/en#contact" : "#contact"}
@@ -161,7 +161,7 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {isEn ? "Catalogues" : "Կատալոգներ"}
+              {isEn ? "Manuals" : "Կատալոգներ"}
             </Link>
             <Link 
               href={isEn ? "/en#workshops" : "#workshops"} 
