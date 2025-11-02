@@ -35,7 +35,18 @@ export function Products({
   const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
   return (
-    <section id="products" className="pt-8 md:pt-12 pb-4 md:pb-6 bg-white relative">
+    <section id="products" className="pt-8 md:pt-12 pb-4 md:pb-6 bg-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(156,163,175,0.1)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(156,163,175,0.08)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s', animationDuration: '4s' }} />
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-neutral-200/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-neutral-300/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s', animationDuration: '6s' }} />
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-neutral-100/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s', animationDuration: '5s' }} />
+        </div>
+      </div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
