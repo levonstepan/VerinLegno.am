@@ -67,7 +67,7 @@ export function Hero({
           {/* Stats or highlights */}
           <div className="mt-8 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 bg-white rounded-2xl p-6 shadow-lg border border-neutral-200">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">40+</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">50+</div>
               <div className="text-sm text-neutral-600">Years Experience</div>
             </div>
             <div>

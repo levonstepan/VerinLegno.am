@@ -1,6 +1,6 @@
 export const hyContent = {
   hero: {
-    title: "A soul increasingly green",
+    title: "VerinLegno in Armenia",
     subtitle:
       "VerinLegno — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
     cta: "Discover more",
@@ -97,7 +97,7 @@ export const hyContent = {
 
 export const enContent = {
   hero: {
-    title: "A soul increasingly green",
+    title: "VerinLegno in Armenia",
     subtitle:
       "VerinLegno — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
     cta: "Discover more",
