@@ -59,22 +59,56 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
           <div className="flex items-center gap-2">
             <Link
               href="/"
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 !isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
                   : "border border-neutral-300 hover:border-[#D70000] hover:text-[#D70000]"
               }`}
             >
+              {/* Armenia Flag */}
+              <svg className="w-4 h-3" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="6.67" fill="#D90012"/>
+                <rect y="6.67" width="40" height="6.67" fill="#0033A0"/>
+                <rect y="13.33" width="40" height="6.67" fill="#F2A800"/>
+              </svg>
               Հայ
             </Link>
             <Link
               href="/en"
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
                   : "border border-neutral-300 hover:border-[#D70000] hover:text-[#D70000]"
               }`}
             >
+              {/* USA Flag */}
+              <svg className="w-4 h-3" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="20" fill="#B22234"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="0"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="3.08"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="6.15"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="9.23"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="12.31"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="15.38"/>
+                <rect width="40" height="1.54" fill="#FFFFFF" y="18.46"/>
+                <rect width="16" height="10.77" fill="#3C3B6E" x="0" y="0"/>
+                <circle cx="2" cy="1.85" r="0.8" fill="#FFFFFF"/>
+                <circle cx="5.5" cy="1.85" r="0.8" fill="#FFFFFF"/>
+                <circle cx="9" cy="1.85" r="0.8" fill="#FFFFFF"/>
+                <circle cx="12.5" cy="1.85" r="0.8" fill="#FFFFFF"/>
+                <circle cx="2" cy="4.62" r="0.8" fill="#FFFFFF"/>
+                <circle cx="5.5" cy="4.62" r="0.8" fill="#FFFFFF"/>
+                <circle cx="9" cy="4.62" r="0.8" fill="#FFFFFF"/>
+                <circle cx="12.5" cy="4.62" r="0.8" fill="#FFFFFF"/>
+                <circle cx="2" cy="7.38" r="0.8" fill="#FFFFFF"/>
+                <circle cx="5.5" cy="7.38" r="0.8" fill="#FFFFFF"/>
+                <circle cx="9" cy="7.38" r="0.8" fill="#FFFFFF"/>
+                <circle cx="12.5" cy="7.38" r="0.8" fill="#FFFFFF"/>
+                <circle cx="2" cy="10.15" r="0.8" fill="#FFFFFF"/>
+                <circle cx="5.5" cy="10.15" r="0.8" fill="#FFFFFF"/>
+                <circle cx="9" cy="10.15" r="0.8" fill="#FFFFFF"/>
+                <circle cx="12.5" cy="10.15" r="0.8" fill="#FFFFFF"/>
+              </svg>
               EN
             </Link>
             <button
