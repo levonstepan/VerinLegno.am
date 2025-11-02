@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export function About({
   content,
@@ -26,37 +27,18 @@ export function About({
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          {/* VerinLegno Card */}
+          {/* Partnership Image Frame */}
           <div className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#D70000] to-[#b30000] rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-            <div className="relative bg-white rounded-2xl p-8 border-2 border-neutral-200 shadow-lg hover:shadow-xl transition-all duration-300">
-              {/* Flag icon */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#D70000] via-[#008C45] to-white flex items-center justify-center shadow-md">
-                  <span className="text-2xl">🇮🇹</span>
-                </div>
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-1">{content.verinlegnoTitle}</h3>
-                  <div className="text-sm text-neutral-600">Est. 1983 • Italy</div>
-                </div>
-              </div>
-              
-              <p className="text-neutral-700 leading-relaxed mb-6">{content.verinlegnoText}</p>
-              
-              {/* Timeline milestones */}
-              <div className="space-y-3 pt-6 border-t border-neutral-200">
-                {[
-                  { year: "1983", event: "Company Founded" },
-                  { year: "40+", event: "Years of Innovation" },
-                  { year: "50+", event: "Countries Worldwide" }
-                ].map((milestone, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D70000]/10 flex items-center justify-center">
-                      <span className="text-xs font-bold text-[#D70000]">{milestone.year}</span>
-                    </div>
-                    <span className="text-sm text-neutral-600">{milestone.event}</span>
-                  </div>
-                ))}
+            <div className="relative bg-white rounded-2xl p-4 border-2 border-neutral-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="relative w-full aspect-square">
+                <Image
+                  src="/partnership.jpg"
+                  alt="Partnership"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
