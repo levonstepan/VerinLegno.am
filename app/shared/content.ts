@@ -72,8 +72,8 @@ export const hyContent = {
   contact: {
     title: "Contact",
     rootsTitle: "Roots Furniture LLC",
-    rootsText: "Official representative of VerinLegno S.p.A. in Armenia",
-    address: "Yerevan, Armenia",
+    rootsText: "Furniture manufacturer in Vagharshapat",
+    address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
     phone: "+374 XX XXX XXX",
     email: "info@roots.am",
     newsletterTitle: "Subscribe to our newsletter!",
@@ -169,8 +169,8 @@ export const enContent = {
   contact: {
     title: "Contact",
     rootsTitle: "Roots Furniture LLC",
-    rootsText: "Official representative of VerinLegno S.p.A. in Armenia",
-    address: "Yerevan, Armenia",
+    rootsText: "Furniture manufacturer in Vagharshapat",
+    address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
     phone: "+374 XX XXX XXX",
     email: "info@roots.am",
     newsletterTitle: "Subscribe to our newsletter!",
