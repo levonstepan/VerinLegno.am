@@ -70,7 +70,7 @@ export const hyContent = {
     acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
   },
   contact: {
-    title: "Contact",
+    title: "Contact Us",
     rootsTitle: "Roots Furniture LLC",
     rootsText: "Furniture manufacturer in Vagharshapat",
     address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
@@ -167,7 +167,7 @@ export const enContent = {
     acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
   },
   contact: {
-    title: "Contact",
+    title: "Contact Us",
     rootsTitle: "Roots Furniture LLC",
     rootsText: "Furniture manufacturer in Vagharshapat",
     address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
