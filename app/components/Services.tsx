@@ -16,10 +16,7 @@ export function Services({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="services" className="py-8 md:py-12 bg-gradient-to-b from-white to-neutral-50 relative overflow-hidden wood-grain-walnut">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#D70000]/5 rounded-full blur-3xl -z-10" />
+    <section id="services" className="py-8 md:py-12 bg-white relative">
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -121,9 +118,6 @@ export function Services({
               </div>
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#D70000]/10 rounded-full blur-2xl animate-pulse" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-1000" />
           </div>
         </div>
       </div>

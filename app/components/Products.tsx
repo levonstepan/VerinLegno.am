@@ -32,10 +32,7 @@ export function Products({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="products" className="py-8 md:py-12 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden wood-grain-pine">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#D70000]/3 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl -z-10" />
+    <section id="products" className="py-8 md:py-12 bg-white relative">
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">

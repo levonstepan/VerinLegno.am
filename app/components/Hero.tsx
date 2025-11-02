@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 export function Hero({
   content,
@@ -12,61 +11,13 @@ export function Hero({
     ctaLink: string;
   }>;
 }) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
-    // Animated gradient background
-    let time = 0;
-    const animate = () => {
-      time += 0.01;
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      const hue1 = (Math.sin(time) * 10 + 350) % 360;
-      const hue2 = (Math.sin(time + 2) * 10 + 360) % 360;
-      
-      gradient.addColorStop(0, `hsla(${hue1}, 20%, 98%, 0.03)`);
-      gradient.addColorStop(1, `hsla(${hue2}, 15%, 96%, 0.03)`);
-      
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      requestAnimationFrame(animate);
-    };
-    animate();
-
-    return () => {
-      window.removeEventListener("resize", resizeCanvas);
-    };
-  }, []);
-
   return (
-    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white pt-0 pb-8 md:pb-12 overflow-hidden wood-grain-oak">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-40"
-        style={{ zIndex: 1 }}
-      />
-      
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-[#D70000]/5 rounded-full blur-3xl" style={{ zIndex: 1 }} />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" style={{ zIndex: 1 }} />
+    <section className="relative bg-white pt-0 pb-8 md:pb-12">
       
       <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6 pt-4 md:pt-6">
         <div className="max-w-4xl">
-          {/* Semi-transparent background for text readability */}
-          <div className="relative backdrop-blur-sm bg-white/60 rounded-2xl p-6 md:p-8 shadow-lg">
+          {/* Content card */}
+          <div className="relative bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-neutral-200">
             <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
               <span className="text-sm font-medium text-[#D70000]">Since 1983 • Italian Excellence</span>
             </div>
@@ -103,7 +54,7 @@ export function Hero({
           </div>
           
           {/* Stats or highlights */}
-          <div className="mt-8 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 backdrop-blur-sm bg-white/60 rounded-2xl p-6 shadow-lg">
+          <div className="mt-8 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 bg-white rounded-2xl p-6 shadow-lg border border-neutral-200">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">40+</div>
               <div className="text-sm text-neutral-600">Years Experience</div>
