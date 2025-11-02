@@ -60,7 +60,7 @@ export const hyContent = {
     ctaLink: "#contact",
   },
   about: {
-    title: "Company",
+    title: "VerinLegno and Roots Furniture",
     verinlegnoTitle: "VerinLegno S.p.A.",
     verinlegnoText:
       "Verinlegno is an Italian company that develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. Over 40 years of experience, distribution in many countries, wide catalogue.",
@@ -157,7 +157,7 @@ export const enContent = {
     ctaLink: "#contact",
   },
   about: {
-    title: "Company",
+    title: "VerinLegno and Roots Furniture",
     verinlegnoTitle: "VerinLegno S.p.A.",
     verinlegnoText:
       "Verinlegno is an Italian company that develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. Over 40 years of experience, distribution in many countries, wide catalogue.",
