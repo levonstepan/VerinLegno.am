@@ -52,18 +52,30 @@ export function Hero({
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white py-20 md:py-32 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white py-20 md:py-32 overflow-hidden wood-grain-oak">
+      {/* Blurred background image */}
+      <div 
+        className="absolute inset-0 w-full h-full opacity-30 blur-md"
+        style={{
+          backgroundImage: "url('/background-1.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          zIndex: 0,
+        }}
+      />
+      
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-40"
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 1 }}
       />
       
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-[#D70000]/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-20 right-10 w-72 h-72 bg-[#D70000]/5 rounded-full blur-3xl" style={{ zIndex: 1 }} />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" style={{ zIndex: 1 }} />
       
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
+      <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6">
         <div className="max-w-4xl">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Since 1983 • Italian Excellence</span>
