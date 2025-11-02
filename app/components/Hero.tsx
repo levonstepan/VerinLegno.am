@@ -53,18 +53,6 @@ export function Hero({
 
   return (
     <section className="relative bg-gradient-to-b from-neutral-50 via-white to-white py-20 md:py-32 overflow-hidden wood-grain-oak">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 w-full h-full opacity-100"
-        style={{
-          backgroundImage: "url('/background-1.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          zIndex: 0,
-        }}
-      />
-      
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-40"
