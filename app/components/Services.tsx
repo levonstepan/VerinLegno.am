@@ -16,7 +16,7 @@ export function Services({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-gradient-to-b from-white to-neutral-50 relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-gradient-to-b from-white to-neutral-50 relative overflow-hidden wood-grain-walnut">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#D70000]/5 rounded-full blur-3xl -z-10" />
