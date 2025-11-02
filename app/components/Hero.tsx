@@ -22,7 +22,7 @@ export function Hero({
               <span className="text-sm font-medium text-[#D70000]">Since 1983 • Italian Excellence</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-neutral-900 drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-8 text-neutral-800">
               {content.title}
             </h1>
             
