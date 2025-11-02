@@ -117,7 +117,7 @@ export function Footer({
               </li>
               <li>
                 <Link href="#contact" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>

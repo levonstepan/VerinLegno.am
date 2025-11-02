@@ -28,13 +28,19 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               href={isEn ? "/en#company" : "#company"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
-              {isEn ? "Company" : "Ընկերություն"}
+              {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link
               href={isEn ? "/en#products" : "#products"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Products" : "Ապրանքներ"}
+            </Link>
+            <Link
+              href={isEn ? "/en#catalogues" : "#catalogues"}
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+            >
+              {isEn ? "Manuals" : "Կատալոգներ"}
             </Link>
             <Link
               href={isEn ? "/en#services" : "#services"}
@@ -49,16 +55,10 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               {isEn ? "Workshops" : "Վարպետություններ"}
             </Link>
             <Link
-              href={isEn ? "/en#catalogues" : "#catalogues"}
-              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
-            >
-              {isEn ? "Manuals" : "Կատալոգներ"}
-            </Link>
-            <Link
               href={isEn ? "/en#contact" : "#contact"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
-              {isEn ? "Contact" : "Կապ"}
+              {isEn ? "Contact Us" : "Կապ"}
             </Link>
           </nav>
 
@@ -140,7 +140,7 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {isEn ? "Company" : "Ընկերություն"}
+              {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link 
               href={isEn ? "/en#products" : "#products"} 
@@ -150,18 +150,18 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               {isEn ? "Products" : "Ապրանքներ"}
             </Link>
             <Link 
-              href={isEn ? "/en#services" : "#services"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {isEn ? "Services" : "Ծառայություններ"}
-            </Link>
-            <Link 
               href={isEn ? "/en#catalogues" : "#catalogues"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Manuals" : "Կատալոգներ"}
+            </Link>
+            <Link 
+              href={isEn ? "/en#services" : "#services"} 
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {isEn ? "Services" : "Ծառայություններ"}
             </Link>
             <Link 
               href={isEn ? "/en#workshops" : "#workshops"} 
@@ -175,7 +175,7 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {isEn ? "Contact" : "Կապ"}
+              {isEn ? "Contact Us" : "Կապ"}
             </Link>
           </div>
         )}
