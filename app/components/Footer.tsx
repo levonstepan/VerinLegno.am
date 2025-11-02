@@ -97,7 +97,7 @@ export function Footer({
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#company" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Company
+                  Partnership
                 </Link>
               </li>
               <li>
