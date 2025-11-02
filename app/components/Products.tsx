@@ -32,7 +32,7 @@ export function Products({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="products" className="py-8 md:py-12 bg-white relative">
+    <section id="products" className="pt-8 md:pt-12 pb-4 md:pb-6 bg-white relative">
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">

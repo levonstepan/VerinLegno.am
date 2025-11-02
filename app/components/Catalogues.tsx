@@ -16,7 +16,7 @@ export function Catalogues({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="catalogues" className="py-8 md:py-12 bg-white relative">
+    <section id="catalogues" className="pt-4 md:pt-6 pb-8 md:pb-12 bg-white relative">
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
