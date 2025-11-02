@@ -77,7 +77,7 @@ export function About({
               {/* More Button inside the frame */}
               <Link
                 href="#"
-                className="inline-flex items-center justify-center w-full px-8 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300 mt-auto"
+                className="inline-flex items-center justify-center w-full px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300 mt-auto"
               >
                 <span>More</span>
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
