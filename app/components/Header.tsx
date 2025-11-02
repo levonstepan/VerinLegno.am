@@ -26,37 +26,37 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
           <nav className="hidden md:flex items-center gap-1 text-sm">
             <Link
               href={isEn ? "/en#company" : "#company"}
-              className="px-4 py-2 rounded-lg text-neutral-900 font-semibold hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Company" : "Ընկերություն"}
             </Link>
             <Link
               href={isEn ? "/en#products" : "#products"}
-              className="px-4 py-2 rounded-lg text-neutral-900 font-semibold hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Products" : "Ապրանքներ"}
             </Link>
             <Link
               href={isEn ? "/en#services" : "#services"}
-              className="px-4 py-2 rounded-lg text-neutral-900 font-semibold hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Services" : "Ծառայություններ"}
             </Link>
             <Link
               href={isEn ? "/en#workshops" : "#workshops"}
-              className="px-4 py-2 rounded-lg text-neutral-900 font-semibold hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Workshops" : "Վարպետություններ"}
             </Link>
             <Link
               href={isEn ? "/en#catalogues" : "#catalogues"}
-              className="px-4 py-2 rounded-lg text-neutral-900 font-semibold hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Catalogues" : "Կատալոգներ"}
             </Link>
             <Link
               href={isEn ? "/en#contact" : "#contact"}
-              className="px-4 py-2 rounded-lg text-neutral-900 font-semibold hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Contact" : "Կապ"}
             </Link>
@@ -68,7 +68,7 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 !isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
-                  : "border border-neutral-300 hover:border-[#D70000] hover:text-[#D70000]"
+                  : "border border-neutral-300 text-neutral-800 hover:border-[#D70000] hover:text-[#D70000]"
               }`}
             >
               {/* Armenia Flag */}
@@ -137,42 +137,42 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
           <div className="md:hidden pb-4 space-y-1 animate-fade-in-up">
             <Link 
               href={isEn ? "/en#company" : "#company"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-semibold text-neutral-900"
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Company" : "Ընկերություն"}
             </Link>
             <Link 
               href={isEn ? "/en#products" : "#products"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-semibold text-neutral-900"
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Products" : "Ապրանքներ"}
             </Link>
             <Link 
               href={isEn ? "/en#services" : "#services"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-semibold text-neutral-900"
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Services" : "Ծառայություններ"}
             </Link>
             <Link 
               href={isEn ? "/en#catalogues" : "#catalogues"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-semibold text-neutral-900"
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Catalogues" : "Կատալոգներ"}
             </Link>
             <Link 
               href={isEn ? "/en#workshops" : "#workshops"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-semibold text-neutral-900"
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Workshops" : "Վարպետություններ"}
             </Link>
             <Link 
               href={isEn ? "/en#contact" : "#contact"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-semibold text-neutral-900"
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Contact" : "Կապ"}
