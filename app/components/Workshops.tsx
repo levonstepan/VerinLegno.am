@@ -16,7 +16,7 @@ export function Workshops({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="workshops" className="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden wood-grain-pine">
+    <section id="workshops" className="py-8 md:py-12 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden wood-grain-pine">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#D70000]/5 rounded-full blur-3xl -z-10" />

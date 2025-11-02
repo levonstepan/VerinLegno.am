@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -32,7 +31,7 @@ export function Products({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="products" className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden wood-grain-pine">
+    <section id="products" className="py-8 md:py-12 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden wood-grain-pine">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#D70000]/3 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl -z-10" />

@@ -13,7 +13,7 @@ export function About({
   }>;
 }) {
   return (
-    <section id="company" className="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden wood-grain-oak">
+    <section id="company" className="py-8 md:py-12 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden wood-grain-oak">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute inset-0" style={{
