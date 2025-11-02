@@ -77,17 +77,19 @@ export function Hero({
       
       <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6">
         <div className="max-w-4xl">
-          <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-            <span className="text-sm font-medium text-[#D70000]">Since 1983 • Italian Excellence</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 bg-clip-text text-transparent">
-            {content.title}
-          </h1>
-          
-          <p className="text-lg md:text-xl text-neutral-700 mb-10 leading-relaxed max-w-2xl">
-            {content.subtitle}
-          </p>
+          {/* Semi-transparent background for text readability */}
+          <div className="relative backdrop-blur-sm bg-white/60 rounded-2xl p-6 md:p-8 shadow-lg">
+            <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
+              <span className="text-sm font-medium text-[#D70000]">Since 1983 • Italian Excellence</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-neutral-900 drop-shadow-lg">
+              {content.title}
+            </h1>
+            
+            <p className="text-lg md:text-xl text-neutral-800 mb-10 leading-relaxed max-w-2xl drop-shadow-md">
+              {content.subtitle}
+            </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -110,9 +112,10 @@ export function Hero({
               Learn More
             </Link>
           </div>
-
+          </div>
+          
           {/* Stats or highlights */}
-          <div className="mt-16 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-200">
+          <div className="mt-16 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 backdrop-blur-sm bg-white/60 rounded-2xl p-6 shadow-lg">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">40+</div>
               <div className="text-sm text-neutral-600">Years Experience</div>
