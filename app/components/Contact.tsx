@@ -113,7 +113,7 @@ export function Contact({
           <div className="bg-white rounded-2xl border-2 border-neutral-200 shadow-lg overflow-hidden">
             <div className="h-full min-h-[400px] w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.543210!2d44.5133!3d40.1811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406aa2dab8c73b4f%3A0x4f3b3b3b3b3b3b3b!2sYerevan%2C%20Armenia!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.7672512195813!2d44.3309115!3d40.172823099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406a959d3f8e0701%3A0x4f3c4dcd7d2a4d07!2sRoots%20Furniture!5e1!3m2!1sen!2sam!4v1762110944902!5m2!1sen!2sam"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '400px' }}
@@ -121,7 +121,7 @@ export function Contact({
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
-                title="Location Map - Yerevan, Armenia"
+                title="Roots Furniture Location Map"
               />
             </div>
           </div>
