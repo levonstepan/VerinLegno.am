@@ -1,8 +1,10 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export function Catalogues({
   content,
+  showAll = false,
 }: {
   content: Readonly<{
     title: string;
@@ -12,8 +14,10 @@ export function Catalogues({
     }>;
     cta: string;
   }>;
+  showAll?: boolean;
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
   return (
     <section id="catalogues" className="pt-4 md:pt-6 pb-8 md:pb-12 bg-white relative">
@@ -31,8 +35,8 @@ export function Catalogues({
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {content.items.map((item, index) => {
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {displayedItems.map((item, index) => {
             const isHovered = hoveredIndex === index;
             
             return (
@@ -80,17 +84,20 @@ export function Catalogues({
           })}
         </div>
         
-        {/* Additional info */}
+        {/* See More Button - only show if not showing all */}
+        {!showAll && (
           <div className="mt-8 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-100 rounded-full">
-            <svg className="w-5 h-5 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            <span className="text-sm text-neutral-700">
-              All catalogs are available in digital format
-            </span>
+            <Link
+              href="/catalogues"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
+            >
+              See more
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

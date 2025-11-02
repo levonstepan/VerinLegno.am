@@ -7,7 +7,7 @@ export const hyContent = {
     ctaLink: "#products",
   },
   products: {
-    title: "Our Products",
+    title: "Product Catalogues",
     subtitle: "High technology, reliability and sustainability",
     items: [
       { name: "Special effects", href: "#products" },
@@ -23,7 +23,7 @@ export const hyContent = {
     ] as const,
   },
   catalogues: {
-    title: "Our Catalogues",
+    title: "Technical Documents",
     items: [
       { name: "2025 CATALOGO PRODOTTI LINEE SOLVENTE E IDRO", href: "/files/catalogue-2025.pdf" },
       { name: "ACRYSTONE", href: "/files/acrystone.pdf" },
@@ -104,7 +104,7 @@ export const enContent = {
     ctaLink: "#products",
   },
   products: {
-    title: "Our Products",
+    title: "Product Catalogues",
     subtitle: "High technology, reliability and sustainability",
     items: [
       { name: "Special effects", href: "#products" },
@@ -120,7 +120,7 @@ export const enContent = {
     ] as const,
   },
   catalogues: {
-    title: "Our Catalogues",
+    title: "Technical Documents",
     items: [
       { name: "2025 CATALOGO PRODOTTI LINEE SOLVENTE E IDRO", href: "/files/catalogue-2025.pdf" },
       { name: "ACRYSTONE", href: "/files/acrystone.pdf" },

@@ -18,6 +18,7 @@ const productIcons: Record<string, string> = {
 
 export function Products({
   content,
+  showAll = false,
 }: {
   content: Readonly<{
     title: string;
@@ -28,8 +29,10 @@ export function Products({
       desc?: string;
     }>;
   }>;
+  showAll?: boolean;
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
   return (
     <section id="products" className="pt-8 md:pt-12 pb-4 md:pb-6 bg-white relative">
@@ -47,8 +50,8 @@ export function Products({
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          {content.items.map((item, index) => {
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {displayedItems.map((item, index) => {
             const icon = productIcons[item.name] || "🎨";
             const isHovered = hoveredIndex === index;
             
@@ -95,19 +98,20 @@ export function Products({
           })}
         </div>
         
-        {/* CTA Section */}
-        <div className="mt-8 text-center">
-          <p className="text-neutral-600 mb-6">Looking for a specific solution?</p>
-          <Link
-            href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium border-2 border-neutral-300 text-neutral-700 hover:border-[#D70000] hover:text-[#D70000] transition-all duration-300"
-          >
-            Contact Our Experts
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
+        {/* See More Button - only show if not showing all */}
+        {!showAll && (
+          <div className="mt-8 text-center">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
+            >
+              See more
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
