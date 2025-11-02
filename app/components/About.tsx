@@ -77,11 +77,11 @@ export function About({
           </div>
         </div>
         
-        {/* Single More Button under the left window */}
-        <div className="mt-6 flex justify-start max-w-3xl">
+        {/* Single More Button under the Roots Furniture section */}
+        <div className="mt-6 flex justify-end md:justify-start md:ml-auto md:max-w-md">
           <Link
             href="#"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-lg font-medium bg-[#D70000] text-white hover:shadow-lg hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300 w-full md:w-auto min-w-[200px]"
           >
             <span>More</span>
             <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
