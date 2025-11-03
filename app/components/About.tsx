@@ -75,15 +75,22 @@ export function About({
               </div>
               
               {/* More Button inside the frame */}
-              <Link
-                href="#"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Scroll to contact section or do nothing to prevent navigation issues
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="inline-flex items-center justify-center w-full px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300 mt-auto"
               >
                 <span>More</span>
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
