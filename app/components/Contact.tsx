@@ -113,7 +113,7 @@ export function Contact({
           <div className="bg-white rounded-2xl border-2 border-neutral-200 shadow-lg overflow-hidden">
             <div className="h-full min-h-[400px] w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.7672512195813!2d44.3309115!3d40.172823099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406a959d3f8e0701%3A0x4f3c4dcd7d2a4d07!2sRoots%20Furniture!5e1!3m2!1sen!2sam!4v1762110944902!5m2!1sen!2sam"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6097.289334478398!2d44.330187!3d40.1724645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406a959d3f8e0701%3A0x4f3c4dcd7d2a4d07!2sRoots%20Furniture!5e0!3m2!1sen!2sam!4v1762201646766!5m2!1sen!2sam"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '400px' }}
