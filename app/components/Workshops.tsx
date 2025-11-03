@@ -16,9 +16,9 @@ export function Workshops({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="workshops" className="py-8 md:py-12 bg-white relative">
+    <section id="workshops" className="py-8 md:py-12 bg-white relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem', visibility: 'visible', display: 'block' }}>
       
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6" style={{ visibility: 'visible', display: 'block' }}>
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Professional Training</span>
@@ -94,6 +94,17 @@ export function Workshops({
         <div className="text-center">
           <Link
             href={content.ctaLink}
+            onClick={(e) => {
+              // Handle hash links smoothly
+              if (content.ctaLink.startsWith('#')) {
+                e.preventDefault();
+                const targetId = content.ctaLink.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }
+            }}
             className="group inline-flex items-center gap-2 bg-[#D70000] text-white px-8 py-4 rounded-full font-medium hover:shadow-xl hover:shadow-[#D70000]/20 transition-all duration-300 hover:scale-105"
           >
             <span>{content.cta}</span>
