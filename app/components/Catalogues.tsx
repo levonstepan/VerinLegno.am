@@ -24,12 +24,13 @@ export function Catalogues({
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 opacity-50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(156,163,175,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(156,163,175,0.08)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '4s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(215,0,0,0.03)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(215,0,0,0.025)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '4s' }} />
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-32 right-20 w-80 h-80 bg-neutral-200/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-32 left-20 w-[400px] h-[400px] bg-neutral-300/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s', animationDuration: '6s' }} />
-          <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-neutral-100/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '0.5s', animationDuration: '5.5s' }} />
+          <div className="absolute top-32 right-20 w-80 h-80 bg-[#D70000]/8 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-32 left-20 w-[400px] h-[400px] bg-[#D70000]/6 rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s', animationDuration: '6s' }} />
+          <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-[#D70000]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '0.5s', animationDuration: '5.5s' }} />
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#D70000]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3.5s', animationDuration: '7.5s' }} />
         </div>
       </div>
       
