@@ -81,8 +81,6 @@ export const hyContent = {
     links: [
       { label: "Privacy Policy", href: "#" },
       { label: "Legal Notes", href: "#" },
-      { label: "Disclaimer", href: "#" },
-      { label: "Cookie Policy", href: "#" },
     ] as const,
     copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia`,
   },
@@ -171,8 +169,6 @@ export const enContent = {
     links: [
       { label: "Privacy Policy", href: "#" },
       { label: "Legal Notes", href: "#" },
-      { label: "Disclaimer", href: "#" },
-      { label: "Cookie Policy", href: "#" },
     ] as const,
     copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia`,
   },

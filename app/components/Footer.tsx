@@ -23,7 +23,7 @@ export function Footer({
       </div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
@@ -85,41 +85,6 @@ export function Footer({
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-bold mb-4 flex items-center gap-2">
-              <span>Quick Links</span>
-              <div className="h-px flex-1 bg-neutral-700" />
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#company" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Partnership
-                </Link>
-              </li>
-              <li>
-                <Link href="#products" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#catalogues" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Manuals
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="text-neutral-400 hover:text-[#D70000] transition-colors">
-                  Contact Us
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
