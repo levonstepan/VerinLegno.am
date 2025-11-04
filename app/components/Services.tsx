@@ -171,36 +171,35 @@ export function Services({
               onClick={() => setSelectedImage(null)}
             >
               <div 
-                className="relative max-w-2xl w-full max-h-[85vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+                className="relative max-w-2xl w-full max-h-[85vh] rounded-2xl shadow-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Header with name and close button */}
-                <div className="flex items-center justify-between p-4 border-b border-neutral-200 bg-white">
-                  <h3 className="text-xl md:text-2xl font-bold text-neutral-900">
-                    {selectedImage.name}
-                  </h3>
-                  <button
-                    onClick={() => setSelectedImage(null)}
-                    className="w-8 h-8 rounded-full bg-[#D70000] text-white flex items-center justify-center hover:bg-[#b30000] transition-colors shadow-lg"
-                    aria-label="Close"
-                  >
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
+                {/* Close button */}
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-[#D70000] text-white flex items-center justify-center hover:bg-[#b30000] transition-colors shadow-lg"
+                  aria-label="Close"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
                 
-                {/* Image */}
-                <div className="relative">
-                  <div className="relative w-full aspect-[3/4] bg-white">
-                    <Image
-                      src={selectedImage.src}
-                      alt={selectedImage.name}
-                      fill
-                      className="object-contain"
-                      sizes="80vw"
-                      priority
-                    />
+                {/* Image with name overlay */}
+                <div className="relative w-full aspect-[3/4] bg-white">
+                  <Image
+                    src={selectedImage.src}
+                    alt={selectedImage.name}
+                    fill
+                    className="object-contain"
+                    sizes="80vw"
+                    priority
+                  />
+                  {/* Name overlay at bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      {selectedImage.name}
+                    </h3>
                   </div>
                 </div>
               </div>
