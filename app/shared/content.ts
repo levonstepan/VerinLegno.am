@@ -51,14 +51,6 @@ export const hyContent = {
     cta: "Access now",
     ctaLink: "#contact",
   },
-  workshops: {
-    title: "Workshops",
-    subtitle: "Professional training programs for mastering VerinLegno products and techniques",
-    description:
-      "Join our comprehensive workshops to learn expert application techniques, product knowledge, and best practices from industry professionals.",
-    cta: "Contact us for workshops",
-    ctaLink: "#contact",
-  },
   about: {
     title: "VerinLegno and Roots Furniture",
     verinlegnoTitle: "VerinLegno S.p.A.",
@@ -146,14 +138,6 @@ export const enContent = {
     description:
       "The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way.",
     cta: "Access now",
-    ctaLink: "#contact",
-  },
-  workshops: {
-    title: "Workshops",
-    subtitle: "Professional training programs for mastering VerinLegno products and techniques",
-    description:
-      "Join our comprehensive workshops to learn expert application techniques, product knowledge, and best practices from industry professionals.",
-    cta: "Contact us for workshops",
     ctaLink: "#contact",
   },
   about: {
