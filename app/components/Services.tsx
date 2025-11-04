@@ -133,7 +133,7 @@ export function Services({
                 {/* Color cards we are working with */}
                 <div>
                   <div className="text-sm font-semibold text-neutral-700 mb-2">Color cards we are working with</div>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2 max-w-xs mx-auto">
                     {colorCards.map((card, idx) => (
                       <div 
                         key={idx} 
@@ -146,7 +146,7 @@ export function Services({
                             alt={card.alt}
                             fill
                             className="object-contain"
-                            sizes="(max-width: 768px) 50vw, 40vw"
+                            sizes="(max-width: 768px) 40vw, 20vw"
                           />
                         </div>
                       </div>
