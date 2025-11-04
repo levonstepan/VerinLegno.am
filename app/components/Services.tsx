@@ -171,7 +171,7 @@ export function Services({
               onClick={() => setSelectedImage(null)}
             >
               <div 
-                className="relative max-w-2xl w-full max-h-[70vh] rounded-2xl shadow-2xl overflow-hidden"
+                className="relative max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden bg-white"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close button */}
@@ -186,15 +186,19 @@ export function Services({
                 </button>
                 
                 {/* Image with name overlay */}
-                <div className="relative w-full aspect-[3/4] bg-white">
-                  <Image
-                    src={selectedImage.src}
-                    alt={selectedImage.name}
-                    fill
-                    className="object-contain"
-                    sizes="80vw"
-                    priority
-                  />
+                <div className="relative w-full">
+                  <div className="relative w-full" style={{ maxHeight: '70vh' }}>
+                    <Image
+                      src={selectedImage.src}
+                      alt={selectedImage.name}
+                      width={800}
+                      height={1067}
+                      className="object-contain object-top w-full h-auto"
+                      style={{ maxHeight: '70vh', display: 'block' }}
+                      sizes="80vw"
+                      priority
+                    />
+                  </div>
                   {/* Name overlay at bottom */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-4">
                     <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
