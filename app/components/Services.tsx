@@ -47,7 +47,7 @@ export function Services({
     <section id="services" className="py-8 md:py-12 bg-white relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem', visibility: 'visible', display: 'block' }}>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6" style={{ visibility: 'visible', display: 'block' }}>
-        <div className="grid md:grid-cols-5 gap-12 items-center">
+        <div className="grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-2">
             <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
               <span className="text-sm font-medium text-[#D70000]">Advanced Technology</span>
@@ -114,13 +114,13 @@ export function Services({
           {/* Visual mockup */}
           <div className="relative md:col-span-3">
             <div 
-              className="bg-gradient-to-br from-neutral-50 to-white rounded-2xl p-8 border-2 border-neutral-200 shadow-2xl transform transition-all duration-500 hover:shadow-[#D70000]/10 hover:scale-[1.02]"
+              className="bg-gradient-to-br from-neutral-50 to-white rounded-2xl px-6 py-4 border-2 border-neutral-200 shadow-2xl transform transition-all duration-500 hover:shadow-[#D70000]/10 hover:scale-[1.02]"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               {/* Mock interface */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 mb-6">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 mb-3">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D70000] to-[#b30000] flex items-center justify-center">
                     <span className="text-white font-bold text-xl">V</span>
                   </div>
@@ -131,9 +131,9 @@ export function Services({
                 </div>
                 
                 {/* Color cards we are working with */}
-                <div className="mb-4">
-                  <div className="text-sm font-semibold text-neutral-700 mb-4">Color cards we are working with</div>
-                  <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <div className="text-sm font-semibold text-neutral-700 mb-3">Color cards we are working with</div>
+                  <div className="grid grid-cols-2 gap-3">
                     {colorCards.map((card, idx) => (
                       <div 
                         key={idx} 
@@ -155,7 +155,7 @@ export function Services({
                 </div>
                 
                 {/* Status indicator */}
-                <div className="mt-6 flex items-center gap-2 px-4 py-2 bg-green-50 rounded-lg border border-green-200">
+                <div className="mt-3 flex items-center gap-2 px-4 py-2 bg-green-50 rounded-lg border border-green-200">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-sm text-green-700 font-medium">System Ready</span>
                 </div>
