@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export function Services({
@@ -102,23 +103,29 @@ export function Services({
                   </div>
                 </div>
                 
-                {/* Color palette mockup */}
-                <div className="grid grid-cols-5 gap-3">
-                  {[
-                    { color: "#D70000", label: "Red" },
-                    { color: "#1E40AF", label: "Blue" },
-                    { color: "#059669", label: "Green" },
-                    { color: "#F59E0B", label: "Orange" },
-                    { color: "#6366F1", label: "Purple" }
-                  ].map((swatch, idx) => (
-                    <div key={idx} className="group/item">
-                      <div 
-                        className="w-full aspect-square rounded-lg mb-2 shadow-md transition-transform duration-300 group-hover/item:scale-110"
-                        style={{ backgroundColor: swatch.color }}
-                      />
-                      <div className="text-xs text-center text-neutral-600">{swatch.label}</div>
-                    </div>
-                  ))}
+                {/* Color cards we are working with */}
+                <div className="mb-4">
+                  <div className="text-sm font-semibold text-neutral-700 mb-4">Color cards we are working with</div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { src: "/images/color cards/IL LACCATO color card.jpeg", alt: "IL LACCATO color card" },
+                      { src: "/images/color cards/NCS Index 2050 color card.jpeg", alt: "NCS Index 2050 color card" },
+                      { src: "/images/color cards/RAL color card.jpeg", alt: "RAL color card" },
+                      { src: "/images/color cards/VCP color card.jpeg", alt: "VCP color card" }
+                    ].map((card, idx) => (
+                      <div key={idx} className="group/item">
+                        <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200">
+                          <Image
+                            src={card.src}
+                            alt={card.alt}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 
                 {/* Status indicator */}
