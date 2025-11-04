@@ -192,7 +192,7 @@ export function Services({
                 
                 {/* Image */}
                 <div className="relative">
-                  <div className="relative w-full aspect-[3/4] bg-neutral-100">
+                  <div className="relative w-full aspect-[3/4] bg-white">
                     <Image
                       src={selectedImage.src}
                       alt={selectedImage.name}
