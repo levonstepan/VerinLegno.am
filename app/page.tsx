@@ -3,7 +3,6 @@ import { Hero } from "./components/Hero";
 import { Products } from "./components/Products";
 import { Catalogues } from "./components/Catalogues";
 import { Services } from "./components/Services";
-import { Workshops } from "./components/Workshops";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
@@ -17,7 +16,7 @@ export default function Home() {
         <Hero content={enContent.hero} />
         <Products content={enContent.products} />
         <Catalogues content={enContent.catalogues} />
-        <Services content={enContent.services} />        <Workshops content={enContent.workshops} />
+        <Services content={enContent.services} />        
         <About content={enContent.about} />
         <Contact content={enContent.contact} />
       </main>
