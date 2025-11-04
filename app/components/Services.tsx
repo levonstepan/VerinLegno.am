@@ -167,13 +167,22 @@ export function Services({
           {/* Image Modal */}
           {selectedImage && (
             <div 
-              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 pt-24"
+              className="fixed inset-0 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 pt-24"
               onClick={() => setSelectedImage(null)}
-              style={{ backdropFilter: 'blur(12px)' }}
+              style={{ 
+                backdropFilter: 'blur(12px)', 
+                zIndex: 99999,
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                position: 'fixed'
+              }}
             >
               <div 
-                className="relative max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden bg-white z-[10000]"
+                className="relative max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden bg-white"
                 onClick={(e) => e.stopPropagation()}
+                style={{ zIndex: 100000 }}
               >
                 {/* Close button */}
                 <button
