@@ -9,6 +9,7 @@ export function Contact({
     rootsText: string;
     address: string;
     phone: string;
+    ceoName?: string;
     email: string;
     newsletterTitle?: string;
     newsletterText?: string;
@@ -64,6 +65,9 @@ export function Contact({
                     >
                       {content.phone}
                     </a>
+                    {content.ceoName && (
+                      <div className="text-neutral-600 mt-1 text-sm">{content.ceoName}</div>
+                    )}
                   </div>
                 </div>
                 

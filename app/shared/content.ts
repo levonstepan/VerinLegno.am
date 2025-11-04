@@ -2,7 +2,7 @@ export const hyContent = {
   hero: {
     title: "VerinLegno in Armenia",
     subtitle:
-      "VerinLegno — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
+      "Verinlegno Spa, founded in Massa e Cozzile in 1975 — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
     cta: "Discover more",
     ctaLink: "#products",
   },
@@ -66,7 +66,8 @@ export const hyContent = {
     rootsTitle: "Roots Furniture LLC",
     rootsText: "Furniture manufacturer in Vagharshapat",
     address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
-    phone: "+374 XX XXX XXX",
+    phone: "+374 91 665520",
+    ceoName: "Levon Stepanyan - CEO of Roots LLC",
     email: "info@roots.am",
     newsletterTitle: "Subscribe to our newsletter!",
     newsletterText:
@@ -91,7 +92,7 @@ export const enContent = {
   hero: {
     title: "VerinLegno in Armenia",
     subtitle:
-      "VerinLegno — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
+      "Verinlegno Spa, founded in Massa e Cozzile in 1975 — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
     cta: "Discover more",
     ctaLink: "#products",
   },
@@ -155,7 +156,8 @@ export const enContent = {
     rootsTitle: "Roots Furniture LLC",
     rootsText: "Furniture manufacturer in Vagharshapat",
     address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
-    phone: "+374 XX XXX XXX",
+    phone: "+374 91 665520",
+    ceoName: "Levon Stepanyan - CEO of Roots LLC",
     email: "info@roots.am",
     newsletterTitle: "Subscribe to our newsletter!",
     newsletterText:

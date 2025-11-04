@@ -30,7 +30,7 @@ export function Hero({
           {/* Content card */}
           <div className="relative bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-neutral-200">
             <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-              <span className="text-sm font-medium text-[#D70000]">Since 1983 • Italian Excellence</span>
+              <span className="text-sm font-medium text-[#D70000]">Since 1975 • Italian Excellence</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-8 text-neutral-800">
