@@ -140,7 +140,7 @@ export function Services({
                         className="group/item cursor-pointer"
                         onClick={() => setSelectedImage({ src: card.src, name: card.name })}
                       >
-                        <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200 p-1">
+                        <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200 bg-white">
                           <Image
                             src={card.src}
                             alt={card.alt}
