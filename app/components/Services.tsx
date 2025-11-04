@@ -167,11 +167,11 @@ export function Services({
           {/* Image Modal */}
           {selectedImage && (
             <div 
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 pt-24"
               onClick={() => setSelectedImage(null)}
             >
               <div 
-                className="relative max-w-2xl w-full max-h-[85vh] rounded-2xl shadow-2xl overflow-hidden"
+                className="relative max-w-2xl w-full max-h-[70vh] rounded-2xl shadow-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Close button */}
@@ -196,8 +196,8 @@ export function Services({
                     priority
                   />
                   {/* Name overlay at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
                       {selectedImage.name}
                     </h3>
                   </div>
