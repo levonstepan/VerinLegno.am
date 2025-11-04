@@ -133,20 +133,20 @@ export function Services({
                 {/* Color cards we are working with */}
                 <div>
                   <div className="text-sm font-semibold text-neutral-700 mb-2">Color cards we are working with</div>
-                  <div className="grid grid-cols-2 gap-2 max-w-xs mx-auto">
+                  <div className="grid grid-cols-2 gap-3">
                     {colorCards.map((card, idx) => (
                       <div 
                         key={idx} 
                         className="group/item cursor-pointer"
                         onClick={() => setSelectedImage({ src: card.src, name: card.name })}
                       >
-                        <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200 bg-white">
+                        <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200 bg-white">
                           <Image
                             src={card.src}
                             alt={card.alt}
                             fill
                             className="object-contain"
-                            sizes="(max-width: 768px) 40vw, 20vw"
+                            sizes="(max-width: 768px) 45vw, 30vw"
                           />
                         </div>
                       </div>
