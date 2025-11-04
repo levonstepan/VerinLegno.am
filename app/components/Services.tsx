@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Services({
   content,
@@ -15,13 +15,40 @@ export function Services({
   }>;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; name: string } | null>(null);
+
+  const colorCards = [
+    { src: "/images/color cards/IL LACCATO color card.jpeg", name: "IL LACCATO", alt: "IL LACCATO color card" },
+    { src: "/images/color cards/NCS Index 2050 color card.jpeg", name: "NCS Index 2050", alt: "NCS Index 2050 color card" },
+    { src: "/images/color cards/RAL color card.jpeg", name: "RAL", alt: "RAL color card" },
+    { src: "/images/color cards/VCP color card.jpeg", name: "VCP", alt: "VCP color card" }
+  ];
+
+  // Handle ESC key to close modal
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImage) {
+        setSelectedImage(null);
+      }
+    };
+    
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
 
   return (
     <section id="services" className="py-8 md:py-12 bg-white relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem', visibility: 'visible', display: 'block' }}>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6" style={{ visibility: 'visible', display: 'block' }}>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="grid md:grid-cols-5 gap-12 items-center">
+          <div className="md:col-span-2">
             <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
               <span className="text-sm font-medium text-[#D70000]">Advanced Technology</span>
             </div>
@@ -85,7 +112,7 @@ export function Services({
           </div>
           
           {/* Visual mockup */}
-          <div className="relative">
+          <div className="relative md:col-span-3">
             <div 
               className="bg-gradient-to-br from-neutral-50 to-white rounded-2xl p-8 border-2 border-neutral-200 shadow-2xl transform transition-all duration-500 hover:shadow-[#D70000]/10 hover:scale-[1.02]"
               onMouseEnter={() => setIsHovered(true)}
@@ -107,20 +134,19 @@ export function Services({
                 <div className="mb-4">
                   <div className="text-sm font-semibold text-neutral-700 mb-4">Color cards we are working with</div>
                   <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { src: "/images/color cards/IL LACCATO color card.jpeg", alt: "IL LACCATO color card" },
-                      { src: "/images/color cards/NCS Index 2050 color card.jpeg", alt: "NCS Index 2050 color card" },
-                      { src: "/images/color cards/RAL color card.jpeg", alt: "RAL color card" },
-                      { src: "/images/color cards/VCP color card.jpeg", alt: "VCP color card" }
-                    ].map((card, idx) => (
-                      <div key={idx} className="group/item">
+                    {colorCards.map((card, idx) => (
+                      <div 
+                        key={idx} 
+                        className="group/item cursor-pointer"
+                        onClick={() => setSelectedImage({ src: card.src, name: card.name })}
+                      >
                         <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200">
                           <Image
                             src={card.src}
                             alt={card.alt}
                             fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 50vw, 25vw"
+                            className="object-contain"
+                            sizes="(max-width: 768px) 50vw, 40vw"
                           />
                         </div>
                       </div>
@@ -137,6 +163,51 @@ export function Services({
             </div>
             
           </div>
+          
+          {/* Image Modal */}
+          {selectedImage && (
+            <div 
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div 
+                className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close button */}
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-[#D70000] text-white flex items-center justify-center hover:bg-[#b30000] transition-colors shadow-lg"
+                  aria-label="Close"
+                >
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
+                {/* Image with name */}
+                <div className="relative">
+                  <div className="relative w-full aspect-[3/4] bg-neutral-100">
+                    <Image
+                      src={selectedImage.src}
+                      alt={selectedImage.name}
+                      fill
+                      className="object-contain"
+                      sizes="90vw"
+                      priority
+                    />
+                  </div>
+                  
+                  {/* Name overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                      {selectedImage.name}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
