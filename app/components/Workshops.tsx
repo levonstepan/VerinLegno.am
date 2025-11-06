@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function Workshops({
   content,
@@ -14,21 +14,80 @@ export function Workshops({
   }>;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const scrollProgress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
+        setScrollY(scrollProgress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section id="workshops" className="py-8 md:py-12 bg-white relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem' }}>
+    <section ref={sectionRef} id="workshops" className="pt-4 md:pt-6 pb-8 md:pb-12 bg-white relative overflow-hidden">
+      {/* Animated Background with Scroll Parallax */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(215,0,0,0.03)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(215,0,0,0.025)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '4s' }} />
+        <div className="absolute top-0 left-0 w-full h-full">
+          {/* Scroll-responsive moving shapes */}
+          <div 
+            className="absolute top-32 right-20 w-80 h-80 bg-[#D70000]/8 rounded-full blur-3xl animate-float"
+            style={{ 
+              transform: `translate(${scrollY * 30}px, ${scrollY * 40}px) scale(${1 + scrollY * 0.1})`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          />
+          <div 
+            className="absolute bottom-32 left-20 w-[400px] h-[400px] bg-[#D70000]/6 rounded-full blur-3xl animate-float" 
+            style={{ 
+              animationDelay: '2.5s', 
+              animationDuration: '6s',
+              transform: `translate(${-scrollY * 25}px, ${-scrollY * 35}px) scale(${1 + scrollY * 0.08})`,
+              transition: 'transform 0.1s ease-out'
+            }} 
+          />
+          <div 
+            className="absolute top-1/2 right-1/3 w-72 h-72 bg-[#D70000]/10 rounded-full blur-3xl animate-float" 
+            style={{ 
+              animationDelay: '0.5s', 
+              animationDuration: '5.5s',
+              transform: `translate(${scrollY * 20}px, ${-scrollY * 30}px) scale(${1 + scrollY * 0.12})`,
+              transition: 'transform 0.1s ease-out'
+            }} 
+          />
+          <div 
+            className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#D70000]/5 rounded-full blur-3xl animate-float" 
+            style={{ 
+              animationDelay: '3.5s', 
+              animationDuration: '7.5s',
+              transform: `translate(${-scrollY * 35}px, ${scrollY * 25}px) scale(${1 + scrollY * 0.15})`,
+              transition: 'transform 0.1s ease-out'
+            }} 
+          />
+        </div>
+      </div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Professional Training</span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-12 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
             {content.title}
           </h2>
-          
-          <p className="text-lg text-neutral-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
             {content.subtitle}
           </p>
         </div>
@@ -124,4 +183,6 @@ export function Workshops({
     </section>
   );
 }
+
+
 
