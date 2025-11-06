@@ -25,29 +25,13 @@ export const hyContent = {
   catalogues: {
     title: "Technical Documents",
     items: [
-      // First 4 manuals - shown on main page
+      // All 6 manuals - first 4 shown on main page, all 6 on See more page
       { name: "G100 - VF BIANCO 310", href: "/manuals/G100 - VF BIANCO 310.pdf" },
       { name: "G490 - VF BIANCO 470", href: "/manuals/G490 - VF BIANCO 470.pdf" },
       { name: "G790 - VF A TX 2019 E", href: "/manuals/G790 - VF A TX 2019 E.pdf" },
       { name: "G930 - VF A 893", href: "/manuals/G930 - VF A 893.pdf" },
-      // Rest of the documents
-      { name: "2025 CATALOGO PRODOTTI LINEE SOLVENTE E IDRO", href: "/files/catalogue-2025.pdf" },
-      { name: "ACRYSTONE", href: "/files/acrystone.pdf" },
-      { name: "AG+", href: "/files/ag-plus.pdf" },
-      { name: "COLORANTI", href: "/catalogues/Stains.pdf" },
-      { name: "CRYSTAL EPOX", href: "/catalogues/Crystal-epox_ENG.pdf" },
-      { name: "EFFETTI SPECIALI", href: "/files/effetti-speciali.pdf" },
-      { name: "GARANZIA", href: "/files/garanzia.pdf" },
       { name: "H36025 - VPK BIANCO 260 25 GLOSS", href: "/manuals/H36025 - VPK BIANCO 260 25 GLOSS.pdf" },
-      { name: "HYDRO OIL EFFECT", href: "/files/hydro-oil.pdf" },
-      { name: "MARKOLOR", href: "/files/markolor.pdf" },
       { name: "M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS", href: "/manuals/M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS.pdf" },
-      { name: "PARQUET", href: "/files/parquet.pdf" },
-      { name: "PATINE", href: "/catalogues/Patinas.pdf" },
-      { name: "VERIN-SEA FINISHING", href: "/files/verin-sea.pdf" },
-      { name: "VERNICI IGNIFUGHE", href: "/files/ignifughi.pdf" },
-      { name: "WOOD OIL", href: "/catalogues/WOOD-OIL.pdf" },
-      { name: "XILOVER", href: "/files/xilover.pdf" },
     ] as const,
     cta: "Discover all catalogues",
   },
@@ -129,29 +113,13 @@ export const enContent = {
   catalogues: {
     title: "Technical Documents",
     items: [
-      // First 4 manuals - shown on main page
+      // All 6 manuals - first 4 shown on main page, all 6 on See more page
       { name: "G100 - VF BIANCO 310", href: "/manuals/G100 - VF BIANCO 310.pdf" },
       { name: "G490 - VF BIANCO 470", href: "/manuals/G490 - VF BIANCO 470.pdf" },
       { name: "G790 - VF A TX 2019 E", href: "/manuals/G790 - VF A TX 2019 E.pdf" },
       { name: "G930 - VF A 893", href: "/manuals/G930 - VF A 893.pdf" },
-      // Rest of the documents
-      { name: "2025 CATALOGO PRODOTTI LINEE SOLVENTE E IDRO", href: "/files/catalogue-2025.pdf" },
-      { name: "ACRYSTONE", href: "/files/acrystone.pdf" },
-      { name: "AG+", href: "/files/ag-plus.pdf" },
-      { name: "COLORANTI", href: "/catalogues/Stains.pdf" },
-      { name: "CRYSTAL EPOX", href: "/catalogues/Crystal-epox_ENG.pdf" },
-      { name: "EFFETTI SPECIALI", href: "/files/effetti-speciali.pdf" },
-      { name: "GARANZIA", href: "/files/garanzia.pdf" },
       { name: "H36025 - VPK BIANCO 260 25 GLOSS", href: "/manuals/H36025 - VPK BIANCO 260 25 GLOSS.pdf" },
-      { name: "HYDRO OIL EFFECT", href: "/files/hydro-oil.pdf" },
-      { name: "MARKOLOR", href: "/files/markolor.pdf" },
       { name: "M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS", href: "/manuals/M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS.pdf" },
-      { name: "PARQUET", href: "/files/parquet.pdf" },
-      { name: "PATINE", href: "/catalogues/Patinas.pdf" },
-      { name: "VERIN-SEA FINISHING", href: "/files/verin-sea.pdf" },
-      { name: "VERNICI IGNIFUGHE", href: "/files/ignifughi.pdf" },
-      { name: "WOOD OIL", href: "/catalogues/WOOD-OIL.pdf" },
-      { name: "XILOVER", href: "/files/xilover.pdf" },
     ] as const,
     cta: "Discover all catalogues",
   },
