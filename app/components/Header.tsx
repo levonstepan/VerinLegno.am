@@ -37,16 +37,16 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               {isEn ? "Manuals" : "Կատալոգներ"}
             </Link>
             <Link
-              href={isEn ? "/en#company" : "#company"}
-              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
-            >
-              {isEn ? "Partnership" : "Ընկերություն"}
-            </Link>
-            <Link
               href={isEn ? "/en#services" : "#services"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Services" : "Ծառայություններ"}
+            </Link>
+            <Link
+              href={isEn ? "/en#company" : "#company"}
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+            >
+              {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link
               href={isEn ? "/en#workshops" : "#workshops"}
@@ -150,18 +150,18 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               {isEn ? "Manuals" : "Կատալոգներ"}
             </Link>
             <Link 
-              href={isEn ? "/en#company" : "#company"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {isEn ? "Partnership" : "Ընկերություն"}
-            </Link>
-            <Link 
               href={isEn ? "/en#services" : "#services"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Services" : "Ծառայություններ"}
+            </Link>
+            <Link 
+              href={isEn ? "/en#company" : "#company"} 
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link 
               href={isEn ? "/en#workshops" : "#workshops"} 
