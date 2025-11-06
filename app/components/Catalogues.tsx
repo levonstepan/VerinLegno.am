@@ -20,14 +20,14 @@ export function Catalogues({
   const sectionRef = useRef<HTMLElement>(null);
   const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
-  // Dynamic gradient colors for each frame - different colors that change on hover
+  // Dynamic gradient colors for each frame - different colors that change on hover (more saturated)
   const gradientColors = [
-    { from: 'from-blue-50', via: 'via-purple-50', to: 'to-pink-50', hoverFrom: 'group-hover:from-blue-100', hoverVia: 'group-hover:via-purple-100', hoverTo: 'group-hover:to-pink-100' },
-    { from: 'from-emerald-50', via: 'via-teal-50', to: 'to-cyan-50', hoverFrom: 'group-hover:from-emerald-100', hoverVia: 'group-hover:via-teal-100', hoverTo: 'group-hover:to-cyan-100' },
-    { from: 'from-amber-50', via: 'via-orange-50', to: 'to-red-50', hoverFrom: 'group-hover:from-amber-100', hoverVia: 'group-hover:via-orange-100', hoverTo: 'group-hover:to-red-100' },
-    { from: 'from-indigo-50', via: 'via-blue-50', to: 'to-violet-50', hoverFrom: 'group-hover:from-indigo-100', hoverVia: 'group-hover:via-blue-100', hoverTo: 'group-hover:to-violet-100' },
-    { from: 'from-rose-50', via: 'via-pink-50', to: 'to-fuchsia-50', hoverFrom: 'group-hover:from-rose-100', hoverVia: 'group-hover:via-pink-100', hoverTo: 'group-hover:to-fuchsia-100' },
-    { from: 'from-green-50', via: 'via-emerald-50', to: 'to-teal-50', hoverFrom: 'group-hover:from-green-100', hoverVia: 'group-hover:via-emerald-100', hoverTo: 'group-hover:to-teal-100' },
+    { from: 'from-blue-100', via: 'via-purple-100', to: 'to-pink-100', hoverFrom: 'group-hover:from-blue-200', hoverVia: 'group-hover:via-purple-200', hoverTo: 'group-hover:to-pink-200' },
+    { from: 'from-emerald-100', via: 'via-teal-100', to: 'to-cyan-100', hoverFrom: 'group-hover:from-emerald-200', hoverVia: 'group-hover:via-teal-200', hoverTo: 'group-hover:to-cyan-200' },
+    { from: 'from-amber-100', via: 'via-orange-100', to: 'to-red-100', hoverFrom: 'group-hover:from-amber-200', hoverVia: 'group-hover:via-orange-200', hoverTo: 'group-hover:to-red-200' },
+    { from: 'from-indigo-100', via: 'via-blue-100', to: 'to-violet-100', hoverFrom: 'group-hover:from-indigo-200', hoverVia: 'group-hover:via-blue-200', hoverTo: 'group-hover:to-violet-200' },
+    { from: 'from-rose-100', via: 'via-pink-100', to: 'to-fuchsia-100', hoverFrom: 'group-hover:from-rose-200', hoverVia: 'group-hover:via-pink-200', hoverTo: 'group-hover:to-fuchsia-200' },
+    { from: 'from-green-100', via: 'via-emerald-100', to: 'to-teal-100', hoverFrom: 'group-hover:from-green-200', hoverVia: 'group-hover:via-emerald-200', hoverTo: 'group-hover:to-teal-200' },
   ];
 
   return (
@@ -62,7 +62,7 @@ export function Catalogues({
                 <div className={`absolute inset-0 bg-gradient-to-br ${gradient.from} ${gradient.via} ${gradient.to} ${gradient.hoverFrom} ${gradient.hoverVia} ${gradient.hoverTo} transition-all duration-500 ease-in-out rounded-xl`} />
                 
                 {/* Additional gradient overlay for depth and readability */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-white/70 via-white/50 to-transparent group-hover:from-white/40 group-hover:via-white/30 group-hover:to-transparent transition-all duration-500 rounded-xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br from-white/50 via-white/30 to-transparent group-hover:from-white/30 group-hover:via-white/20 group-hover:to-transparent transition-all duration-500 rounded-xl`} />
                 
                 {/* PDF icon */}
                 <div className={`relative z-10 mb-4 flex items-center gap-3`}>
