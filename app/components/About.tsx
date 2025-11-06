@@ -34,7 +34,7 @@ export function About({
             <div className="relative bg-white rounded-2xl p-4 border-2 border-neutral-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="relative w-full min-h-[400px]">
                 <Image
-                  src="/partnership.jpg"
+                  src="/partnership-min.jpg"
                   alt="Partnership"
                   fill
                   className="object-contain rounded-lg"
