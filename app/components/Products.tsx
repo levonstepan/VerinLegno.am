@@ -85,22 +85,22 @@ export function Products({
                 href={item.href}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative ${showAll ? 'p-6' : 'p-8 md:p-10'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''}`}
+                className={`group relative ${showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''}`}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
                 
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
-                  <div className="relative z-10 mb-4 flex justify-center">
-                    <div className={`${showAll ? 'w-1/2' : 'w-1/2'} ${showAll ? 'h-48' : 'h-56 md:h-64'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
+                  <div className="relative z-10 mb-3 flex justify-center">
+                    <div className={`${showAll ? 'w-full' : 'w-full'} ${showAll ? 'h-48' : 'h-64 md:h-72'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
                       <Image
                         src={item.image}
                         alt={item.name}
                         width={600}
                         height={400}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 768px) 50vw, 50vw"
+                        sizes="(max-width: 768px) 100vw, 100vw"
                       />
                     </div>
                   </div>
@@ -112,7 +112,7 @@ export function Products({
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className={`font-semibold ${showAll ? 'text-lg' : 'text-xl md:text-2xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300`}>
+                  <h3 className={`font-semibold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300 text-center`}>
                     {item.image ? getCatalogueName(item.image) : item.name}
                   </h3>
                   {item.desc && (
