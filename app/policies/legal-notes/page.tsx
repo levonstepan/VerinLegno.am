@@ -85,14 +85,7 @@ export default function LegalNotes() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">8. Data Protection</h2>
-            <p className="text-neutral-700 mb-4">
-              The collection, processing, and use of personal data through this website is governed by our Privacy Policy. By using this website, you consent to the collection and use of information as described in our Privacy Policy.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">9. Modifications</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">8. Modifications</h2>
             <p className="text-neutral-700 mb-4">
               Roots Furniture LLC reserves the right to modify, suspend, or discontinue any aspect of this website at any time without prior notice. We also reserve the right to update these legal notes at any time.
             </p>
@@ -102,7 +95,7 @@ export default function LegalNotes() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">10. Contact</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">9. Contact</h2>
             <p className="text-neutral-700 mb-4">
               For any questions regarding these legal notes or the website, please contact us:
             </p>
@@ -120,4 +113,3 @@ export default function LegalNotes() {
     </div>
   );
 }
-
