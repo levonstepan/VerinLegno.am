@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 export function Catalogues({
@@ -11,6 +12,7 @@ export function Catalogues({
     items: ReadonlyArray<{
       name: string;
       href: string;
+      image?: string;
     }>;
     cta: string;
   }>;
@@ -127,17 +129,36 @@ export function Catalogues({
                 {/* Gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
                 
-                {/* PDF icon */}
-                <div className={`relative z-10 mb-4 flex items-center gap-3`}>
-                  <div className={`${showAll ? 'w-12 h-12' : 'w-16 h-16 md:w-20 md:h-20'} rounded-lg bg-[#D70000]/10 flex items-center justify-center group-hover:bg-[#D70000]/20 transition-colors`}>
-                    <svg className={`${showAll ? 'w-6 h-6' : 'w-8 h-8 md:w-10 md:h-10'} text-[#D70000]`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
+                {/* Catalogue Image or PDF icon */}
+                {item.image ? (
+                  <div className={`relative z-10 mb-4 ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100`}>
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <div className="absolute top-2 right-2 bg-[#D70000]/90 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                      PDF
+                    </div>
                   </div>
-                  <div className={`${showAll ? 'text-xs' : 'text-sm md:text-base'} font-medium text-neutral-500 group-hover:text-[#D70000] transition-colors`}>
-                    PDF
+                ) : (
+                  <div className={`relative z-10 mb-4 flex items-center gap-3`}>
+                    <div className={`${showAll ? 'w-12 h-12' : 'w-16 h-16 md:w-20 md:h-20'} rounded-lg bg-[#D70000]/10 flex items-center justify-center group-hover:bg-[#D70000]/20 transition-colors`}>
+                      <svg className={`${showAll ? 'w-6 h-6' : 'w-8 h-8 md:w-10 md:h-10'} text-[#D70000]`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div className={`${showAll ? 'text-xs' : 'text-sm md:text-base'} font-medium text-neutral-500 group-hover:text-[#D70000] transition-colors`}>
+                      PDF
+                    </div>
                   </div>
-                </div>
+                )}
                 
                 {/* Content */}
                 <div className="relative z-10">
