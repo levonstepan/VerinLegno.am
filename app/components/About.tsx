@@ -36,8 +36,8 @@ export function About({
                 <Image
                   src="/partnership-min.jpg"
                   alt="Partnership"
-                  width={2650}
-                  height={1768}
+                  width={1325}
+                  height={884}
                   className="object-contain rounded-lg w-full h-auto"
                   sizes="(max-width: 768px) 100vw, 60vw"
                 />
