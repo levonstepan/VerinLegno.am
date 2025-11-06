@@ -35,7 +35,7 @@ export function Products({
   showAll?: boolean;
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const displayedItems = showAll ? content.items : content.items.slice(0, 4);
+  const displayedItems = showAll ? content.items.slice(0, 8) : content.items.slice(0, 4);
 
   // Helper function to get catalogue name from image path
   const getCatalogueName = (imagePath: string | undefined): string => {
@@ -75,7 +75,7 @@ export function Products({
           </p>
         </div>
         
-        <div className={`flex flex-wrap justify-center gap-6 md:gap-8`}>
+        <div className={`${showAll ? 'grid grid-cols-2 md:grid-cols-4' : 'flex flex-wrap justify-center'} gap-6 md:gap-8`}>
           {displayedItems.map((item, index) => {
             const icon = productIcons[item.name] || "🎨";
             const isHovered = hoveredIndex === index;
