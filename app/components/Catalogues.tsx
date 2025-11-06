@@ -22,12 +22,12 @@ export function Catalogues({
 
   // Dynamic gradient colors for each frame - different colors that change on hover (more saturated)
   const gradientColors = [
-    { from: 'from-blue-100', via: 'via-purple-100', to: 'to-pink-100', hoverFrom: 'group-hover:from-blue-200', hoverVia: 'group-hover:via-purple-200', hoverTo: 'group-hover:to-pink-200' },
-    { from: 'from-emerald-100', via: 'via-teal-100', to: 'to-cyan-100', hoverFrom: 'group-hover:from-emerald-200', hoverVia: 'group-hover:via-teal-200', hoverTo: 'group-hover:to-cyan-200' },
-    { from: 'from-amber-100', via: 'via-orange-100', to: 'to-red-100', hoverFrom: 'group-hover:from-amber-200', hoverVia: 'group-hover:via-orange-200', hoverTo: 'group-hover:to-red-200' },
-    { from: 'from-indigo-100', via: 'via-blue-100', to: 'to-violet-100', hoverFrom: 'group-hover:from-indigo-200', hoverVia: 'group-hover:via-blue-200', hoverTo: 'group-hover:to-violet-200' },
-    { from: 'from-rose-100', via: 'via-pink-100', to: 'to-fuchsia-100', hoverFrom: 'group-hover:from-rose-200', hoverVia: 'group-hover:via-pink-200', hoverTo: 'group-hover:to-fuchsia-200' },
-    { from: 'from-green-100', via: 'via-emerald-100', to: 'to-teal-100', hoverFrom: 'group-hover:from-green-200', hoverVia: 'group-hover:via-emerald-200', hoverTo: 'group-hover:to-teal-200' },
+    { from: 'from-blue-200', via: 'via-purple-200', to: 'to-pink-200', hoverFrom: 'group-hover:from-blue-300', hoverVia: 'group-hover:via-purple-300', hoverTo: 'group-hover:to-pink-300' },
+    { from: 'from-emerald-200', via: 'via-teal-200', to: 'to-cyan-200', hoverFrom: 'group-hover:from-emerald-300', hoverVia: 'group-hover:via-teal-300', hoverTo: 'group-hover:to-cyan-300' },
+    { from: 'from-amber-200', via: 'via-orange-200', to: 'to-red-200', hoverFrom: 'group-hover:from-amber-300', hoverVia: 'group-hover:via-orange-300', hoverTo: 'group-hover:to-red-300' },
+    { from: 'from-indigo-200', via: 'via-blue-200', to: 'to-violet-200', hoverFrom: 'group-hover:from-indigo-300', hoverVia: 'group-hover:via-blue-300', hoverTo: 'group-hover:to-violet-300' },
+    { from: 'from-rose-200', via: 'via-pink-200', to: 'to-fuchsia-200', hoverFrom: 'group-hover:from-rose-300', hoverVia: 'group-hover:via-pink-300', hoverTo: 'group-hover:to-fuchsia-300' },
+    { from: 'from-green-200', via: 'via-emerald-200', to: 'to-teal-200', hoverFrom: 'group-hover:from-green-300', hoverVia: 'group-hover:via-emerald-300', hoverTo: 'group-hover:to-teal-300' },
   ];
 
   return (
@@ -62,7 +62,7 @@ export function Catalogues({
                 <div className={`absolute inset-0 bg-gradient-to-br ${gradient.from} ${gradient.via} ${gradient.to} ${gradient.hoverFrom} ${gradient.hoverVia} ${gradient.hoverTo} transition-all duration-500 ease-in-out rounded-xl`} />
                 
                 {/* Additional gradient overlay for depth and readability */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-white/50 via-white/30 to-transparent group-hover:from-white/30 group-hover:via-white/20 group-hover:to-transparent transition-all duration-500 rounded-xl`} />
+                <div className={`absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-transparent group-hover:from-white/20 group-hover:via-white/10 group-hover:to-transparent transition-all duration-500 rounded-xl`} />
                 
                 {/* PDF icon */}
                 <div className={`relative z-10 mb-4 flex items-center gap-3`}>
@@ -78,7 +78,7 @@ export function Catalogues({
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className={`font-semibold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-3 group-hover:text-[#D70000] transition-colors duration-300 line-clamp-2`}>
+                  <h3 className={`font-semibold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-3 text-neutral-900 group-hover:text-[#D70000] transition-colors duration-300 line-clamp-2 drop-shadow-sm`}>
                     {item.name}
                   </h3>
                   
