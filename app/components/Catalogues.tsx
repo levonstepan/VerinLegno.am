@@ -24,6 +24,16 @@ export function Catalogues({
   const drawRef = useRef(1);
   const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
+  // Dynamic gradient colors for each frame - different colors that change on hover
+  const gradientColors = [
+    { from: 'from-blue-50', via: 'via-purple-50', to: 'to-pink-50', hoverFrom: 'group-hover:from-blue-100', hoverVia: 'group-hover:via-purple-100', hoverTo: 'group-hover:to-pink-100' },
+    { from: 'from-emerald-50', via: 'via-teal-50', to: 'to-cyan-50', hoverFrom: 'group-hover:from-emerald-100', hoverVia: 'group-hover:via-teal-100', hoverTo: 'group-hover:to-cyan-100' },
+    { from: 'from-amber-50', via: 'via-orange-50', to: 'to-red-50', hoverFrom: 'group-hover:from-amber-100', hoverVia: 'group-hover:via-orange-100', hoverTo: 'group-hover:to-red-100' },
+    { from: 'from-indigo-50', via: 'via-blue-50', to: 'to-violet-50', hoverFrom: 'group-hover:from-indigo-100', hoverVia: 'group-hover:via-blue-100', hoverTo: 'group-hover:to-violet-100' },
+    { from: 'from-rose-50', via: 'via-pink-50', to: 'to-fuchsia-50', hoverFrom: 'group-hover:from-rose-100', hoverVia: 'group-hover:via-pink-100', hoverTo: 'group-hover:to-fuchsia-100' },
+    { from: 'from-green-50', via: 'via-emerald-50', to: 'to-teal-50', hoverFrom: 'group-hover:from-green-100', hoverVia: 'group-hover:via-emerald-100', hoverTo: 'group-hover:to-teal-100' },
+  ];
+
   useEffect(() => {
     // Dynamic import of Trianglify to avoid SSR issues
     let Trianglify: any;
@@ -206,6 +216,7 @@ export function Catalogues({
         <div className={`grid ${showAll ? 'sm:grid-cols-2 md:grid-cols-3' : 'sm:grid-cols-2'} gap-6 md:gap-8`}>
           {displayedItems.map((item, index) => {
             const isHovered = hoveredIndex === index;
+            const gradient = gradientColors[index % gradientColors.length];
             
             return (
               <a
@@ -213,10 +224,13 @@ export function Catalogues({
                 href={item.href}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative ${showAll ? 'p-6' : 'p-8 md:p-10'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''}`}
+                className={`group relative ${showAll ? 'p-6' : 'p-8 md:p-10'} rounded-xl border-2 border-neutral-200 hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''}`}
               >
-                {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
+                {/* Dynamic gradient background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${gradient.from} ${gradient.via} ${gradient.to} ${gradient.hoverFrom} ${gradient.hoverVia} ${gradient.hoverTo} transition-all duration-500 ease-in-out rounded-xl`} />
+                
+                {/* Additional gradient overlay for depth and readability */}
+                <div className={`absolute inset-0 bg-gradient-to-br from-white/70 via-white/50 to-transparent group-hover:from-white/40 group-hover:via-white/30 group-hover:to-transparent transition-all duration-500 rounded-xl`} />
                 
                 {/* PDF icon */}
                 <div className={`relative z-10 mb-4 flex items-center gap-3`}>
