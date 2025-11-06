@@ -82,15 +82,24 @@ export function Products({
                 
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
-                  <div className={`relative z-10 mb-4 ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100`}>
+                  <div className={`relative z-10 mb-4 ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
                     <Image
                       src={item.image}
                       alt={item.name}
                       width={400}
                       height={300}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
+                    {/* Catalogue name at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-3">
+                      <p className="text-white text-sm font-semibold text-center">
+                        {item.image.includes('Crystal Epox') ? 'Crystal Epox' :
+                         item.image.includes('Wood oil') ? 'Wood Oil' :
+                         item.image.includes('Stains') ? 'Stains' :
+                         item.image.includes('Patinas') ? 'Patinas' : ''}
+                      </p>
+                    </div>
                   </div>
                 ) : (
                   <div className={`relative z-10 mb-4 ${showAll ? 'text-4xl' : 'text-5xl md:text-6xl'} transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
