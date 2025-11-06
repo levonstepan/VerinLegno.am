@@ -12,6 +12,11 @@ type WorkshopsProps = {
 };
 
 export function Workshops({ content }: WorkshopsProps) {
+  // Debug logging
+  console.log('Workshops component rendered');
+  console.log('Workshops content:', content);
+  
+  // Always render - no conditional returns
   return (
     <section
       id="workshops"
