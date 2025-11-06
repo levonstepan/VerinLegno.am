@@ -85,7 +85,7 @@ export function Products({
                 href={item.href}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative ${showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''}`}
+                className={`group relative ${showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''} max-w-sm mx-auto`}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
@@ -112,7 +112,7 @@ export function Products({
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className={`font-semibold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300 text-center`}>
+                  <h3 className={`font-bold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300 text-center ${item.image ? 'text-neutral-900' : ''}`}>
                     {item.image ? getCatalogueName(item.image) : item.name}
                   </h3>
                   {item.desc && (
