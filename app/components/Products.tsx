@@ -99,7 +99,12 @@ export function Products({
                         alt={item.name}
                         width={600}
                         height={400}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 ${
+                          item.image.includes('Crystal Epox') || 
+                          item.image.includes('Stains') || 
+                          item.image.includes('Patinas') 
+                            ? 'scale-125' : ''
+                        }`}
                         sizes="(max-width: 768px) 100vw, 100vw"
                       />
                     </div>
