@@ -25,12 +25,6 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
 
           <nav className="hidden md:flex items-center gap-1 text-sm">
             <Link
-              href={isEn ? "/en#company" : "#company"}
-              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
-            >
-              {isEn ? "Partnership" : "Ընկերություն"}
-            </Link>
-            <Link
               href={isEn ? "/en#products" : "#products"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
@@ -41,6 +35,12 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Manuals" : "Կատալոգներ"}
+            </Link>
+            <Link
+              href={isEn ? "/en#company" : "#company"}
+              className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
+            >
+              {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link
               href={isEn ? "/en#services" : "#services"}
@@ -136,13 +136,6 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 space-y-1 animate-fade-in-up">
             <Link 
-              href={isEn ? "/en#company" : "#company"} 
-              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {isEn ? "Partnership" : "Ընկերություն"}
-            </Link>
-            <Link 
               href={isEn ? "/en#products" : "#products"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
@@ -155,6 +148,13 @@ export function Header({ locale }: { locale: "hy" | "en" }) {
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Manuals" : "Կատալոգներ"}
+            </Link>
+            <Link 
+              href={isEn ? "/en#company" : "#company"} 
+              className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link 
               href={isEn ? "/en#services" : "#services"} 
