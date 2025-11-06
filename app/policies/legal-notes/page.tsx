@@ -93,20 +93,6 @@ export default function LegalNotes() {
               Continued use of the website after any changes constitutes acceptance of the modified legal notes.
             </p>
           </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">9. Contact</h2>
-            <p className="text-neutral-700 mb-4">
-              For any questions regarding these legal notes or the website, please contact us:
-            </p>
-            <div className="bg-neutral-50 p-6 rounded-lg">
-              <p className="text-neutral-700 mb-2"><strong>Roots Furniture LLC</strong></p>
-              <p className="text-neutral-700 mb-2">20/1 Ter-Gabrielyan Street, Vagharshapat</p>
-              <p className="text-neutral-700 mb-2">Yerevan, Armenia</p>
-              <p className="text-neutral-700 mb-2">Email: <a href="mailto:info@roots.am" className="text-[#D70000] hover:underline">info@roots.am</a></p>
-              <p className="text-neutral-700">Phone: <a href="tel:+37491665520" className="text-[#D70000] hover:underline">+374 91 665520</a></p>
-            </div>
-          </section>
         </div>
       </main>
       <Footer content={enContent.footer} />

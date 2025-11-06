@@ -91,20 +91,6 @@ export default function TermsOfService() {
               We reserve the right to modify or replace these Terms at any time. By continuing to access or use our Website after any revisions become effective, you agree to be bound by the revised terms.
             </p>
           </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-900">10. Contact Information</h2>
-            <p className="text-neutral-700 mb-4">
-              If you have any questions about these Terms of Service, please contact us:
-            </p>
-            <div className="bg-neutral-50 p-6 rounded-lg">
-              <p className="text-neutral-700 mb-2"><strong>Roots Furniture LLC</strong></p>
-              <p className="text-neutral-700 mb-2">20/1 Ter-Gabrielyan Street, Vagharshapat</p>
-              <p className="text-neutral-700 mb-2">Yerevan, Armenia</p>
-              <p className="text-neutral-700 mb-2">Email: <a href="mailto:info@roots.am" className="text-[#D70000] hover:underline">info@roots.am</a></p>
-              <p className="text-neutral-700">Phone: <a href="tel:+37491665520" className="text-[#D70000] hover:underline">+374 91 665520</a></p>
-            </div>
-          </section>
         </div>
       </main>
       <Footer content={enContent.footer} />
