@@ -32,30 +32,26 @@ export function Catalogues({
 
     const initBackground = async () => {
       try {
-        // Try to load trianglify - first try npm package, then CDN
-        try {
-          const trianglifyModule = await import('trianglify');
-          Trianglify = trianglifyModule.default || trianglifyModule.Trianglify;
-        } catch (npmError) {
-          // If npm import fails, try loading from CDN
-          console.warn('Trianglify npm package not available, trying CDN...');
-          // Load from CDN using dynamic script injection
-          await new Promise((resolve, reject) => {
-            if ((window as any).Trianglify) {
-              Trianglify = (window as any).Trianglify;
-              resolve(true);
-              return;
-            }
-            const script = document.createElement('script');
-            script.src = 'https://unpkg.com/trianglify@4/dist/trianglify.bundle.js';
-            script.onload = () => {
-              Trianglify = (window as any).Trianglify || (window as any).trianglify;
-              resolve(true);
-            };
-            script.onerror = reject;
-            document.head.appendChild(script);
-          });
-        }
+        // Load trianglify from CDN (npm package has native dependencies that cause build issues)
+        // Load from CDN using dynamic script injection
+        await new Promise((resolve, reject) => {
+          if ((window as any).Trianglify) {
+            Trianglify = (window as any).Trianglify;
+            resolve(true);
+            return;
+          }
+          const script = document.createElement('script');
+          script.src = 'https://unpkg.com/trianglify@4/dist/trianglify.bundle.js';
+          script.onload = () => {
+            Trianglify = (window as any).Trianglify || (window as any).trianglify;
+            resolve(true);
+          };
+          script.onerror = () => {
+            console.warn('Failed to load Trianglify from CDN');
+            reject(new Error('CDN load failed'));
+          };
+          document.head.appendChild(script);
+        });
         
         if (!Trianglify) {
           console.warn('Trianglify not available, using fallback pattern');
