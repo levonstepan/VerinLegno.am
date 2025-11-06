@@ -93,14 +93,14 @@ export function Products({
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
                   <div className="relative z-10 mb-4 flex justify-center">
-                    <div className={`${showAll ? 'w-1/2' : 'w-1/2'} ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
+                    <div className={`${showAll ? 'w-4/5' : 'w-full'} ${showAll ? 'h-48' : 'h-56 md:h-64'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
                       <Image
                         src={item.image}
                         alt={item.name}
-                        width={400}
-                        height={300}
+                        width={600}
+                        height={400}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 768px) 25vw, 12.5vw"
+                        sizes="(max-width: 768px) 50vw, 100vw"
                       />
                     </div>
                   </div>
