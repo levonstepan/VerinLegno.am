@@ -30,7 +30,7 @@ export function DynamicBackground() {
       style={{
         opacity,
         transition: 'opacity 0.2s ease-out',
-        zIndex: 1, // Above white background but below content
+        zIndex: 0, // Behind content but visible
       }}
     >
       {/* Animated gradient background */}

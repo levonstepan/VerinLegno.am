@@ -12,7 +12,7 @@ export function Hero({
   }>;
 }) {
   return (
-    <section className="relative bg-white pt-0 pb-8 md:pb-12 overflow-hidden">
+    <section className="relative pt-0 pb-8 md:pb-12 overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 w-full h-full"

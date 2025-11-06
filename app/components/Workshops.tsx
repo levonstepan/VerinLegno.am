@@ -20,7 +20,7 @@ export function Workshops({ content }: WorkshopsProps) {
   return (
     <section
       id="workshops"
-      className="bg-red-50 border border-red-100 py-16 mt-8 relative z-10"
+      className="py-16 mt-8 relative z-10"
       style={{ position: 'relative', zIndex: 10 }}
     >
       <div className="max-w-5xl mx-auto px-4 space-y-4">

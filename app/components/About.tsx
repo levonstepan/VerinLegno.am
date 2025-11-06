@@ -15,7 +15,7 @@ export function About({
   }>;
 }) {
   return (
-    <section id="company" className="py-8 md:py-12 bg-white relative">
+    <section id="company" className="py-8 md:py-12 relative">
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">

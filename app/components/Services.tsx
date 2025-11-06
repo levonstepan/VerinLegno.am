@@ -24,7 +24,7 @@ export function Services({
   ];
 
   return (
-    <section id="services" className="py-8 md:py-12 bg-white relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem', visibility: 'visible', display: 'block' }}>
+    <section id="services" className="py-8 md:py-12 relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem', visibility: 'visible', display: 'block' }}>
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6" style={{ visibility: 'visible', display: 'block' }}>
         <div className="grid md:grid-cols-5 gap-12 items-start">

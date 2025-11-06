@@ -31,7 +31,7 @@ export function Catalogues({
   ];
 
   return (
-    <section ref={sectionRef} id="catalogues" className="pt-4 md:pt-6 pb-8 md:pb-12 bg-white relative">
+    <section ref={sectionRef} id="catalogues" className="pt-4 md:pt-6 pb-8 md:pb-12 relative">
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
