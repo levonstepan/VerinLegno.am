@@ -54,8 +54,8 @@ export function About({
                   <span className="text-xl">🇦🇲</span>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold mb-1">{content.rootsTitle}</h3>
-                  <div className="text-xs text-neutral-600">Official Representative</div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold mb-1 text-neutral-900">{content.rootsTitle}</h3>
+                  <div className="text-xs text-neutral-600 font-medium">Official Representative</div>
                 </div>
               </div>
               
