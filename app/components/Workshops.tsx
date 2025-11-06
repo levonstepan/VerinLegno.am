@@ -13,15 +13,15 @@ export function Workshops({
   }>;
 }) {
   return (
-    <section id="workshops" className="py-12 md:py-16 relative scroll-mt-20 md:scroll-mt-24" style={{ visibility: 'visible', display: 'block' }}>
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
+    <section id="workshops" className="py-12 md:py-16 relative scroll-mt-20 md:scroll-mt-24" style={{ visibility: 'visible', display: 'block', zIndex: 10 }}>
+      <div className="relative z-20 mx-auto max-w-7xl px-4 md:px-6">
         {/* Background card for visibility */}
-        <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-lg border-2 border-neutral-100">
+        <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-2xl border-2 border-[#D70000]/20">
           <div className="text-center mb-8">
             <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
               <span className="text-sm font-medium text-[#D70000]">Professional Training</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-8 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-normal text-neutral-900">
               {content.title}
             </h2>
             <p className="text-lg text-neutral-700 max-w-2xl mx-auto mb-6">
