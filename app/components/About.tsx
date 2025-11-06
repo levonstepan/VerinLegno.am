@@ -32,12 +32,13 @@ export function About({
           <div className="md:col-span-3 group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#D70000] to-[#b30000] rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
             <div className="relative bg-white rounded-2xl p-4 border-2 border-neutral-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="relative w-full min-h-[400px]">
+              <div className="relative w-full flex justify-center">
                 <Image
                   src="/partnership-min.jpg"
                   alt="Partnership"
-                  fill
-                  className="object-contain rounded-lg"
+                  width={2650}
+                  height={1768}
+                  className="object-contain rounded-lg w-full h-auto"
                   sizes="(max-width: 768px) 100vw, 60vw"
                 />
               </div>
