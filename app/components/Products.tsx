@@ -36,6 +36,16 @@ export function Products({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
+  // Helper function to get catalogue name from image path
+  const getCatalogueName = (imagePath: string | undefined): string => {
+    if (!imagePath) return '';
+    if (imagePath.includes('Crystal Epox')) return 'Crystal Epox';
+    if (imagePath.includes('Wood oil')) return 'Wood Oil';
+    if (imagePath.includes('Stains')) return 'Stains';
+    if (imagePath.includes('Patinas')) return 'Patinas';
+    return '';
+  };
+
   return (
     <section id="products" className="pt-8 md:pt-12 pb-4 md:pb-6 bg-white relative overflow-hidden">
       {/* Animated Background */}
@@ -82,23 +92,16 @@ export function Products({
                 
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
-                  <div className={`relative z-10 mb-4 ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                    />
-                    {/* Catalogue name at bottom */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-3">
-                      <p className="text-white text-sm font-semibold text-center">
-                        {item.image.includes('Crystal Epox') ? 'Crystal Epox' :
-                         item.image.includes('Wood oil') ? 'Wood Oil' :
-                         item.image.includes('Stains') ? 'Stains' :
-                         item.image.includes('Patinas') ? 'Patinas' : ''}
-                      </p>
+                  <div className="relative z-10 mb-4 flex justify-center">
+                    <div className={`${showAll ? 'w-1/2' : 'w-1/2'} ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 25vw, 12.5vw"
+                      />
                     </div>
                   </div>
                 ) : (
@@ -110,7 +113,7 @@ export function Products({
                 {/* Content */}
                 <div className="relative z-10">
                   <h3 className={`font-semibold ${showAll ? 'text-lg' : 'text-xl md:text-2xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300`}>
-                    {item.name}
+                    {item.image ? getCatalogueName(item.image) : item.name}
                   </h3>
                   {item.desc && (
                     <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors">
