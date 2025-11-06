@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
-// Icon mapping for different product types
+// Icon mapping for different product types (fallback when no image)
 const productIcons: Record<string, string> = {
   "Special effects": "✨",
   "Water-based exterior": "🌊",
@@ -27,6 +28,7 @@ export function Products({
       name: string;
       href: string;
       desc?: string;
+      image?: string;
     }>;
   }>;
   showAll?: boolean;
@@ -78,10 +80,23 @@ export function Products({
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
                 
-                {/* Icon */}
-                <div className={`relative z-10 mb-4 ${showAll ? 'text-4xl' : 'text-5xl md:text-6xl'} transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
-                  {icon}
-                </div>
+                {/* Catalogue Image or Icon */}
+                {item.image ? (
+                  <div className={`relative z-10 mb-4 ${showAll ? 'h-32' : 'h-40 md:h-48'} rounded-lg overflow-hidden bg-neutral-100`}>
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
+                ) : (
+                  <div className={`relative z-10 mb-4 ${showAll ? 'text-4xl' : 'text-5xl md:text-6xl'} transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
+                    {icon}
+                  </div>
+                )}
                 
                 {/* Content */}
                 <div className="relative z-10">
