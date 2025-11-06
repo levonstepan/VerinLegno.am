@@ -29,6 +29,7 @@ export function Products({
       href: string;
       desc?: string;
       image?: string;
+      pdf?: string;
     }>;
   }>;
   showAll?: boolean;
@@ -79,13 +80,21 @@ export function Products({
             const icon = productIcons[item.name] || "🎨";
             const isHovered = hoveredIndex === index;
             
+            const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+              if (item.pdf && item.image) {
+                e.preventDefault();
+                window.open(item.pdf, '_blank');
+              }
+            };
+
             return (
               <Link
                 key={item.name}
-                href={item.href}
+                href={item.pdf && item.image ? item.pdf : item.href}
+                onClick={handleClick}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative ${showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''} max-w-sm mx-auto`}
+                className={`group relative ${showAll && item.image ? 'p-4 aspect-square' : showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''} ${showAll && item.image ? 'max-w-xs' : 'max-w-sm'} mx-auto`}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
@@ -93,17 +102,18 @@ export function Products({
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
                   <div className="relative z-10 mb-3 flex justify-center">
-                    <div className={`${showAll ? 'w-full' : 'w-full'} ${showAll ? 'h-48' : 'h-64 md:h-72'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
+                    <div className={`w-full ${showAll ? 'h-48' : 'h-64 md:h-72'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
                       <Image
                         src={item.image}
                         alt={item.name}
                         width={600}
                         height={400}
                         className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 ${
-                          item.image.includes('Crystal Epox') || 
-                          item.image.includes('Stains') || 
-                          item.image.includes('Patinas') 
-                            ? 'scale-125' : ''
+                          !showAll && (
+                            item.image.includes('Crystal Epox') || 
+                            item.image.includes('Stains') || 
+                            item.image.includes('Patinas') 
+                          ) ? 'scale-125' : ''
                         }`}
                         sizes="(max-width: 768px) 100vw, 100vw"
                       />
