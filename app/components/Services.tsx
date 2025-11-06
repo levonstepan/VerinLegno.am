@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export function Services({
   content,
@@ -15,7 +15,6 @@ export function Services({
   }>;
 }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<{ src: string; name: string } | null>(null);
 
   const colorCards = [
     { src: "/images/color cards/IL LACCATO color card.jpeg", name: "IL LACCATO", alt: "IL LACCATO color card" },
@@ -23,25 +22,6 @@ export function Services({
     { src: "/images/color cards/RAL color card.jpeg", name: "RAL", alt: "RAL color card" },
     { src: "/images/color cards/VCP color card.jpeg", name: "VCP", alt: "VCP color card" }
   ];
-
-  // Handle ESC key to close modal
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && selectedImage) {
-        setSelectedImage(null);
-      }
-    };
-    
-    if (selectedImage) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
-    }
-    
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
-    };
-  }, [selectedImage]);
 
   return (
     <section id="services" className="py-8 md:py-12 bg-white relative scroll-mt-20 md:scroll-mt-24" style={{ scrollMarginTop: '6rem', visibility: 'visible', display: 'block' }}>
@@ -137,8 +117,7 @@ export function Services({
                     {colorCards.map((card, idx) => (
                       <div 
                         key={idx} 
-                        className="group/item cursor-pointer"
-                        onClick={() => setSelectedImage({ src: card.src, name: card.name })}
+                        className="group/item"
                       >
                         <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-md transition-transform duration-300 group-hover/item:scale-105 border border-neutral-200 bg-white">
                           <Image
@@ -163,62 +142,6 @@ export function Services({
             </div>
             
           </div>
-          
-          {/* Image Modal */}
-          {selectedImage && (
-            <div 
-              className="fixed inset-0 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 pt-24"
-              onClick={() => setSelectedImage(null)}
-              style={{ 
-                backdropFilter: 'blur(12px)', 
-                zIndex: 99999,
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                position: 'fixed'
-              }}
-            >
-              <div 
-                className="relative max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden bg-white"
-                onClick={(e) => e.stopPropagation()}
-                style={{ zIndex: 100000 }}
-              >
-                {/* Close button */}
-                <button
-                  onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-[#D70000] text-white flex items-center justify-center hover:bg-[#b30000] transition-colors shadow-lg"
-                  aria-label="Close"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-                
-                {/* Image with name overlay */}
-                <div className="relative w-full">
-                  <div className="relative w-full" style={{ maxHeight: '70vh' }}>
-                    <Image
-                      src={selectedImage.src}
-                      alt={selectedImage.name}
-                      width={800}
-                      height={1067}
-                      className="object-contain object-top w-full h-auto"
-                      style={{ maxHeight: '70vh', display: 'block' }}
-                      sizes="80vw"
-                      priority
-                    />
-                  </div>
-                  {/* Name overlay at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-4">
-                    <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-                      {selectedImage.name}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </section>
