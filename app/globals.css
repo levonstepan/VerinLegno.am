@@ -22,7 +22,7 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: transparent;
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
