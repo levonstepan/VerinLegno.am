@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export function Catalogues({
   content,
@@ -18,11 +18,183 @@ export function Catalogues({
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const background1Ref = useRef<HTMLDivElement>(null);
+  const background2Ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const drawRef = useRef(1);
   const displayedItems = showAll ? content.items : content.items.slice(0, 4);
 
+  useEffect(() => {
+    // Dynamic import of Trianglify to avoid SSR issues
+    let Trianglify: any;
+    let intervalId: NodeJS.Timeout;
+    let resizeHandler: () => void;
+
+    const initBackground = async () => {
+      try {
+        // Try to load trianglify - first try npm package, then CDN
+        try {
+          const trianglifyModule = await import('trianglify');
+          Trianglify = trianglifyModule.default || trianglifyModule.Trianglify;
+        } catch (npmError) {
+          // If npm import fails, try loading from CDN
+          console.warn('Trianglify npm package not available, trying CDN...');
+          // Load from CDN using dynamic script injection
+          await new Promise((resolve, reject) => {
+            if ((window as any).Trianglify) {
+              Trianglify = (window as any).Trianglify;
+              resolve(true);
+              return;
+            }
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/trianglify@4/dist/trianglify.bundle.js';
+            script.onload = () => {
+              Trianglify = (window as any).Trianglify || (window as any).trianglify;
+              resolve(true);
+            };
+            script.onerror = reject;
+            document.head.appendChild(script);
+          });
+        }
+        
+        if (!Trianglify) {
+          console.warn('Trianglify not available, using fallback pattern');
+          return;
+        }
+
+        const updateSize = () => {
+          if (!containerRef.current || !background1Ref.current || !background2Ref.current) return;
+          
+          const width = window.innerWidth;
+          const height = containerRef.current.offsetHeight || window.innerHeight;
+          
+          containerRef.current.style.minWidth = `${width}px`;
+          containerRef.current.style.minHeight = `${height}px`;
+          background1Ref.current.style.minWidth = `${width}px`;
+          background1Ref.current.style.minHeight = `${height}px`;
+          background2Ref.current.style.minWidth = `${width}px`;
+          background2Ref.current.style.minHeight = `${height}px`;
+        };
+
+        const svgNew = () => {
+          if (!Trianglify || !background1Ref.current || !background2Ref.current) return;
+
+          // Handle both constructor and function call APIs
+          let t;
+          if (typeof Trianglify === 'function') {
+            try {
+              t = new Trianglify({
+                noiseIntensity: 0,
+              });
+            } catch (e) {
+              // If constructor fails, try as a function
+              t = Trianglify({
+                noiseIntensity: 0,
+              });
+            }
+          } else {
+            t = Trianglify;
+          }
+
+          const width = window.innerWidth;
+          const height = containerRef.current?.offsetHeight || window.innerHeight;
+          const pattern = t.generate(width, height);
+
+          // Get dataUrl - handle different pattern formats
+          let dataUrl = pattern.dataUrl;
+          if (!dataUrl && pattern.toCanvas) {
+            // If pattern has toCanvas method, convert to data URL
+            const canvas = pattern.toCanvas();
+            dataUrl = canvas.toDataURL();
+          } else if (!dataUrl && pattern.svg) {
+            // If pattern is an SVG element, convert to data URL
+            const svgString = new XMLSerializer().serializeToString(pattern.svg || pattern);
+            dataUrl = 'data:image/svg+xml;base64,' + btoa(svgString);
+          }
+
+          if (drawRef.current === 1) {
+            svgDraw1({ dataUrl }, width, height);
+          } else {
+            svgDraw2({ dataUrl }, width, height);
+          }
+        };
+
+        const svgDraw1 = (pattern: any, width: number, height: number) => {
+          if (!background1Ref.current) return;
+          
+          drawRef.current = 2;
+          background1Ref.current.style.background = pattern.dataUrl;
+          background1Ref.current.style.minWidth = `${width}px`;
+          background1Ref.current.style.minHeight = `${height}px`;
+          
+          // Fade animations
+          background1Ref.current.classList.remove('fade-out');
+          background1Ref.current.classList.add('fade-in');
+          if (background2Ref.current) {
+            background2Ref.current.classList.remove('fade-in');
+            background2Ref.current.classList.add('fade-out');
+          }
+        };
+
+        const svgDraw2 = (pattern: any, width: number, height: number) => {
+          if (!background2Ref.current) return;
+          
+          drawRef.current = 1;
+          background2Ref.current.style.background = pattern.dataUrl;
+          background2Ref.current.style.minWidth = `${width}px`;
+          background2Ref.current.style.minHeight = `${height}px`;
+          
+          // Fade animations
+          background2Ref.current.classList.remove('fade-out');
+          background2Ref.current.classList.add('fade-in');
+          if (background1Ref.current) {
+            background1Ref.current.classList.remove('fade-in');
+            background1Ref.current.classList.add('fade-out');
+          }
+        };
+
+        // Initial setup
+        updateSize();
+        svgNew();
+
+        // Set up interval to recreate SVG every 5 seconds
+        intervalId = setInterval(svgNew, 5000);
+
+        // Handle resize
+        resizeHandler = () => {
+          updateSize();
+          svgNew();
+        };
+        window.addEventListener('resize', resizeHandler);
+
+      } catch (error) {
+        console.warn('Failed to load Trianglify:', error);
+        // Fallback: create a simple gradient pattern
+        if (background1Ref.current && background2Ref.current) {
+          const gradient1 = 'linear-gradient(135deg, rgba(215, 0, 0, 0.05) 0%, rgba(215, 0, 0, 0.02) 100%)';
+          const gradient2 = 'linear-gradient(45deg, rgba(215, 0, 0, 0.03) 0%, rgba(215, 0, 0, 0.01) 100%)';
+          background1Ref.current.style.background = gradient1;
+          background2Ref.current.style.background = gradient2;
+        }
+      }
+    };
+
+    initBackground();
+
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+      if (resizeHandler) window.removeEventListener('resize', resizeHandler);
+    };
+  }, []);
+
   return (
-    <section ref={sectionRef} id="catalogues" className="pt-4 md:pt-6 pb-8 md:pb-12 bg-white relative">
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
+    <section ref={sectionRef} id="catalogues" className="pt-4 md:pt-6 pb-8 md:pb-12 bg-white relative overflow-hidden">
+      {/* Multi-layered SVG Background */}
+      <div id="background-container" ref={containerRef} className="background-container">
+        <div id="background-1" ref={background1Ref} className="background-1"></div>
+        <div id="background-2" ref={background2Ref} className="background-2"></div>
+      </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6" style={{ position: 'relative', zIndex: 10 }}>
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">Resources</span>
