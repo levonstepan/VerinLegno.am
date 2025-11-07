@@ -153,7 +153,8 @@ body {
     background-color: white;
     border-radius: 20px;
     padding: 50px 45px;
-    max-width: 650px;
+    max-width: 850px;
+    width: 100%;
     box-shadow: var(--shadow-xl);
     position: relative;
     z-index: 2;
@@ -241,7 +242,8 @@ body {
     background-color: white;
     border-radius: 20px;
     padding: 30px 40px;
-    max-width: 650px;
+    max-width: 850px;
+    width: 100%;
     box-shadow: var(--shadow-xl);
     display: flex;
     gap: 40px;
