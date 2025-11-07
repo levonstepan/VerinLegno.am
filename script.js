@@ -68,23 +68,7 @@ function updateActiveNavLink() {
 
 window.addEventListener('scroll', updateActiveNavLink);
 
-// Contact Form Submission
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show an alert
-    alert('Thank you for your message! We will contact you soon.');
-    
-    // Reset form
-    contactForm.reset();
-});
+// Contact form removed - replaced with Google Maps
 
 // Scroll reveal animation
 const observerOptions = {
@@ -184,28 +168,5 @@ createScrollToTopButton();
 console.log('%c VerinLegno Armenia ', 'background: #D70000; color: white; font-size: 20px; padding: 10px;');
 console.log('%c High-technology, reliable and increasingly green coatings ', 'font-size: 14px; color: #4A5568;');
 
-// Prevent empty form submission
-document.querySelectorAll('input, textarea').forEach(input => {
-    input.addEventListener('invalid', (e) => {
-        e.preventDefault();
-        input.classList.add('error');
-        setTimeout(() => input.classList.remove('error'), 2000);
-    });
-});
-
-// Add error style dynamically
-const style = document.createElement('style');
-style.textContent = `
-    .error {
-        animation: shake 0.5s;
-        border-color: #D70000 !important;
-    }
-    
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-10px); }
-        75% { transform: translateX(10px); }
-    }
-`;
-document.head.appendChild(style);
+// Form validation removed - contact form replaced with map
 
