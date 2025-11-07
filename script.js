@@ -112,21 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Manual download buttons (placeholder functionality)
-const manualBtns = document.querySelectorAll('.manual-btn');
-manualBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert('PDF download will be available soon. Please contact us for immediate access.');
-    });
-});
+// Manual download buttons - links are now direct PDF downloads, no need for placeholder
 
-// Product links (placeholder functionality)
+// Product links - PDF links work directly, only handle contact links
 const productLinks = document.querySelectorAll('.product-link');
 productLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Product details page coming soon. Please contact us for more information.');
-    });
+    if (link.getAttribute('href') === '#contact') {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            scrollToSection('contact');
+        });
+    }
 });
 
 // Services button

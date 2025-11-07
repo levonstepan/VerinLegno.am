@@ -127,14 +127,31 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
     color: white;
     padding: 140px 20px 100px;
     text-align: center;
     margin-top: 70px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -239,6 +256,26 @@ body {
     margin-bottom: 20px;
 }
 
+.product-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-light);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
 .product-card h3 {
     font-size: 22px;
     font-weight: 700;
@@ -266,7 +303,7 @@ body {
 /* Manuals Section */
 .manuals-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -311,6 +348,8 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .manual-btn:hover {
@@ -403,6 +442,19 @@ body {
     height: 120px;
     border-radius: 8px;
     margin-bottom: 15px;
+    overflow: hidden;
+    background-color: var(--bg-light);
+}
+
+.color-sample img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.color-card:hover .color-sample img {
+    transform: scale(1.05);
 }
 
 .color-card p {
@@ -428,6 +480,26 @@ body {
 .partnership-card:hover {
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+}
+
+.partnership-image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-light);
+}
+
+.partnership-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.partnership-card:hover .partnership-image img {
+    transform: scale(1.05);
 }
 
 .partnership-card h3 {
