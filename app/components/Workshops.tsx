@@ -109,17 +109,10 @@ export function Workshops({
   return (
     <section
       id="workshops"
-      className="py-12 md:py-16 relative scroll-mt-20 md:scroll-mt-24"
+      className="py-12 md:py-16 relative scroll-mt-20 md:scroll-mt-24 bg-white"
     >
-      <div className="absolute inset-x-0 top-0 -z-10 flex justify-center">
-        <div className="h-32 w-full max-w-3xl bg-[#D70000]/10 blur-3xl" />
-      </div>
-
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-neutral-200/60 bg-white/80 shadow-xl shadow-[#d70000]/10 backdrop-blur">
-          <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full bg-[#D70000]/10 blur-3xl" />
-          <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-[#D70000]/5 blur-2xl" />
-
+        <div className="relative overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white shadow-xl">
           <div className="relative z-10 px-6 py-10 md:px-16 md:py-16">
             <div className="text-center max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#D70000]/20 bg-[#D70000]/10 px-4 py-1.5 text-sm font-medium text-[#D70000]">
@@ -142,7 +135,7 @@ export function Workshops({
               {content.items.map((item, index) => (
                 <div
                   key={`${item.title}-${index}`}
-                  className="group h-full rounded-2xl border border-neutral-200 bg-white/90 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#D70000]/30 hover:shadow-lg"
+                  className="group h-full rounded-2xl border-2 border-neutral-200 bg-white p-6 text-left shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#D70000]/50 hover:shadow-xl"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#D70000]/12 text-[#D70000]">
