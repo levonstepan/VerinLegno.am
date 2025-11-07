@@ -170,3 +170,50 @@ console.log('%c High-technology, reliable and increasingly green coatings ', 'fo
 
 // Form validation removed - contact form replaced with map
 
+// Wave animation on scroll for manuals section
+function initWaveAnimation() {
+    const manualsSection = document.getElementById('manuals');
+    const wavePaths = document.querySelectorAll('.wave-path');
+    
+    if (!manualsSection || wavePaths.length === 0) return;
+    
+    let baseOffset = [0, 0, 0];
+    let lastScrollY = window.scrollY;
+    
+    function updateWaves() {
+        const currentScrollY = window.scrollY;
+        const scrollDelta = currentScrollY - lastScrollY;
+        lastScrollY = currentScrollY;
+        
+        const rect = manualsSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible && Math.abs(scrollDelta) > 0) {
+            // Update base offset based on scroll
+            wavePaths.forEach((wave, index) => {
+                const speed = (index + 1) * 0.6;
+                const direction = index % 2 === 0 ? 1 : -1;
+                baseOffset[index] = (baseOffset[index] + scrollDelta * speed * direction) % 400;
+            });
+        }
+        
+        // Apply continuous animation + scroll offset
+        const time = Date.now() * 0.001;
+        wavePaths.forEach((wave, index) => {
+            const floatAmount = Math.sin(time * 0.5 + index) * 10;
+            const translateX = baseOffset[index] + floatAmount;
+            wave.style.transform = `translateX(${translateX}px)`;
+        });
+        
+        requestAnimationFrame(updateWaves);
+    }
+    
+    // Start animation loop
+    updateWaves();
+}
+
+// Initialize wave animation when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initWaveAnimation();
+});
+
