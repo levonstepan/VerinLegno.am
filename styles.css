@@ -385,6 +385,21 @@ body {
     color: var(--primary-dark);
 }
 
+.product-card-blank {
+    background-color: transparent;
+    border: 2px dashed var(--border-color);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card-blank:hover {
+    border-color: var(--border-color);
+    transform: none;
+    box-shadow: none;
+}
+
 .section-cta {
     text-align: center;
     margin-top: 40px;
