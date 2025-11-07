@@ -43,6 +43,39 @@ export const hyContent = {
     cta: "Access now",
     ctaLink: "#contact",
   },
+  workshops: {
+    label: "Professional Training",
+    title: "Workshops",
+    subtitle: "Professional training programs for mastering VerinLegno products and techniques",
+    items: [
+      {
+        title: "Application Techniques",
+        description:
+          "Join our comprehensive workshops to learn expert application techniques, product knowledge, and best practices from industry professionals.",
+        icon: "application",
+      },
+      {
+        title: "Product Knowledge",
+        description:
+          "Learn about the full range of VerinLegno products, their applications, and best practices for optimal results.",
+        icon: "product",
+      },
+      {
+        title: "Color Matching",
+        description:
+          "Master the art of color matching and tinting with our professional training programs.",
+        icon: "color",
+      },
+      {
+        title: "Quality Control",
+        description:
+          "Understand quality standards and inspection techniques to ensure professional finishes every time.",
+        icon: "quality",
+      },
+    ] as const,
+    cta: "Contact us for workshops",
+    ctaLink: "#contact",
+  },
   about: {
     title: "VerinLegno and Roots Furniture",
     verinlegnoTitle: "VerinLegno S.p.A.",
@@ -122,6 +155,39 @@ export const enContent = {
     description:
       "The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way.",
     cta: "Access now",
+    ctaLink: "#contact",
+  },
+  workshops: {
+    label: "Professional Training",
+    title: "Workshops",
+    subtitle: "Professional training programs for mastering VerinLegno products and techniques",
+    items: [
+      {
+        title: "Application Techniques",
+        description:
+          "Join our comprehensive workshops to learn expert application techniques, product knowledge, and best practices from industry professionals.",
+        icon: "application",
+      },
+      {
+        title: "Product Knowledge",
+        description:
+          "Learn about the full range of VerinLegno products, their applications, and best practices for optimal results.",
+        icon: "product",
+      },
+      {
+        title: "Color Matching",
+        description:
+          "Master the art of color matching and tinting with our professional training programs.",
+        icon: "color",
+      },
+      {
+        title: "Quality Control",
+        description:
+          "Understand quality standards and inspection techniques to ensure professional finishes every time.",
+        icon: "quality",
+      },
+    ] as const,
+    cta: "Contact us for workshops",
     ctaLink: "#contact",
   },
   about: {
