@@ -14,6 +14,50 @@ navLinks.forEach(link => {
     });
 });
 
+// Language Switcher
+const langButtons = document.querySelectorAll('.lang-btn');
+
+langButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = button.getAttribute('data-lang');
+        
+        // Remove active class from all buttons
+        langButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Store language preference
+        localStorage.setItem('preferredLanguage', lang);
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+        
+        // For now, just log the language change
+        // In the future, this will load the Armenian version
+        if (lang === 'hy') {
+            console.log('Armenian version coming soon!');
+            // TODO: Implement language switching
+        }
+    });
+});
+
+// Load preferred language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const preferredLang = localStorage.getItem('preferredLanguage');
+    if (preferredLang) {
+        langButtons.forEach(button => {
+            if (button.getAttribute('data-lang') === preferredLang) {
+                button.classList.add('active');
+                document.documentElement.lang = preferredLang;
+            } else {
+                button.classList.remove('active');
+            }
+        });
+    }
+});
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
