@@ -765,6 +765,13 @@ body {
 }
 
 /* Workshops Section */
+.workshops-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 400px;
+}
+
 .workshops-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
