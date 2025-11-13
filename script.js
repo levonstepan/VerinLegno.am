@@ -139,12 +139,29 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
-    // Ensure workshops section is visible
+    // Ensure workshops section is visible and properly initialized
     const workshopsSection = document.getElementById('workshops');
     if (workshopsSection) {
+        // Force visibility
         workshopsSection.style.display = 'block';
         workshopsSection.style.visibility = 'visible';
         workshopsSection.style.opacity = '1';
+        workshopsSection.style.height = 'auto';
+        workshopsSection.style.minHeight = '400px';
+        
+        // Ensure all child elements are visible
+        const workshopsChildren = workshopsSection.querySelectorAll('*');
+        workshopsChildren.forEach(child => {
+            if (getComputedStyle(child).display === 'none') {
+                child.style.display = '';
+            }
+            if (getComputedStyle(child).visibility === 'hidden') {
+                child.style.visibility = '';
+            }
+        });
+        
+        // Add to observer for animation
+        observer.observe(workshopsSection);
     }
 });
 

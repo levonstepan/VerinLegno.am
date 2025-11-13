@@ -765,6 +765,7 @@ body {
 }
 
 /* Workshops Section */
+section#workshops.workshops-section,
 .workshops-section {
     display: block !important;
     visibility: visible !important;
@@ -772,6 +773,9 @@ body {
     min-height: 400px;
     position: relative;
     z-index: 1;
+    width: 100%;
+    overflow: visible;
+    height: auto;
 }
 
 .workshops-section .workshops-grid,
@@ -783,10 +787,11 @@ body {
 }
 
 .workshops-grid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
+    width: 100%;
 }
 
 @media (min-width: 1200px) {
@@ -829,6 +834,9 @@ body {
 
 .workshop-cta {
     text-align: center;
+    display: block !important;
+    visibility: visible !important;
+    width: 100%;
 }
 
 .workshop-btn {
