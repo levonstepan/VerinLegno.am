@@ -766,37 +766,46 @@ body {
 
 /* Workshops Section */
 section#workshops.workshops-section,
-.workshops-section {
+.workshops-section,
+section#workshops {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    min-height: 400px;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    overflow: visible;
-    height: auto;
+    min-height: 400px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    overflow: visible !important;
+    height: auto !important;
+    padding: 80px 20px !important;
 }
 
 .workshops-section .workshops-grid,
 .workshops-section .section-header,
 .workshops-section .workshop-card,
-.workshops-section .workshop-cta {
+.workshops-section .workshop-cta,
+#workshops .workshops-grid,
+#workshops .section-header,
+#workshops .workshop-card,
+#workshops .workshop-cta {
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
 }
 
 .workshops-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 30px !important;
+    margin-bottom: 50px !important;
+    width: 100% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 @media (min-width: 1200px) {
     .workshops-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr) !important;
     }
 }
 

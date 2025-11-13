@@ -129,6 +129,60 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Ensure workshops section is visible - run immediately and on DOMContentLoaded
+function ensureWorkshopsVisible() {
+    const workshopsSection = document.getElementById('workshops');
+    if (workshopsSection) {
+        // Force visibility with inline styles (inline styles have high specificity)
+        // Note: Can't use !important in inline styles, but CSS !important rules will handle conflicts
+        workshopsSection.style.display = 'block';
+        workshopsSection.style.visibility = 'visible';
+        workshopsSection.style.opacity = '1';
+        workshopsSection.style.minHeight = '400px';
+        workshopsSection.style.padding = '80px 20px';
+        
+        // Ensure all child elements are visible
+        const workshopsGrid = workshopsSection.querySelector('.workshops-grid');
+        if (workshopsGrid) {
+            workshopsGrid.style.display = 'grid';
+            workshopsGrid.style.visibility = 'visible';
+            workshopsGrid.style.opacity = '1';
+        }
+        
+        const sectionHeader = workshopsSection.querySelector('.section-header');
+        if (sectionHeader) {
+            sectionHeader.style.display = 'block';
+            sectionHeader.style.visibility = 'visible';
+            sectionHeader.style.opacity = '1';
+        }
+        
+        const workshopCards = workshopsSection.querySelectorAll('.workshop-card');
+        workshopCards.forEach(card => {
+            card.style.display = 'block';
+            card.style.visibility = 'visible';
+            card.style.opacity = '1';
+        });
+        
+        const workshopCta = workshopsSection.querySelector('.workshop-cta');
+        if (workshopCta) {
+            workshopCta.style.display = 'block';
+            workshopCta.style.visibility = 'visible';
+            workshopCta.style.opacity = '1';
+        }
+    }
+}
+
+// Run immediately if DOM is already loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureWorkshopsVisible);
+} else {
+    ensureWorkshopsVisible();
+}
+
+// Also run after a short delay to catch any late-loading issues
+setTimeout(ensureWorkshopsVisible, 100);
+setTimeout(ensureWorkshopsVisible, 500);
+
 // Observe all cards and sections for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll(
@@ -139,30 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
-    // Ensure workshops section is visible and properly initialized
+    // Ensure workshops section is added to observer
     const workshopsSection = document.getElementById('workshops');
     if (workshopsSection) {
-        // Force visibility
-        workshopsSection.style.display = 'block';
-        workshopsSection.style.visibility = 'visible';
-        workshopsSection.style.opacity = '1';
-        workshopsSection.style.height = 'auto';
-        workshopsSection.style.minHeight = '400px';
-        
-        // Ensure all child elements are visible
-        const workshopsChildren = workshopsSection.querySelectorAll('*');
-        workshopsChildren.forEach(child => {
-            if (getComputedStyle(child).display === 'none') {
-                child.style.display = '';
-            }
-            if (getComputedStyle(child).visibility === 'hidden') {
-                child.style.visibility = '';
-            }
-        });
-        
-        // Add to observer for animation
         observer.observe(workshopsSection);
     }
+    
+    // Final check after animations are set up
+    ensureWorkshopsVisible();
 });
 
 // Manual download buttons - links are now direct PDF downloads, no need for placeholder
