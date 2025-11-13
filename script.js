@@ -129,59 +129,183 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Ensure workshops section is visible - run immediately and on DOMContentLoaded
-function ensureWorkshopsVisible() {
-    const workshopsSection = document.getElementById('workshops');
+// CRITICAL: Ensure ALL sections remain visible - prevents any section from being hidden or removed
+function ensureAllSectionsVisible() {
+    // Get all sections by class and by tag
+    const allSections = document.querySelectorAll('section.section, section[id]');
+    
+    allSections.forEach(section => {
+        // Prevent removal - ensure section stays in DOM
+        if (!section.parentNode || !document.body.contains(section)) {
+            console.warn('Section was removed from DOM, restoring:', section.id || section.className);
+            // If section was removed, try to restore it (this shouldn't happen, but protects against it)
+            if (section.parentNode === null) {
+                document.body.appendChild(section);
+            }
+        }
+        
+        // Force visibility - ensure section is always visible
+        if (getComputedStyle(section).display === 'none') {
+            section.style.display = 'block';
+        }
+        if (getComputedStyle(section).visibility === 'hidden') {
+            section.style.visibility = 'visible';
+        }
+        if (getComputedStyle(section).opacity === '0') {
+            section.style.opacity = '1';
+        }
+        
+        // Ensure section has proper dimensions
+        if (section.offsetHeight === 0 && section.offsetWidth === 0) {
+            section.style.minHeight = '100px';
+        }
+        
+        // Ensure all child elements within sections are visible
+        const children = section.querySelectorAll('*');
+        children.forEach(child => {
+            const computedStyle = getComputedStyle(child);
+            if (computedStyle.display === 'none') {
+                // Only restore if it's not intentionally hidden (like mobile menu)
+                if (!child.classList.contains('nav-menu') || child.classList.contains('active')) {
+                    child.style.display = '';
+                }
+            }
+            if (computedStyle.visibility === 'hidden' && !child.classList.contains('scroll-to-top')) {
+                child.style.visibility = '';
+            }
+        });
+    });
+    
+    // Special handling for workshops section (handles both 'workshops' and 'gago' IDs)
+    const workshopsSection = document.getElementById('workshops') || document.getElementById('gago');
     if (workshopsSection) {
-        // Force visibility with inline styles (inline styles have high specificity)
-        // Note: Can't use !important in inline styles, but CSS !important rules will handle conflicts
         workshopsSection.style.display = 'block';
         workshopsSection.style.visibility = 'visible';
         workshopsSection.style.opacity = '1';
         workshopsSection.style.minHeight = '400px';
-        workshopsSection.style.padding = '80px 20px';
         
-        // Ensure all child elements are visible
+        // Ensure workshops grid is visible
         const workshopsGrid = workshopsSection.querySelector('.workshops-grid');
         if (workshopsGrid) {
             workshopsGrid.style.display = 'grid';
             workshopsGrid.style.visibility = 'visible';
             workshopsGrid.style.opacity = '1';
         }
-        
-        const sectionHeader = workshopsSection.querySelector('.section-header');
-        if (sectionHeader) {
-            sectionHeader.style.display = 'block';
-            sectionHeader.style.visibility = 'visible';
-            sectionHeader.style.opacity = '1';
-        }
-        
-        const workshopCards = workshopsSection.querySelectorAll('.workshop-card');
-        workshopCards.forEach(card => {
-            card.style.display = 'block';
-            card.style.visibility = 'visible';
-            card.style.opacity = '1';
-        });
-        
-        const workshopCta = workshopsSection.querySelector('.workshop-cta');
-        if (workshopCta) {
-            workshopCta.style.display = 'block';
-            workshopCta.style.visibility = 'visible';
-            workshopCta.style.opacity = '1';
-        }
     }
 }
 
+// Override any attempts to hide sections
+const originalRemoveChild = Node.prototype.removeChild;
+Node.prototype.removeChild = function(child) {
+    // Prevent removal of sections
+    if (child && (child.tagName === 'SECTION' || child.classList?.contains('section'))) {
+        console.warn('Attempted to remove section prevented:', child.id || child.className);
+        return child; // Return the child without removing it
+    }
+    return originalRemoveChild.call(this, child);
+};
+
+// Prevent setting display: none on sections
+const originalSetProperty = CSSStyleDeclaration.prototype.setProperty;
+CSSStyleDeclaration.prototype.setProperty = function(property, value, priority) {
+    // Get the element this style belongs to
+    let element = null;
+    try {
+        // Try to find the element by checking if this is attached to an element
+        if (this._ownerElement) {
+            element = this._ownerElement;
+        } else {
+            // Fallback: check all sections to see if any match this style object
+            const allSections = document.querySelectorAll('section');
+            for (let section of allSections) {
+                if (section.style === this) {
+                    element = section;
+                    break;
+                }
+            }
+        }
+    } catch (e) {
+        // If we can't determine the element, allow the property to be set
+    }
+    
+    // Prevent hiding sections
+    if (property === 'display' && value === 'none') {
+        if (element && (element.tagName === 'SECTION' || element.classList?.contains('section'))) {
+            console.warn('Attempted to hide section prevented:', element.id || element.className);
+            // Still set it but immediately restore visibility
+            originalSetProperty.call(this, property, value, priority);
+            setTimeout(() => ensureAllSectionsVisible(), 0);
+            return;
+        }
+    }
+    if (property === 'visibility' && value === 'hidden') {
+        if (element && (element.tagName === 'SECTION' || element.classList?.contains('section'))) {
+            console.warn('Attempted to hide section visibility prevented:', element.id || element.className);
+            // Still set it but immediately restore visibility
+            originalSetProperty.call(this, property, value, priority);
+            setTimeout(() => ensureAllSectionsVisible(), 0);
+            return;
+        }
+    }
+    return originalSetProperty.call(this, property, value, priority);
+};
+
 // Run immediately if DOM is already loaded
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ensureWorkshopsVisible);
+    document.addEventListener('DOMContentLoaded', ensureAllSectionsVisible);
 } else {
-    ensureWorkshopsVisible();
+    ensureAllSectionsVisible();
 }
 
-// Also run after a short delay to catch any late-loading issues
-setTimeout(ensureWorkshopsVisible, 100);
-setTimeout(ensureWorkshopsVisible, 500);
+// Run multiple times to catch any late-loading issues or dynamic changes
+setTimeout(ensureAllSectionsVisible, 100);
+setTimeout(ensureAllSectionsVisible, 500);
+setTimeout(ensureAllSectionsVisible, 1000);
+
+// Monitor for any changes that might hide sections
+const sectionObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes') {
+            const target = mutation.target;
+            if (target.tagName === 'SECTION' || target.classList?.contains('section')) {
+                // Check if section was hidden
+                const display = getComputedStyle(target).display;
+                const visibility = getComputedStyle(target).visibility;
+                if (display === 'none' || visibility === 'hidden') {
+                    ensureAllSectionsVisible();
+                }
+            }
+        }
+        if (mutation.type === 'childList') {
+            // Check if any sections were removed
+            mutation.removedNodes.forEach((node) => {
+                if (node.nodeType === 1 && (node.tagName === 'SECTION' || node.classList?.contains('section'))) {
+                    ensureAllSectionsVisible();
+                }
+            });
+        }
+    });
+});
+
+// Start observing when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Observe all sections for changes
+    const allSections = document.querySelectorAll('section');
+    allSections.forEach(section => {
+        sectionObserver.observe(section, {
+            attributes: true,
+            attributeFilter: ['style', 'class'],
+            childList: true,
+            subtree: true
+        });
+    });
+    
+    // Also observe document body for section removals
+    sectionObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+});
 
 // Observe all cards and sections for animation
 document.addEventListener('DOMContentLoaded', () => {
@@ -193,14 +317,14 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
-    // Ensure workshops section is added to observer
-    const workshopsSection = document.getElementById('workshops');
+    // Ensure workshops section is added to observer (handles both IDs)
+    const workshopsSection = document.getElementById('workshops') || document.getElementById('gago');
     if (workshopsSection) {
         observer.observe(workshopsSection);
     }
     
-    // Final check after animations are set up
-    ensureWorkshopsVisible();
+    // Final check after animations are set up - ensure all sections are visible
+    ensureAllSectionsVisible();
 });
 
 // Manual download buttons - links are now direct PDF downloads, no need for placeholder
