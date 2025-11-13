@@ -242,7 +242,7 @@ function createScrollToTopButton() {
         font-size: 24px;
         cursor: pointer;
         opacity: 0;
-        visibility: hidden;
+        visibility: visible;
         transition: all 0.3s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 999;
@@ -256,7 +256,7 @@ function createScrollToTopButton() {
             scrollBtn.style.visibility = 'visible';
         } else {
             scrollBtn.style.opacity = '0';
-            scrollBtn.style.visibility = 'hidden';
+            scrollBtn.style.visibility = 'visible';
         }
     });
     
