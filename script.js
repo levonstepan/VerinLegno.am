@@ -131,10 +131,13 @@ const observer = new IntersectionObserver((entries) => {
 
 // CRITICAL: Ensure ALL sections remain visible - prevents any section from being hidden or removed
 function ensureAllSectionsVisible() {
-    // Get all sections by class and by tag
-    const allSections = document.querySelectorAll('section.section, section[id]');
+    // Get all sections by class and by tag - this includes dynamically added sections
+    const allSections = document.querySelectorAll('section.section, section[id], section');
     
     allSections.forEach(section => {
+        // Skip if not a real section element
+        if (!section || section.nodeType !== 1) return;
+        
         // Prevent removal - ensure section stays in DOM
         if (!section.parentNode || !document.body.contains(section)) {
             console.warn('Section was removed from DOM, restoring:', section.id || section.className);
@@ -145,62 +148,140 @@ function ensureAllSectionsVisible() {
         }
         
         // Force visibility - ensure section is always visible
-        if (getComputedStyle(section).display === 'none') {
+        const computedStyle = getComputedStyle(section);
+        if (computedStyle.display === 'none') {
             section.style.display = 'block';
         }
-        if (getComputedStyle(section).visibility === 'hidden') {
+        if (computedStyle.visibility === 'hidden') {
             section.style.visibility = 'visible';
         }
-        if (getComputedStyle(section).opacity === '0') {
+        if (parseFloat(computedStyle.opacity) === 0) {
             section.style.opacity = '1';
         }
         
-        // Ensure section has proper dimensions
-        if (section.offsetHeight === 0 && section.offsetWidth === 0) {
-            section.style.minHeight = '100px';
+        // Ensure section has proper dimensions - prevent collapsing
+        if (section.offsetHeight === 0 && section.offsetWidth === 0 && computedStyle.display !== 'none') {
+            // Only set min-height if section is actually collapsed
+            const hasContent = section.querySelector('.container, .section-header, .workshops-grid, .products-grid, .manuals-grid');
+            if (hasContent) {
+                section.style.minHeight = '200px';
+            }
         }
         
-        // Ensure all child elements within sections are visible
-        const children = section.querySelectorAll('*');
-        children.forEach(child => {
-            const computedStyle = getComputedStyle(child);
-            if (computedStyle.display === 'none') {
-                // Only restore if it's not intentionally hidden (like mobile menu)
-                if (!child.classList.contains('nav-menu') || child.classList.contains('active')) {
+        // Ensure section has proper padding (matches other sections)
+        if (!section.style.padding && !section.style.paddingTop && !section.style.paddingBottom) {
+            // Let CSS handle padding, but ensure it's not zero
+            if (parseInt(computedStyle.paddingTop) === 0 && parseInt(computedStyle.paddingBottom) === 0) {
+                // Only if truly collapsed
+            }
+        }
+        
+        // Ensure all critical child elements within sections are visible
+        const criticalChildren = section.querySelectorAll('.container, .section-header, .workshops-grid, .products-grid, .manuals-grid, .services-content, .partnership-content, .contact-content');
+        criticalChildren.forEach(child => {
+            const childStyle = getComputedStyle(child);
+            if (childStyle.display === 'none') {
+                // Restore display for critical structural elements
+                if (child.classList.contains('container')) {
+                    child.style.display = 'block';
+                } else if (child.classList.contains('workshops-grid') || child.classList.contains('products-grid') || child.classList.contains('manuals-grid')) {
+                    child.style.display = 'grid';
+                } else {
                     child.style.display = '';
                 }
             }
-            if (computedStyle.visibility === 'hidden' && !child.classList.contains('scroll-to-top')) {
-                child.style.visibility = '';
+            if (childStyle.visibility === 'hidden') {
+                child.style.visibility = 'visible';
             }
         });
     });
     
-    // Special handling for workshops section (handles both 'workshops' and 'gago' IDs)
-    const workshopsSection = document.getElementById('workshops') || document.getElementById('gago');
+    // Special handling for workshops section
+    const workshopsSection = document.getElementById('workshops');
     if (workshopsSection) {
+        // Ensure workshops section is fully visible and not collapsed
         workshopsSection.style.display = 'block';
         workshopsSection.style.visibility = 'visible';
         workshopsSection.style.opacity = '1';
-        workshopsSection.style.minHeight = '400px';
         
         // Ensure workshops grid is visible
         const workshopsGrid = workshopsSection.querySelector('.workshops-grid');
         if (workshopsGrid) {
-            workshopsGrid.style.display = 'grid';
+            const gridStyle = getComputedStyle(workshopsGrid);
+            if (gridStyle.display === 'none' || gridStyle.display === '') {
+                workshopsGrid.style.display = 'grid';
+            }
             workshopsGrid.style.visibility = 'visible';
             workshopsGrid.style.opacity = '1';
+        }
+        
+        // Ensure container is visible
+        const container = workshopsSection.querySelector('.container');
+        if (container) {
+            container.style.display = 'block';
         }
     }
 }
 
-// Override any attempts to hide sections
+// Helper function to initialize new sections properly
+function initializeNewSection(section) {
+    if (!section || section.nodeType !== 1) return;
+    
+    // Ensure section has proper classes if missing
+    if (!section.classList.contains('section')) {
+        section.classList.add('section');
+    }
+    
+    // Set basic visibility properties
+    section.style.display = 'block';
+    section.style.visibility = 'visible';
+    section.style.opacity = '1';
+    
+    // Ensure section has proper padding if missing
+    const computedStyle = getComputedStyle(section);
+    if (parseInt(computedStyle.paddingTop) === 0 && parseInt(computedStyle.paddingBottom) === 0) {
+        section.style.padding = '80px 20px';
+    }
+    
+    // Ensure container exists and is visible
+    let container = section.querySelector('.container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'container';
+        // Move existing content into container if needed
+        const children = Array.from(section.childNodes);
+        children.forEach(child => {
+            if (child.nodeType === 1) {
+                container.appendChild(child);
+            }
+        });
+        section.appendChild(container);
+    }
+    container.style.display = 'block';
+    
+    // Ensure grid elements are properly displayed
+    const grids = section.querySelectorAll('.workshops-grid, .products-grid, .manuals-grid');
+    grids.forEach(grid => {
+        grid.style.display = 'grid';
+        grid.style.visibility = 'visible';
+    });
+    
+    console.log('New section initialized:', section.id || section.className);
+}
+
+// Override any attempts to hide sections - but allow legitimate DOM operations
 const originalRemoveChild = Node.prototype.removeChild;
 Node.prototype.removeChild = function(child) {
-    // Prevent removal of sections
+    // Prevent removal of sections that are part of the main page structure
     if (child && (child.tagName === 'SECTION' || child.classList?.contains('section'))) {
-        console.warn('Attempted to remove section prevented:', child.id || child.className);
-        return child; // Return the child without removing it
+        // Only prevent if it's a section with an ID (main page sections)
+        // Allow removal of temporary/dynamic sections if needed
+        if (child.id && document.querySelector(`section#${child.id}`) === child) {
+            console.warn('Attempted to remove main page section prevented:', child.id || child.className);
+            // Restore visibility instead of preventing removal
+            ensureAllSectionsVisible();
+            return child; // Return the child without removing it
+        }
     }
     return originalRemoveChild.call(this, child);
 };
@@ -262,7 +343,7 @@ setTimeout(ensureAllSectionsVisible, 100);
 setTimeout(ensureAllSectionsVisible, 500);
 setTimeout(ensureAllSectionsVisible, 1000);
 
-// Monitor for any changes that might hide sections
+// Monitor for any changes that might hide sections or detect new sections being added
 const sectionObserver = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         if (mutation.type === 'attributes') {
@@ -283,13 +364,31 @@ const sectionObserver = new MutationObserver((mutations) => {
                     ensureAllSectionsVisible();
                 }
             });
+            
+            // IMPORTANT: Detect NEW sections being added and ensure they're visible
+            mutation.addedNodes.forEach((node) => {
+                if (node.nodeType === 1 && (node.tagName === 'SECTION' || node.classList?.contains('section'))) {
+                    console.log('New section detected, initializing:', node.id || node.className);
+                    // Initialize the new section properly
+                    initializeNewSection(node);
+                    // Ensure all sections are visible
+                    ensureAllSectionsVisible();
+                    // Also observe the new section for future changes
+                    sectionObserver.observe(node, {
+                        attributes: true,
+                        attributeFilter: ['style', 'class'],
+                        childList: true,
+                        subtree: true
+                    });
+                }
+            });
         }
     });
 });
 
 // Start observing when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Observe all sections for changes
+    // Observe all existing sections for changes
     const allSections = document.querySelectorAll('section');
     allSections.forEach(section => {
         sectionObserver.observe(section, {
@@ -300,11 +399,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Also observe document body for section removals
+    // Observe document body for section additions/removals - CRITICAL for new sections
     sectionObserver.observe(document.body, {
         childList: true,
         subtree: true
     });
+    
+    // Initial check to ensure all sections are visible
+    ensureAllSectionsVisible();
 });
 
 // Observe all cards and sections for animation
