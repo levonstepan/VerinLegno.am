@@ -196,30 +196,61 @@ function ensureAllSectionsVisible() {
         });
     });
     
-    // Special handling for workshops section
+    // Special handling for workshops section - FORCE visibility with highest priority
     const workshopsSection = document.getElementById('workshops');
     if (workshopsSection) {
-        // Ensure workshops section is fully visible and not collapsed
-        workshopsSection.style.display = 'block';
-        workshopsSection.style.visibility = 'visible';
-        workshopsSection.style.opacity = '1';
+        // Use setProperty with important flag to override any existing styles
+        workshopsSection.style.setProperty('display', 'block', 'important');
+        workshopsSection.style.setProperty('visibility', 'visible', 'important');
+        workshopsSection.style.setProperty('opacity', '1', 'important');
+        workshopsSection.style.setProperty('min-height', '400px', 'important');
+        workshopsSection.style.setProperty('padding', '80px 20px', 'important');
+        workshopsSection.style.setProperty('position', 'relative', 'important');
+        workshopsSection.style.setProperty('width', '100%', 'important');
+        workshopsSection.style.setProperty('height', 'auto', 'important');
+        workshopsSection.style.setProperty('overflow', 'visible', 'important');
         
         // Ensure workshops grid is visible
         const workshopsGrid = workshopsSection.querySelector('.workshops-grid');
         if (workshopsGrid) {
-            const gridStyle = getComputedStyle(workshopsGrid);
-            if (gridStyle.display === 'none' || gridStyle.display === '') {
-                workshopsGrid.style.display = 'grid';
-            }
-            workshopsGrid.style.visibility = 'visible';
-            workshopsGrid.style.opacity = '1';
+            workshopsGrid.style.setProperty('display', 'grid', 'important');
+            workshopsGrid.style.setProperty('visibility', 'visible', 'important');
+            workshopsGrid.style.setProperty('opacity', '1', 'important');
         }
         
         // Ensure container is visible
         const container = workshopsSection.querySelector('.container');
         if (container) {
-            container.style.display = 'block';
+            container.style.setProperty('display', 'block', 'important');
+            container.style.setProperty('visibility', 'visible', 'important');
+            container.style.setProperty('opacity', '1', 'important');
         }
+        
+        // Ensure section header is visible
+        const sectionHeader = workshopsSection.querySelector('.section-header');
+        if (sectionHeader) {
+            sectionHeader.style.setProperty('display', 'block', 'important');
+            sectionHeader.style.setProperty('visibility', 'visible', 'important');
+            sectionHeader.style.setProperty('opacity', '1', 'important');
+        }
+        
+        // Ensure all workshop cards are visible
+        const workshopCards = workshopsSection.querySelectorAll('.workshop-card');
+        workshopCards.forEach(card => {
+            card.style.setProperty('display', 'block', 'important');
+            card.style.setProperty('visibility', 'visible', 'important');
+            card.style.setProperty('opacity', '1', 'important');
+        });
+        
+        // Ensure CTA is visible
+        const workshopCta = workshopsSection.querySelector('.workshop-cta');
+        if (workshopCta) {
+            workshopCta.style.setProperty('display', 'block', 'important');
+            workshopCta.style.setProperty('visibility', 'visible', 'important');
+            workshopCta.style.setProperty('opacity', '1', 'important');
+        }
+        
+        console.log('Workshops section forced visible:', workshopsSection.offsetHeight, workshopsSection.offsetWidth);
     }
 }
 
@@ -331,6 +362,61 @@ CSSStyleDeclaration.prototype.setProperty = function(property, value, priority) 
     return originalSetProperty.call(this, property, value, priority);
 };
 
+// CRITICAL: Run workshops section fix IMMEDIATELY - before anything else
+(function forceWorkshopsVisible() {
+    function fixWorkshops() {
+        const workshopsSection = document.getElementById('workshops');
+        if (workshopsSection) {
+            // Force visibility using setProperty with important flag
+            workshopsSection.style.setProperty('display', 'block', 'important');
+            workshopsSection.style.setProperty('visibility', 'visible', 'important');
+            workshopsSection.style.setProperty('opacity', '1', 'important');
+            workshopsSection.style.setProperty('min-height', '400px', 'important');
+            workshopsSection.style.setProperty('padding', '80px 20px', 'important');
+            workshopsSection.style.setProperty('position', 'relative', 'important');
+            workshopsSection.style.setProperty('width', '100%', 'important');
+            workshopsSection.style.setProperty('height', 'auto', 'important');
+            workshopsSection.style.setProperty('overflow', 'visible', 'important');
+            
+            const grid = workshopsSection.querySelector('.workshops-grid');
+            if (grid) {
+                grid.style.setProperty('display', 'grid', 'important');
+                grid.style.setProperty('visibility', 'visible', 'important');
+                grid.style.setProperty('opacity', '1', 'important');
+            }
+            
+            const container = workshopsSection.querySelector('.container');
+            if (container) {
+                container.style.setProperty('display', 'block', 'important');
+                container.style.setProperty('visibility', 'visible', 'important');
+                container.style.setProperty('opacity', '1', 'important');
+            }
+            
+            // Check if section is actually visible
+            const rect = workshopsSection.getBoundingClientRect();
+            if (rect.height === 0 || rect.width === 0) {
+                console.warn('Workshops section collapsed, forcing dimensions');
+                workshopsSection.style.setProperty('min-height', '400px', 'important');
+                workshopsSection.style.setProperty('height', 'auto', 'important');
+            }
+        }
+    }
+    
+    // Run immediately
+    fixWorkshops();
+    
+    // Run when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fixWorkshops);
+    }
+    
+    // Run multiple times to catch any issues
+    setTimeout(fixWorkshops, 0);
+    setTimeout(fixWorkshops, 50);
+    setTimeout(fixWorkshops, 100);
+    setTimeout(fixWorkshops, 200);
+})();
+
 // Run immediately if DOM is already loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ensureAllSectionsVisible);
@@ -339,9 +425,12 @@ if (document.readyState === 'loading') {
 }
 
 // Run multiple times to catch any late-loading issues or dynamic changes
+setTimeout(ensureAllSectionsVisible, 50);
 setTimeout(ensureAllSectionsVisible, 100);
+setTimeout(ensureAllSectionsVisible, 300);
 setTimeout(ensureAllSectionsVisible, 500);
 setTimeout(ensureAllSectionsVisible, 1000);
+setTimeout(ensureAllSectionsVisible, 2000);
 
 // Monitor for any changes that might hide sections or detect new sections being added
 const sectionObserver = new MutationObserver((mutations) => {
@@ -352,6 +441,26 @@ const sectionObserver = new MutationObserver((mutations) => {
                 // Check if section was hidden
                 const display = getComputedStyle(target).display;
                 const visibility = getComputedStyle(target).visibility;
+                const opacity = getComputedStyle(target).opacity;
+                
+                // Special check for workshops section
+                if (target.id === 'workshops' || target.classList.contains('workshops-section')) {
+                    if (display === 'none' || visibility === 'hidden' || opacity === '0' || target.offsetHeight === 0) {
+                        console.warn('Workshops section being hidden, forcing visibility');
+                        target.style.setProperty('display', 'block', 'important');
+                        target.style.setProperty('visibility', 'visible', 'important');
+                        target.style.setProperty('opacity', '1', 'important');
+                        target.style.setProperty('min-height', '400px', 'important');
+                        target.style.setProperty('padding', '80px 20px', 'important');
+                        const grid = target.querySelector('.workshops-grid');
+                        if (grid) {
+                            grid.style.setProperty('display', 'grid', 'important');
+                            grid.style.setProperty('visibility', 'visible', 'important');
+                            grid.style.setProperty('opacity', '1', 'important');
+                        }
+                    }
+                }
+                
                 if (display === 'none' || visibility === 'hidden') {
                     ensureAllSectionsVisible();
                 }
