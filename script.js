@@ -138,6 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
     animateElements.forEach(el => {
         observer.observe(el);
     });
+    
+    // Ensure workshops section is visible
+    const workshopsSection = document.getElementById('workshops');
+    if (workshopsSection) {
+        workshopsSection.style.display = 'block';
+        workshopsSection.style.visibility = 'visible';
+        workshopsSection.style.opacity = '1';
+    }
 });
 
 // Manual download buttons - links are now direct PDF downloads, no need for placeholder

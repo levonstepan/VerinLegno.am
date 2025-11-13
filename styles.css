@@ -770,6 +770,16 @@ body {
     visibility: visible !important;
     opacity: 1 !important;
     min-height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.workshops-section .workshops-grid,
+.workshops-section .section-header,
+.workshops-section .workshop-card,
+.workshops-section .workshop-cta {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .workshops-grid {
