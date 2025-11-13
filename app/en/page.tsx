@@ -18,8 +18,8 @@ export default function HomeEn() {
         <Products content={enContent.products} />
         <Catalogues content={enContent.catalogues} />
         <Services content={enContent.services} />
-        <Workshops content={enContent.workshops} />
         <About content={enContent.about} />
+        <Workshops content={enContent.workshops} />
         <Contact content={enContent.contact} />
       </main>
       <Footer content={enContent.footer} />
