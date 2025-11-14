@@ -5,6 +5,8 @@ export const hyContent = {
       "Verinlegno Spa-ն հիմնադրվել է Մասսա է Կոզզիլեում 1975 թվականին — բարձր տեխնոլոգիաներ, հուսալի և ավելի ու ավելի կանաչ ծածկույթներ փայտի, մետաղի և ապակու համար: Roots Furniture LLC — պաշտոնական ներկայացուցիչ Հայաստանում:",
     cta: "Իմանալ ավելին",
     ctaLink: "#products",
+    cta2: "Մեր Պատմությունը",
+    cta2Link: "#company",
   },
   products: {
     title: "Ապրանքների կատալոգներ",
@@ -125,8 +127,10 @@ export const enContent = {
     title: "VerinLegno in Armenia",
     subtitle:
       "Verinlegno Spa, founded in Massa e Cozzile in 1975 — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
-    cta: "Discover more",
+    cta: "Explore",
     ctaLink: "#products",
+    cta2: "Our Story",
+    cta2Link: "#company",
   },
   products: {
     title: "Product Catalogues",

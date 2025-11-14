@@ -10,6 +10,8 @@ export function Hero({
     subtitle: string;
     cta: string;
     ctaLink: string;
+    cta2?: string;
+    cta2Link?: string;
   }>;
   locale?: "arm" | "en";
 }) {
@@ -58,10 +60,10 @@ export function Hero({
             </Link>
             
             <Link
-              href="#company"
+              href={content.cta2Link || "#company"}
               className="inline-flex items-center justify-center px-8 py-4 rounded-full font-medium border-2 border-neutral-300 text-neutral-700 hover:border-[#D70000] hover:text-[#D70000] transition-all duration-300"
             >
-              Learn More
+              {content.cta2 || "Learn More"}
             </Link>
           </div>
           </div>
