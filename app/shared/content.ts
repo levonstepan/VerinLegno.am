@@ -1,14 +1,14 @@
 export const hyContent = {
   hero: {
-    title: "VerinLegno in Armenia",
+    title: "VerinLegno Հայաստանում",
     subtitle:
-      "Verinlegno Spa, founded in Massa e Cozzile in 1975 — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.",
-    cta: "Discover more",
+      "Verinlegno Spa-ն հիմնադրվել է Մասսա է Կոզզիլեում 1975 թվականին — բարձր տեխնոլոգիաներ, հուսալի և ավելի ու ավելի կանաչ ծածկույթներ փայտի, մետաղի և ապակու համար: Roots Furniture LLC — պաշտոնական ներկայացուցիչ Հայաստանում:",
+    cta: "Իմանալ ավելին",
     ctaLink: "#products",
   },
   products: {
-    title: "Product Catalogues",
-    subtitle: "High technology, reliability and sustainability",
+    title: "Ապրանքների կատալոգներ",
+    subtitle: "Բարձր տեխնոլոգիաներ, հուսալիություն և կայունություն",
     items: [
       { name: "Special effects", href: "/catalogues/Crystal epox ENG.pdf", image: "/images/catalogues/Crystal Epox.jpeg", pdf: "/catalogues/Crystal epox ENG.pdf" },
       { name: "Water-based exterior", href: "/catalogues/WOOD-OIL.pdf", image: "/images/catalogues/Wood oil.jpeg", pdf: "/catalogues/WOOD-OIL.pdf" },
@@ -33,58 +33,58 @@ export const hyContent = {
       { name: "H36025 - VPK BIANCO 260 25 GLOSS", href: "/manuals/H36025 - VPK BIANCO 260 25 GLOSS.pdf" },
       { name: "M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS", href: "/manuals/M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS.pdf" },
     ] as const,
-    cta: "Discover all catalogues",
+    cta: "Դիտել բոլոր կատալոգները",
   },
   services: {
     title: "Verinchrome",
     subtitle: "Verinchrome",
     description:
-      "The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way.\n\nDesigned for professionals who value precision, Verinchrome provides a smart and intuitive approach to color creation. Its high-performance pigments ensure consistent tones across various materials — wood, metal, and plastic.\n\nThe system supports both manual and automated color matching, empowering workshops, industrial users, and designers to achieve perfect results every time.",
-    cta: "Access now",
+      "Verinchrome գունավորման համակարգը թույլ է տալիս առավելագույն հուսալիությամբ վերարտադրել լայն շրջանակի պիգմենտավորված հիմքեր և ավարտական ծածկույթներ ջրային և լուծիչային հիմքերում՝ պարզ, արագ և ճկուն ձևով:\n\nՆախագծված է մասնագետների համար, ովքեր գնահատում են ճշգրտությունը, Verinchrome-ը ապահովում է խելացի և ինտուիտիվ մոտեցում գույնի ստեղծմանը: Դրա բարձրակատար պիգմենտները ապահովում են համահունչ երանգներ տարբեր նյութերի վրա — փայտ, մետաղ և պլաստիկ:\n\nՀամակարգը աջակցում է ինչպես ձեռքով, այնպես էլ ավտոմատ գունավորմանը, հնարավորություն տալով արհեստանոցներին, արդյունաբերական օգտատերերին և դիզայներներին ամեն անգամ հասնել կատարյալ արդյունքների:",
+    cta: "Մուտք գործել",
     ctaLink: "#contact",
   },
   workshops: {
-    label: "Professional Training",
-    title: "Workshops",
-    subtitle: "Professional training programs for mastering VerinLegno products and techniques",
+    label: "Մասնագիտական ուսուցում",
+    title: "Վարպետաց դասեր",
+    subtitle: "Մասնագիտական ուսուցման ծրագրեր VerinLegno ապրանքների և տեխնիկաների տիրապետման համար",
     items: [
       {
-        title: "Application Techniques",
+        title: "Կիրառման տեխնիկաներ",
         description:
-          "Join our comprehensive workshops to learn expert application techniques, product knowledge, and best practices from industry professionals.",
+          "Միացեք մեր համապարփակ վարպետաց դասերին՝ սովորելու փորձառու կիրառման տեխնիկաներ, ապրանքների մասին գիտելիքներ և լավագույն պրակտիկաներ արդյունաբերության մասնագետներից:",
         icon: "application",
       },
       {
-        title: "Product Knowledge",
+        title: "Ապրանքների մասին գիտելիքներ",
         description:
-          "Learn about the full range of VerinLegno products, their applications, and best practices for optimal results.",
+          "Իմացեք VerinLegno ապրանքների ամբողջ շարքի, դրանց կիրառման և օպտիմալ արդյունքների համար լավագույն պրակտիկաների մասին:",
         icon: "product",
       },
       {
-        title: "Color Matching",
+        title: "Գունավորման համապատասխանություն",
         description:
-          "Master the art of color matching and tinting with our professional training programs.",
+          "Տիրապետեք գունավորման և գունավորման արվեստին մեր մասնագիտական ուսուցման ծրագրերի միջոցով:",
         icon: "color",
       },
       {
-        title: "Quality Control",
+        title: "Որակի վերահսկում",
         description:
-          "Understand quality standards and inspection techniques to ensure professional finishes every time.",
+          "Հասկացեք որակի ստանդարտները և ստուգման տեխնիկաները՝ ամեն անգամ ապահովելու մասնագիտական ավարտական ծածկույթներ:",
         icon: "quality",
       },
     ] as const,
-    cta: "Contact us for workshops",
+    cta: "Կապ հաստատել վարպետաց դասերի համար",
     ctaLink: "#contact",
   },
   about: {
-    title: "VerinLegno and Roots Furniture",
+    title: "VerinLegno և Roots Furniture",
     verinlegnoTitle: "VerinLegno S.p.A.",
     verinlegnoText:
-      "Verinlegno is an Italian company that develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. Over 40 years of experience, distribution in many countries, wide catalogue.",
+      "Verinlegno-ն իտալական ընկերություն է, որը մշակում է բարձր տեխնոլոգիաներ, հուսալի և ավելի ու ավելի կանաչ ծածկույթներ փայտի, մետաղի, ապակու, ինտերիերի և էքստերիերի համար: 40 տարուց ավելի փորձ, բաշխում շատ երկրներում, լայն կատալոգ:",
     rootsTitle: "Roots Furniture LLC",
     rootsText:
-      "Roots Furniture LLC is a furniture manufacturing company in Armenia, represented in the market by the Acobian Furniture brand. With more than two decades of experience, Roots Furniture has become one of Armenia's leading manufacturers of high-quality wooden furniture.\n\nRoots LLC is the official / exclusive representative of VerinLegno Italy in Armenia, so the supply of VerinLegno coatings and preparation solutions in Armenia is carried out by us.",
-    acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
+      "Roots Furniture LLC-ն Հայաստանում կահույքի արտադրող ընկերություն է, որը շուկայում ներկայացված է Acobian Furniture ապրանքանիշով: Երկու տասնամյակից ավելի փորձով Roots Furniture-ը դարձել է Հայաստանի առաջատար արտադրողներից մեկը բարձրորակ փայտե կահույքի արտադրության ոլորտում:\n\nRoots LLC-ն VerinLegno Italy-ի պաշտոնական/բացառիկ ներկայացուցիչն է Հայաստանում, ուստի VerinLegno ծածկույթների և նախապատրաստական լուծումների մատակարարումը Հայաստանում իրականացվում է մեր կողմից:",
+    acobianNote: "Acobian ≈ ապրանքանիշ, Roots ≈ ընկերություն (ինչպես Apple → iPhone)",
   },
   contact: {
     title: "Կապ մեզ հետ",
@@ -103,14 +103,14 @@ export const hyContent = {
       "Մի բաց թողեք VerinLegno-ի մասին որևէ բան, կարդացեք գաղտնիության քաղաքականությունը և բաժանորդագրվեք մեր նորություններին",
   },
   footer: {
-    companyInfo: "Roots Furniture LLC — Official representative of VerinLegno S.p.A. in Armenia",
-    address: "Yerevan, Armenia",
+    companyInfo: "Roots Furniture LLC — VerinLegno S.p.A.-ի պաշտոնական ներկայացուցիչ Հայաստանում",
+    address: "Երևան, Հայաստան",
     email: "info@roots.am",
     phone: "+374 91 665520",
     links: [
-      { label: "Privacy Policy", href: "/policies/privacy-policy" },
-      { label: "Terms of Service", href: "/policies/terms-of-service" },
-      { label: "Legal Notes", href: "/policies/legal-notes" },
+      { label: "Գաղտնիության քաղաքականություն", href: "/policies/privacy-policy" },
+      { label: "Ծառայությունների պայմաններ", href: "/policies/terms-of-service" },
+      { label: "Իրավական նշումներ", href: "/policies/legal-notes" },
     ] as const,
     copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia`,
   },
