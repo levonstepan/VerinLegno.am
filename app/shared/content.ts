@@ -39,7 +39,7 @@ export const hyContent = {
     title: "Verinchrome",
     subtitle: "Verinchrome",
     description:
-      "The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way.",
+      "Designed for professionals who value precision, Verinchrome provides a smart and intuitive approach to color creation. The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way. Its high-performance pigments ensure consistent tones across various materials — wood, metal, and plastic — while maintaining durability and environmental responsibility. The system supports both manual and automated color matching, empowering workshops, industrial users, and designers to achieve perfect results every time. With Verinchrome, users can easily adapt formulas to meet project requirements, ensuring creativity, efficiency, and excellence at every stage of production. The extensive color database, combined with modern digital tools, makes it easier than ever to replicate and modify hues with accuracy and repeatability.",
     cta: "Access now",
     ctaLink: "#contact",
   },
@@ -153,7 +153,7 @@ export const enContent = {
     title: "Verinchrome",
     subtitle: "Verinchrome",
     description:
-      "The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way.",
+      "Designed for professionals who value precision, Verinchrome provides a smart and intuitive approach to color creation. The Verinchrome Tinting System allows you to reproduce with maximum reliability a wide range of pigmented bases and finishes in water and solvent, in a simple, fast and flexible way. Its high-performance pigments ensure consistent tones across various materials — wood, metal, and plastic — while maintaining durability and environmental responsibility. The system supports both manual and automated color matching, empowering workshops, industrial users, and designers to achieve perfect results every time. With Verinchrome, users can easily adapt formulas to meet project requirements, ensuring creativity, efficiency, and excellence at every stage of production. The extensive color database, combined with modern digital tools, makes it easier than ever to replicate and modify hues with accuracy and repeatability.",
     cta: "Access now",
     ctaLink: "#contact",
   },
