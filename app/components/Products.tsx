@@ -153,7 +153,7 @@ export function Products({
         {!showAll && (
           <div className="mt-8 text-center">
             <Link
-              href={locale === "arm" ? "/arm/products" : "/en/products"}
+              href={locale === "arm" ? "/arm/products" : "/products"}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
             >
               See more

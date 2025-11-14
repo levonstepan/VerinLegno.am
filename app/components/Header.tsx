@@ -11,7 +11,7 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200/50 shadow-sm">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href={isEn ? "/en" : "/arm"} className="flex items-center gap-3 group">
+          <Link href={isEn ? "/" : "/arm"} className="flex items-center gap-3 group">
             <div className="relative">
               <span className="text-2xl font-bold text-[#D70000] group-hover:opacity-80 transition-opacity">
                 VerinLegno
@@ -25,37 +25,37 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
 
           <nav className="hidden md:flex items-center gap-1 text-sm">
             <Link
-              href={isEn ? "/en#products" : "/arm#products"}
+              href={isEn ? "/#products" : "/arm#products"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Products" : "Ապրանքներ"}
             </Link>
             <Link
-              href={isEn ? "/en#catalogues" : "/arm#catalogues"}
+              href={isEn ? "/#catalogues" : "/arm#catalogues"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Manuals" : "Ձեռնարկներ"}
             </Link>
             <Link
-              href={isEn ? "/en#services" : "/arm#services"}
+              href={isEn ? "/#services" : "/arm#services"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Services" : "Ծառայություններ"}
             </Link>
             <Link
-              href={isEn ? "/en#company" : "/arm#company"}
+              href={isEn ? "/#company" : "/arm#company"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link
-              href={isEn ? "/en#workshops" : "/arm#workshops"}
+              href={isEn ? "/#workshops" : "/arm#workshops"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Workshops" : "Վարպետաց դասեր"}
             </Link>
             <Link
-              href={isEn ? "/en#contact" : "/arm#contact"}
+              href={isEn ? "/#contact" : "/arm#contact"}
               className="px-4 py-2 rounded-lg text-neutral-600 font-medium hover:text-[#D70000] hover:bg-[#D70000]/10 transition-all duration-200"
             >
               {isEn ? "Contact Us" : "Կապ"}
@@ -80,7 +80,7 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
               Հայ
             </Link>
             <Link
-              href="/en"
+              href="/"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
@@ -136,42 +136,42 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 space-y-1 animate-fade-in-up">
             <Link 
-              href={isEn ? "/en#products" : "/arm#products"} 
+              href={isEn ? "/#products" : "/arm#products"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Products" : "Ապրանքներ"}
             </Link>
             <Link 
-              href={isEn ? "/en#catalogues" : "/arm#catalogues"} 
+              href={isEn ? "/#catalogues" : "/arm#catalogues"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Manuals" : "Ձեռնարկներ"}
             </Link>
             <Link 
-              href={isEn ? "/en#services" : "/arm#services"} 
+              href={isEn ? "/#services" : "/arm#services"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Services" : "Ծառայություններ"}
             </Link>
             <Link 
-              href={isEn ? "/en#company" : "/arm#company"} 
+              href={isEn ? "/#company" : "/arm#company"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Partnership" : "Ընկերություն"}
             </Link>
             <Link 
-              href={isEn ? "/en#workshops" : "/arm#workshops"} 
+              href={isEn ? "/#workshops" : "/arm#workshops"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {isEn ? "Workshops" : "Վարպետաց դասեր"}
             </Link>
             <Link 
-              href={isEn ? "/en#contact" : "/arm#contact"} 
+              href={isEn ? "/#contact" : "/arm#contact"} 
               className="block px-4 py-3 rounded-lg hover:bg-[#D70000]/5 hover:text-[#D70000] transition-all font-medium text-neutral-600"
               onClick={() => setMobileMenuOpen(false)}
             >
