@@ -85,14 +85,14 @@ export function Products({
                 onClick={handleClick}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative ${showAll && item.image ? 'p-4 aspect-square' : showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${!showAll ? 'min-h-[280px]' : ''} ${showAll && item.image ? 'max-w-xs' : 'max-w-sm'} mx-auto`}
+                className={`group relative flex flex-col ${showAll && item.image ? 'p-4 min-h-[320px]' : showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 ${!showAll ? 'min-h-[280px]' : ''} ${showAll && item.image ? 'max-w-xs' : 'max-w-sm'} mx-auto`}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
                 
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
-                  <div className="relative z-10 mb-3 flex justify-center">
+                  <div className="relative z-10 mb-3 flex justify-center flex-shrink-0">
                     <div className={`w-full ${showAll ? 'h-48' : 'h-64 md:h-72'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
                       <Image
                         src={item.image}
@@ -115,24 +115,24 @@ export function Products({
                     </div>
                   </div>
                 ) : (
-                  <div className={`relative z-10 mb-4 ${showAll ? 'text-4xl' : 'text-5xl md:text-6xl'} transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
+                  <div className={`relative z-10 mb-4 flex-shrink-0 ${showAll ? 'text-4xl' : 'text-5xl md:text-6xl'} transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
                     {icon}
                   </div>
                 )}
                 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 mt-auto">
                   <h3 className={`font-bold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300 text-center ${item.image ? 'text-neutral-900' : ''}`}>
                     {item.image ? getCatalogueName(item.image) : item.name}
                   </h3>
                   {item.desc && (
-                    <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors">
+                    <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors text-center">
                       {item.desc}
                     </p>
                   )}
                   
                   {/* Arrow indicator */}
-                  <div className="mt-4 flex items-center text-[#D70000] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
+                  <div className="mt-4 flex items-center justify-center text-[#D70000] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
                     <span className="text-sm font-medium mr-2">Explore</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
