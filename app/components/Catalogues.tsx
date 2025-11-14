@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 export function Catalogues({
   content,
   showAll = false,
+  locale = "en",
 }: {
   content: Readonly<{
     title: string;
@@ -15,6 +16,7 @@ export function Catalogues({
     cta: string;
   }>;
   showAll?: boolean;
+  locale?: "arm" | "en";
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -102,7 +104,7 @@ export function Catalogues({
         {!showAll && (
           <div className="mt-8 text-center">
             <Link
-              href="/catalogues"
+              href={locale === "arm" ? "/arm/catalogues" : "/en/catalogues"}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
             >
               See more

@@ -20,6 +20,7 @@ const productIcons: Record<string, string> = {
 export function Products({
   content,
   showAll = false,
+  locale = "en",
 }: {
   content: Readonly<{
     title: string;
@@ -33,6 +34,7 @@ export function Products({
     }>;
   }>;
   showAll?: boolean;
+  locale?: "arm" | "en";
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const displayedItems = showAll ? content.items.slice(0, 8) : content.items.slice(0, 4);
@@ -151,7 +153,7 @@ export function Products({
         {!showAll && (
           <div className="mt-8 text-center">
             <Link
-              href="/products"
+              href={locale === "arm" ? "/arm/products" : "/en/products"}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
             >
               See more
