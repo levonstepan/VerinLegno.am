@@ -37,8 +37,6 @@ export function Services({
               {content.title}
             </h2>
             
-            <h3 className="text-2xl font-semibold text-[#D70000] mb-6">{content.subtitle}</h3>
-            
             <p className="text-lg text-neutral-700 mb-8 leading-relaxed whitespace-pre-line">
               {content.description}
             </p>
