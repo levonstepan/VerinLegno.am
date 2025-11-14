@@ -85,7 +85,7 @@ export function Products({
                 onClick={handleClick}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative flex flex-col ${showAll && item.image ? 'p-4 min-h-[320px]' : showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 ${!showAll ? 'min-h-[280px]' : ''} ${showAll && item.image ? 'max-w-xs' : 'max-w-sm'} mx-auto`}
+                className={`group relative flex flex-col ${showAll && item.image ? 'p-4 aspect-square' : showAll ? 'p-3' : 'p-4 md:p-5'} rounded-xl border-2 border-neutral-200 bg-white hover:border-[#D70000] hover:shadow-xl hover:shadow-[#D70000]/10 transition-all duration-300 transform hover:-translate-y-2 ${!showAll ? 'min-h-[280px]' : ''} ${showAll && item.image ? 'w-full' : showAll ? 'max-w-sm' : 'max-w-sm'} mx-auto`}
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-[#D70000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
@@ -93,7 +93,7 @@ export function Products({
                 {/* Catalogue Image or Icon */}
                 {item.image ? (
                   <div className="relative z-10 mb-3 flex justify-center flex-shrink-0">
-                    <div className={`w-full ${showAll ? 'h-48' : 'h-64 md:h-72'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
+                    <div className={`w-full ${showAll ? 'h-56' : 'h-64 md:h-72'} rounded-lg overflow-hidden bg-neutral-100 flex items-center justify-center`}>
                       <Image
                         src={item.image}
                         alt={item.name}
