@@ -58,7 +58,7 @@ export function Products({
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-            <span className="text-sm font-medium text-[#D70000]">Our Solutions</span>
+            <span className="text-sm font-medium text-[#D70000]">{locale === "arm" ? "Մեր լուծումները" : "Our Solutions"}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-semibold mb-10 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
             {content.title}
@@ -125,7 +125,7 @@ export function Products({
                 {/* Content */}
                 <div className="relative z-10 mt-auto">
                   <h3 className={`font-bold ${showAll ? 'text-base' : 'text-lg md:text-xl'} mb-2 group-hover:text-[#D70000] transition-colors duration-300 text-center ${item.image ? 'text-neutral-900' : ''}`}>
-                    {item.image ? getCatalogueName(item.image) : item.name}
+                    {item.name}
                   </h3>
                   {item.desc && (
                     <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors text-center">
@@ -135,7 +135,7 @@ export function Products({
                   
                   {/* Arrow indicator */}
                   <div className="mt-4 flex items-center justify-center text-[#D70000] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
-                    <span className="text-sm font-medium mr-2">Explore</span>
+                    <span className="text-sm font-medium mr-2">{locale === "arm" ? "Բացահայտել" : "Explore"}</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -156,7 +156,7 @@ export function Products({
               href={locale === "arm" ? "/arm/products" : "/products"}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
             >
-              See more
+              {locale === "arm" ? "Տեսնել ավելին" : "See more"}
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
