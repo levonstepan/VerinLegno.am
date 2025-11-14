@@ -7,22 +7,22 @@ import { Workshops } from "./components/Workshops";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { enContent } from "./shared/content";
+import { hyContent } from "./shared/content";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Header locale="en" />
+      <Header locale="hy" />
       <main>
-        <Hero content={enContent.hero} />
-        <Products content={enContent.products} />
-        <Catalogues content={enContent.catalogues} />
-        <Services content={enContent.services} />        
-        <About content={enContent.about} />
-        <Workshops content={enContent.workshops} />
-        <Contact content={enContent.contact} />
+        <Hero content={hyContent.hero} />
+        <Products content={hyContent.products} />
+        <Catalogues content={hyContent.catalogues} />
+        <Services content={hyContent.services} />        
+        <About content={hyContent.about} />
+        <Workshops content={hyContent.workshops} />
+        <Contact content={hyContent.contact} />
       </main>
-      <Footer content={enContent.footer} />
+      <Footer content={hyContent.footer} />
     </div>
   );
 }
