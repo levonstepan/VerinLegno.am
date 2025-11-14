@@ -43,6 +43,10 @@ export function Products({
     if (imagePath.includes('Crystal Epox')) return 'Crystal Epox';
     if (imagePath.includes('Wood oil')) return 'Wood Oil';
     if (imagePath.includes('Stains')) return 'Stains';
+    if (imagePath.includes('Firefighter')) return 'Firefighter';
+    if (imagePath.includes('Parquet')) return 'Parquet';
+    if (imagePath.includes('Special Effects')) return 'Special Effects';
+    if (imagePath.includes('Verin-Sea Finishing')) return 'Verin-Sea Finishing';
     if (imagePath.includes('Patinas')) return 'Patinas';
     return '';
   };
@@ -99,7 +103,11 @@ export function Products({
                           !showAll && (
                             item.image.includes('Crystal Epox') || 
                             item.image.includes('Stains') || 
-                            item.image.includes('Patinas') 
+                            item.image.includes('Patinas') ||
+                            item.image.includes('Firefighter') ||
+                            item.image.includes('Parquet') ||
+                            item.image.includes('Special Effects') ||
+                            item.image.includes('Verin-Sea Finishing')
                           ) ? 'scale-125' : ''
                         }`}
                         sizes="(max-width: 768px) 100vw, 100vw"
