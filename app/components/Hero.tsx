@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export function Hero({
   content,
+  locale = "en",
 }: {
   content: Readonly<{
     title: string;
@@ -10,6 +11,7 @@ export function Hero({
     cta: string;
     ctaLink: string;
   }>;
+  locale?: "arm" | "en";
 }) {
   return (
     <section className="relative pt-0 pb-8 md:pb-12 overflow-hidden">
@@ -33,7 +35,7 @@ export function Hero({
               <span className="text-sm font-medium text-[#D70000]">Since 1975 • Italian Excellence</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-8 text-neutral-800">
+            <h1 className={`${locale === "arm" ? "text-3xl md:text-4xl lg:text-5xl" : "text-4xl md:text-5xl lg:text-6xl"} font-semibold leading-tight mb-8 text-neutral-800`}>
               {content.title}
             </h1>
             

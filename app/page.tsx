@@ -14,7 +14,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header locale="en" />
       <main>
-        <Hero content={enContent.hero} />
+        <Hero content={enContent.hero} locale="en" />
         <Products content={enContent.products} locale="en" />
         <Catalogues content={enContent.catalogues} locale="en" />
         <Services content={enContent.services} />

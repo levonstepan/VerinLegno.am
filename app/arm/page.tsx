@@ -14,7 +14,7 @@ export default function HomeArm() {
     <div className="min-h-screen bg-white">
       <Header locale="arm" />
       <main>
-        <Hero content={hyContent.hero} />
+        <Hero content={hyContent.hero} locale="arm" />
         <Products content={hyContent.products} locale="arm" />
         <Catalogues content={hyContent.catalogues} locale="arm" />
         <Services content={hyContent.services} />
