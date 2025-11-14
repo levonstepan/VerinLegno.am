@@ -10,7 +10,7 @@ export const hyContent = {
     title: "Product Catalogues",
     subtitle: "High technology, reliability and sustainability",
     items: [
-      { name: "Special effects", href: "/catalogues/Crystal-epox_ENG.pdf", image: "/images/catalogues/Crystal Epox.jpeg", pdf: "/catalogues/Crystal-epox_ENG.pdf" },
+      { name: "Special effects", href: "/catalogues/Crystal epox ENG.pdf", image: "/images/catalogues/Crystal Epox.jpeg", pdf: "/catalogues/Crystal epox ENG.pdf" },
       { name: "Water-based exterior", href: "/catalogues/WOOD-OIL.pdf", image: "/images/catalogues/Wood oil.jpeg", pdf: "/catalogues/WOOD-OIL.pdf" },
       { name: "Water-based interior", href: "/catalogues/Stains.pdf", image: "/images/catalogues/Stains.jpeg", pdf: "/catalogues/Stains.pdf" },
       { name: "Fire retardant", href: "/catalogues/Patinas.pdf", image: "/images/catalogues/Patinas.jpeg", pdf: "/catalogues/Patinas.pdf" },
@@ -124,7 +124,7 @@ export const enContent = {
     title: "Product Catalogues",
     subtitle: "High technology, reliability and sustainability",
     items: [
-      { name: "Special effects", href: "/catalogues/Crystal-epox_ENG.pdf", image: "/images/catalogues/Crystal Epox.jpeg", pdf: "/catalogues/Crystal-epox_ENG.pdf" },
+      { name: "Special effects", href: "/catalogues/Crystal epox ENG.pdf", image: "/images/catalogues/Crystal Epox.jpeg", pdf: "/catalogues/Crystal epox ENG.pdf" },
       { name: "Water-based exterior", href: "/catalogues/WOOD-OIL.pdf", image: "/images/catalogues/Wood oil.jpeg", pdf: "/catalogues/WOOD-OIL.pdf" },
       { name: "Water-based interior", href: "/catalogues/Stains.pdf", image: "/images/catalogues/Stains.jpeg", pdf: "/catalogues/Stains.pdf" },
       { name: "Fire retardant", href: "/catalogues/Patinas.pdf", image: "/images/catalogues/Patinas.jpeg", pdf: "/catalogues/Patinas.pdf" },
