@@ -84,7 +84,7 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
-                  : "border border-neutral-300 hover:border-[#D70000] hover:text-[#D70000]"
+                  : "border border-neutral-300 text-neutral-800 hover:border-[#D70000] hover:text-[#D70000]"
               }`}
             >
               {/* USA Flag */}
