@@ -60,7 +60,7 @@ export function About({
                 </div>
               </div>
               
-              <p className="text-neutral-700 leading-relaxed mb-4 text-sm flex-1">{content.rootsText}</p>
+              <p className="text-neutral-700 leading-relaxed mb-4 text-sm flex-1 whitespace-pre-line">{content.rootsText}</p>
               
               {/* Partnership badge */}
               <div className="flex items-center gap-2 pt-4 border-t border-neutral-200 mb-4">
