@@ -20,7 +20,7 @@ export default function HomeEn() {
         <Services content={enContent.services} />
         <About content={enContent.about} />
         <Workshops content={enContent.workshops} />
-        <Contact content={enContent.contact} />
+        <Contact content={enContent.contact} locale="en" />
       </main>
       <Footer content={enContent.footer} />
     </div>

@@ -20,7 +20,7 @@ export default function HomeArm() {
         <Services content={hyContent.services} />
         <About content={hyContent.about} />
         <Workshops content={hyContent.workshops} />
-        <Contact content={hyContent.contact} />
+        <Contact content={hyContent.contact} locale="arm" />
       </main>
       <Footer content={hyContent.footer} />
     </div>

@@ -2,6 +2,7 @@
 
 export function Contact({
   content,
+  locale = "en",
 }: {
   content: Readonly<{
     title: string;
@@ -18,6 +19,7 @@ export function Contact({
     newsletterTitle?: string;
     newsletterText?: string;
   }>;
+  locale?: "arm" | "en";
 }) {
   return (
     <section id="contact" className="py-8 md:py-12 relative">
@@ -27,7 +29,7 @@ export function Contact({
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">{content.badge || "Get In Touch"}</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+          <h2 className={`text-4xl md:text-5xl font-semibold ${locale === "arm" ? "mb-14 pb-2" : "mb-10"} bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent`}>
             {content.title}
           </h2>
         </div>
