@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export function Services({
   content,
+  locale = "en",
 }: {
   content: Readonly<{
     title: string;
@@ -13,6 +14,7 @@ export function Services({
     cta: string;
     ctaLink: string;
   }>;
+  locale?: "arm" | "en";
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -33,7 +35,7 @@ export function Services({
               <span className="text-sm font-medium text-[#D70000]">Advanced Technology</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+            <h2 className={`${locale === "arm" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent`}>
               {content.title}
             </h2>
             

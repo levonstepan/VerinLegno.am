@@ -17,9 +17,9 @@ export default function HomeEn() {
         <Hero content={enContent.hero} locale="en" />
         <Products content={enContent.products} locale="en" />
         <Catalogues content={enContent.catalogues} locale="en" />
-        <Services content={enContent.services} />
-        <About content={enContent.about} />
-        <Workshops content={enContent.workshops} />
+        <Services content={enContent.services} locale="en" />
+        <About content={enContent.about} locale="en" />
+        <Workshops content={enContent.workshops} locale="en" />
         <Contact content={enContent.contact} locale="en" />
       </main>
       <Footer content={enContent.footer} />

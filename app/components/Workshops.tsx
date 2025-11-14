@@ -7,6 +7,7 @@ type WorkshopIcon = "application" | "product" | "color" | "quality" | string;
 
 export function Workshops({
   content,
+  locale = "en",
 }: {
   content: Readonly<{
     label: string;
@@ -21,6 +22,7 @@ export function Workshops({
     cta: string;
     ctaLink: string;
   }>;
+  locale?: "arm" | "en";
 }) {
   const renderIcon = (icon: WorkshopIcon) => {
     switch (icon) {
@@ -118,7 +120,7 @@ export function Workshops({
               <div className="inline-flex items-center gap-2 rounded-full border border-[#D70000]/20 bg-[#D70000]/10 px-4 py-1.5 text-sm font-medium text-[#D70000]">
                 {content.label}
               </div>
-              <h2 className="mt-6 text-4xl md:text-5xl font-bold text-neutral-900">
+              <h2 className={`mt-6 ${locale === "arm" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-bold text-neutral-900`}>
                 {content.title}
               </h2>
               <p className="mt-4 text-lg text-neutral-600">

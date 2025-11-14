@@ -43,7 +43,7 @@ export function Catalogues({
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
             <span className="text-sm font-medium text-[#D70000]">{content.badge || "Resources"}</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-12 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+          <h2 className={`${locale === "arm" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-semibold mb-12 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent`}>
             {content.title}
           </h2>
           <p className="text-lg text-neutral-700 max-w-2xl mx-auto">

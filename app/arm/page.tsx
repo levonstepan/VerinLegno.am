@@ -17,9 +17,9 @@ export default function HomeArm() {
         <Hero content={hyContent.hero} locale="arm" />
         <Products content={hyContent.products} locale="arm" />
         <Catalogues content={hyContent.catalogues} locale="arm" />
-        <Services content={hyContent.services} />
-        <About content={hyContent.about} />
-        <Workshops content={hyContent.workshops} />
+        <Services content={hyContent.services} locale="arm" />
+        <About content={hyContent.about} locale="arm" />
+        <Workshops content={hyContent.workshops} locale="arm" />
         <Contact content={hyContent.contact} locale="arm" />
       </main>
       <Footer content={hyContent.footer} />
