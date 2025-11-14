@@ -23,7 +23,12 @@ export const hyContent = {
     ] as const,
   },
   catalogues: {
-    title: "Technical Documents",
+    title: "Տեխնիկական փաստաթղթեր",
+    badge: "Ռեսուրսներ",
+    description: "Դիտարկեք մեր ապրանքների կատալոգների և տեխնիկական փաստաթղթերի համապարփակ հավաքածուն",
+    pdfLabel: "PDF",
+    openManual: "Բացել ձեռնարկը",
+    cta: "Դիտել բոլոր կատալոգները",
     items: [
       // All 6 manuals - first 4 shown on main page, all 6 on See more page
       { name: "G100 - VF BIANCO 310", href: "/manuals/G100 - VF BIANCO 310.pdf" },
@@ -33,7 +38,6 @@ export const hyContent = {
       { name: "H36025 - VPK BIANCO 260 25 GLOSS", href: "/manuals/H36025 - VPK BIANCO 260 25 GLOSS.pdf" },
       { name: "M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS", href: "/manuals/M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS.pdf" },
     ] as const,
-    cta: "Դիտել բոլոր կատալոգները",
   },
   services: {
     title: "Verinchrome",
@@ -142,6 +146,11 @@ export const enContent = {
   },
   catalogues: {
     title: "Technical Documents",
+    badge: "Resources",
+    description: "Browse our comprehensive collection of product catalogs and technical documentation",
+    pdfLabel: "PDF",
+    openManual: "Open the manual",
+    cta: "Discover all catalogues",
     items: [
       // All 6 manuals - first 4 shown on main page, all 6 on See more page
       { name: "G100 - VF BIANCO 310", href: "/manuals/G100 - VF BIANCO 310.pdf" },
@@ -151,7 +160,6 @@ export const enContent = {
       { name: "H36025 - VPK BIANCO 260 25 GLOSS", href: "/manuals/H36025 - VPK BIANCO 260 25 GLOSS.pdf" },
       { name: "M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS", href: "/manuals/M90030 - FO FI ACRILICO LONG LIFE 30 GLOSS.pdf" },
     ] as const,
-    cta: "Discover all catalogues",
   },
   services: {
     title: "Verinchrome",

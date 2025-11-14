@@ -9,6 +9,10 @@ export function Catalogues({
 }: {
   content: Readonly<{
     title: string;
+    badge?: string;
+    description?: string;
+    pdfLabel?: string;
+    openManual?: string;
     items: ReadonlyArray<{
       name: string;
       href: string;
@@ -37,13 +41,13 @@ export function Catalogues({
       <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-            <span className="text-sm font-medium text-[#D70000]">Resources</span>
+            <span className="text-sm font-medium text-[#D70000]">{content.badge || "Resources"}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-semibold mb-12 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
             {content.title}
           </h2>
           <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
-            Browse our comprehensive collection of product catalogs and technical documentation
+            {content.description || "Browse our comprehensive collection of product catalogs and technical documentation"}
           </p>
         </div>
         
@@ -74,7 +78,7 @@ export function Catalogues({
                     </svg>
                   </div>
                   <div className={`${showAll ? 'text-xs' : 'text-sm md:text-base'} font-medium text-neutral-500 group-hover:text-[#D70000] transition-colors`}>
-                    PDF
+                    {content.pdfLabel || "PDF"}
                   </div>
                 </div>
                 
@@ -86,7 +90,7 @@ export function Catalogues({
                   
                   {/* CTA */}
                   <div className="flex items-center gap-2 text-[#D70000] text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
-                    <span>Open the manual</span>
+                    <span>{content.openManual || "Open the manual"}</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -107,7 +111,7 @@ export function Catalogues({
               href={locale === "arm" ? "/arm/catalogues" : "/catalogues"}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium bg-[#D70000] text-white hover:shadow-xl hover:shadow-[#D70000]/20 hover:scale-105 transition-all duration-300"
             >
-              See more
+              {content.cta}
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
