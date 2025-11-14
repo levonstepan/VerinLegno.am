@@ -5,6 +5,10 @@ export function Contact({
 }: {
   content: Readonly<{
     title: string;
+    badge?: string;
+    addressLabel?: string;
+    phoneLabel?: string;
+    emailLabel?: string;
     rootsTitle: string;
     rootsText: string;
     address: string;
@@ -21,7 +25,7 @@ export function Contact({
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-            <span className="text-sm font-medium text-[#D70000]">Get In Touch</span>
+            <span className="text-sm font-medium text-[#D70000]">{content.badge || "Get In Touch"}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
             {content.title}
@@ -44,7 +48,7 @@ export function Contact({
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-neutral-900 mb-1">Address</div>
+                  <div className="font-semibold text-neutral-900 mb-1">{content.addressLabel || "Address"}</div>
                   <div className="text-neutral-700">{content.address}</div>
                 </div>
               </div>
@@ -57,7 +61,7 @@ export function Contact({
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-neutral-900 mb-1">Phone</div>
+                  <div className="font-semibold text-neutral-900 mb-1">{content.phoneLabel || "Phone"}</div>
                   <a 
                     href={`tel:${content.phone}`} 
                     className="text-[#D70000] hover:underline transition-all"
@@ -78,7 +82,7 @@ export function Contact({
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-neutral-900 mb-1">Email</div>
+                  <div className="font-semibold text-neutral-900 mb-1">{content.emailLabel || "Email"}</div>
                   <a 
                     href={`mailto:${content.email}`} 
                     className="text-[#D70000] hover:underline transition-all"
