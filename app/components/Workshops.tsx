@@ -112,7 +112,7 @@ export function Workshops({
       className="py-12 md:py-16 relative scroll-mt-20 md:scroll-mt-24 bg-white"
     >
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="relative overflow-hidden rounded-3xl border-2 border-neutral-200 bg-white shadow-xl">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-neutral-200 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 shadow-xl">
           <div className="relative z-10 px-6 py-10 md:px-16 md:py-16">
             <div className="text-center max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#D70000]/20 bg-[#D70000]/10 px-4 py-1.5 text-sm font-medium text-[#D70000]">
