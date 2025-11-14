@@ -83,7 +83,7 @@ export const hyContent = {
       "Verinlegno is an Italian company that develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. Over 40 years of experience, distribution in many countries, wide catalogue.",
     rootsTitle: "Roots Furniture LLC",
     rootsText:
-      "Roots Furniture LLC is a furniture manufacturing company in Armenia, represented in the market by the Acobian Furniture brand. Roots LLC is the official / exclusive representative of VerinLegno Italy in Armenia, so the supply of VerinLegno coatings and preparation solutions in Armenia is carried out by us. With more than two decades of experience, Roots Furniture has become one of Armenia's leading manufacturers of high-quality wooden furniture. The company operates a fully automated, waste-free production system powered by smart equipment and solar energy, ensuring consistent quality and sustainable practices.",
+      "Roots Furniture LLC is a furniture manufacturing company in Armenia, represented in the market by the Acobian Furniture brand. With more than two decades of experience, Roots Furniture has become one of Armenia's leading manufacturers of high-quality wooden furniture.\n\nRoots LLC is the official / exclusive representative of VerinLegno Italy in Armenia, so the supply of VerinLegno coatings and preparation solutions in Armenia is carried out by us.",
     acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
   },
   contact: {
@@ -197,7 +197,7 @@ export const enContent = {
       "Verinlegno is an Italian company that develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. Over 40 years of experience, distribution in many countries, wide catalogue.",
     rootsTitle: "Roots Furniture LLC",
     rootsText:
-      "Roots Furniture LLC is a furniture manufacturing company in Armenia, represented in the market by the Acobian Furniture brand. Roots LLC is the official / exclusive representative of VerinLegno Italy in Armenia, so the supply of VerinLegno coatings and preparation solutions in Armenia is carried out by us. With more than two decades of experience, Roots Furniture has become one of Armenia's leading manufacturers of high-quality wooden furniture. The company operates a fully automated, waste-free production system powered by smart equipment and solar energy, ensuring consistent quality and sustainable practices.",
+      "Roots Furniture LLC is a furniture manufacturing company in Armenia, represented in the market by the Acobian Furniture brand. With more than two decades of experience, Roots Furniture has become one of Armenia's leading manufacturers of high-quality wooden furniture.\n\nRoots LLC is the official / exclusive representative of VerinLegno Italy in Armenia, so the supply of VerinLegno coatings and preparation solutions in Armenia is carried out by us.",
     acobianNote: "Acobian ≈ brand, Roots ≈ company (like Apple → iPhone)",
   },
   contact: {
