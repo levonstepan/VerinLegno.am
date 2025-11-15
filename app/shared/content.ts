@@ -1,6 +1,7 @@
 export const hyContent = {
   hero: {
     title: "VerinLegno-ն Հայաստանում",
+    badge: "Սկսած 1975թ-ից • Իտալական որակ",
     subtitle:
       "Verinlegno-ն, հիմնադրված Տոսկանայում 1975թ.-ին, ոլորտում առաջատար իտալական ընկերություն է, որն արտադրում է բարձրորակ ու , էկոլոգիապես մաքուր ծածկույթներ՝ փայտի, մետաղի և ապակու համար։ Հայաստանում VerinLegno-ի պաշտոնական և բացառիկ ներկայացուցիչն է Roots Furniture ընկերությունը։",
     cta: "Իմանալ ավելին",
@@ -125,6 +126,7 @@ export const hyContent = {
 export const enContent = {
   hero: {
     title: "VerinLegno in Armenia",
+    badge: "Since 1975 • Italian Excellence",
     subtitle:
       "Verinlegno Spa, founded in Massa e Cozzile in 1975, is a leading Italian manufacturer of innovative and reliable coatings for wood, metal, and glass. In Armenia, these solutions are exclusively represented by Roots Furniture LLC.",
     cta: "Explore",
