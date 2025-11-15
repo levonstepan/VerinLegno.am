@@ -193,7 +193,7 @@ export const enContent = {
       {
         title: "Application Techniques",
         description:
-          "Join our comprehensive workshops to learn expert application techniques, product knowledge, and best practices from industry professionals.",
+          "Join our comprehensive workshops to learn expert application techniques and best practices from industry professionals.",
         icon: "application",
       },
       {
