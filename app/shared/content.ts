@@ -36,7 +36,7 @@ export const hyContent = {
     description: "Դիտարկեք մեր ապրանքների կատալոգների և տեխնիկական փաստաթղթերի համապարփակ հավաքածուն",
     pdfLabel: "PDF",
     openManual: "Բացել ձեռնարկը",
-    cta: "Դիտել բոլոր կատալոգները",
+    cta: "Ավելին",
     items: [
       // All 6 manuals - first 4 shown on main page, all 6 on See more page
       { name: "G100 - VF BIANCO 310", href: "/manuals/G100 - VF BIANCO 310.pdf" },
