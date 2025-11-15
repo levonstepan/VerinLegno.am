@@ -68,7 +68,7 @@ export function Products({
           </p>
         </div>
         
-        <div className={`${showAll ? 'grid grid-cols-2 md:grid-cols-4' : 'flex flex-wrap justify-center'} gap-6 md:gap-8`}>
+        <div className={`grid ${showAll ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-4'} gap-6 md:gap-8`}>
           {displayedItems.map((item, index) => {
             const icon = productIcons[item.name] || "🎨";
             const isHovered = hoveredIndex === index;
