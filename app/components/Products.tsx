@@ -58,7 +58,7 @@ export function Products({
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-            <span className="text-sm font-medium text-[#D70000]">{locale === "arm" ? "Առաջադեմ տեխնոլոգիաներ" : "Our Solutions"}</span>
+            <span className="text-sm font-medium text-[#D70000]">{locale === "arm" ? "Մեր լուծումները" : "Our Solutions"}</span>
           </div>
           <h2 className={`${locale === "arm" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-semibold mb-10 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent`}>
             {content.title}
