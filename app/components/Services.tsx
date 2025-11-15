@@ -106,7 +106,7 @@ export function Services({
                   </div>
                   <div>
                     <div className="font-bold text-neutral-900">Verinchrome</div>
-                    <div className="text-sm text-neutral-600">Tinting System</div>
+                    <div className="text-sm text-neutral-600">{locale === "arm" ? "Գունային խառնման համակարգ" : "Tinting System"}</div>
                   </div>
                 </div>
                 
