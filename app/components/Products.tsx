@@ -104,6 +104,7 @@ export function Products({
                         className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 ${
                           !showAll && (
                             item.image.includes('Crystal Epox') || 
+                            item.image.includes('Wood oil') ||
                             item.image.includes('Stains') || 
                             item.image.includes('Patinas') ||
                             item.image.includes('Firefighter') ||
