@@ -205,7 +205,7 @@ export const enContent = {
       {
         title: "Color Matching",
         description:
-          "Master the art of color matching and tinting with our professional training programs.",
+          "Master the art of color matching and tinting with our training programs.",
         icon: "color",
       },
       {
