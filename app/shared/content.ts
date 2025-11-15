@@ -108,14 +108,14 @@ export const hyContent = {
     rootsText: "Կահույք արտադրող ընկերություն",
     address: "Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1",
     phone: "+374 91 665520",
-    ceoName: "Լևոն Ստեփանյան - Roots LLC-ի գլխավոր տնօրեն",
+    ceoName: "Լևոն Ստեփանյան - Roots ՍՊԸ-ի գլխավոր տնօրեն",
     email: "info@roots.am",
     newsletterTitle: "Բաժանորդագրվեք մեր նորություններին!",
     newsletterText:
       "Մի բաց թողեք VerinLegno-ի մասին որևէ բան, կարդացեք գաղտնիության քաղաքականությունը և բաժանորդագրվեք մեր նորություններին",
   },
   footer: {
-    companyInfo: "Roots Furniture LLC — VerinLegno S.p.A.-ի պաշտոնական ներկայացուցիչ Հայաստանում",
+    companyInfo: "Roots Furniture ՍՊԸ — VerinLegno S.p.A.-ի պաշտոնական ներկայացուցիչ Հայաստանում",
     address: "Երևան, Հայաստան",
     email: "info@roots.am",
     phone: "+374 91 665520",
