@@ -23,7 +23,7 @@ export const hyContent = {
       { name: "Փայտի ներկանյութեր", href: "/catalogues/Stains.pdf", image: "/images/catalogues/Stains.jpeg", pdf: "/catalogues/Stains.pdf" },
       { name: "Պատինաներ", href: "/catalogues/Patinas.pdf", image: "/images/catalogues/Patinas.jpeg", pdf: "/catalogues/Patinas.pdf" },
       { name: "Հրդեհակայուն ծածկույթներ", href: "/catalogues/Firefighter.pdf", image: "/images/catalogues/Firefighter.png", pdf: "/catalogues/Firefighter.pdf" },
-      { name: "Պարկետ", href: "/catalogues/Parquet.pdf", image: "/images/catalogues/Parquet.png", pdf: "/catalogues/Parquet.pdf" },
+      { name: "Մանրահատակ", href: "/catalogues/Parquet.pdf", image: "/images/catalogues/Parquet.png", pdf: "/catalogues/Parquet.pdf" },
       { name: "Հատուկ էֆեկտներ", href: "/catalogues/Effetti speciali.pdf", image: "/images/catalogues/Special Effects.png", pdf: "/catalogues/Effetti speciali.pdf" },
       { name: "Verin-Sea ծովային ծածկույթներ", href: "/catalogues/VERIN-SEA FINISHING.pdf", image: "/images/catalogues/Verin-Sea Finishing.png", pdf: "/catalogues/VERIN-SEA FINISHING.pdf" },
       { name: "Լուծիչային ներքին", href: "#products" },
