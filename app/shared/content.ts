@@ -8,6 +8,11 @@ export const hyContent = {
     ctaLink: "#products",
     cta2: "Մեր Պատմությունը",
     cta2Link: "#company",
+    stats: {
+      yearsLabel: "Տարվա փորձառություն",
+      countriesLabel: "Երկիր",
+      ecoLabel: "Էկոլոգիապես անվնաս",
+    },
   },
   products: {
     title: "Ապրանքների կատալոգներ",
@@ -133,6 +138,11 @@ export const enContent = {
     ctaLink: "#products",
     cta2: "Our Story",
     cta2Link: "#company",
+    stats: {
+      yearsLabel: "Years Experience",
+      countriesLabel: "Countries",
+      ecoLabel: "Eco-Friendly",
+    },
   },
   products: {
     title: "Product Catalogues",

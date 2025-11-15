@@ -13,6 +13,11 @@ export function Hero({
     ctaLink: string;
     cta2?: string;
     cta2Link?: string;
+    stats?: {
+      yearsLabel: string;
+      countriesLabel: string;
+      ecoLabel: string;
+    };
   }>;
   locale?: "arm" | "en";
 }) {
@@ -73,15 +78,15 @@ export function Hero({
           <div className="mt-8 grid grid-cols-3 gap-8 pt-8 border-t border-neutral-300 bg-white rounded-2xl p-6 shadow-lg border border-neutral-200">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">50+</div>
-              <div className="text-sm text-neutral-600">Years Experience</div>
+              <div className="text-sm text-neutral-600">{content.stats?.yearsLabel || "Years Experience"}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">50+</div>
-              <div className="text-sm text-neutral-600">Countries</div>
+              <div className="text-sm text-neutral-600">{content.stats?.countriesLabel || "Countries"}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#D70000] mb-2">100%</div>
-              <div className="text-sm text-neutral-600">Eco-Friendly</div>
+              <div className="text-sm text-neutral-600">{content.stats?.ecoLabel || "Eco-Friendly"}</div>
             </div>
           </div>
         </div>
