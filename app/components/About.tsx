@@ -22,7 +22,7 @@ export function About({
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-            <span className="text-sm font-medium text-[#D70000]">{locale === "arm" ? "Մեր Պատմությունը" : "Our Story"}</span>
+            <span className="text-sm font-medium text-[#D70000]">{locale === "arm" ? "Մեր պատմությունը" : "Our Story"}</span>
           </div>
           <h2 className={`${locale === "arm" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-semibold mb-12 leading-normal bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent`}>
             {content.title}
