@@ -104,7 +104,7 @@ export function About({
             <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-[#D70000]" />
             <div className="w-3 h-3 rounded-full bg-[#D70000] animate-pulse" />
             <div className="text-sm font-medium text-neutral-600 px-4 py-2 bg-neutral-100 rounded-full">
-              Partnership Since 2020
+              {locale === "arm" ? "Համագործակցություն սկսած 2020 թվականից" : "Partnership Since 2020"}
             </div>
             <div className="w-3 h-3 rounded-full bg-[#D70000] animate-pulse" />
             <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-[#D70000]" />
