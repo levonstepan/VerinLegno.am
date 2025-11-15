@@ -124,7 +124,7 @@ export const hyContent = {
       { label: "Ծառայությունների պայմաններ", href: "/policies/terms-of-service" },
       { label: "Իրավական նշումներ", href: "/policies/legal-notes" },
     ] as const,
-    copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia`,
+    copyright: `© ${new Date().getFullYear()} Roots Furniture ՍՊԸ - VerinLegno Armenia`,
   },
 } as const;
 
