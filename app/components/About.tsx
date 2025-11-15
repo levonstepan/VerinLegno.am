@@ -72,8 +72,8 @@ export function About({
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-neutral-900">Certified Partnership</div>
-                  <div className="text-xs text-neutral-600">Exclusive Armenia Distributor</div>
+                  <div className="text-xs font-semibold text-neutral-900">{locale === "arm" ? "Սերտիֆիկացված Գործընկերություն" : "Certified Partnership"}</div>
+                  <div className="text-xs text-neutral-600">{locale === "arm" ? "Հայաստանում բացառիկ դիստրիբյուտոր" : "Exclusive Armenia Distributor"}</div>
                 </div>
               </div>
               
