@@ -32,7 +32,7 @@ export function Services({
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-2">
             <div className="inline-block mb-4 px-4 py-1.5 bg-[#D70000]/10 rounded-full border border-[#D70000]/20">
-              <span className="text-sm font-medium text-[#D70000]">Advanced Technology</span>
+              <span className="text-sm font-medium text-[#D70000]">{locale === "arm" ? "Առաջադեմ տեխնոլոգիաներ" : "Advanced Technology"}</span>
             </div>
             
             <h2 className={`${locale === "arm" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-semibold mb-10 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent`}>
