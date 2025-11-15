@@ -45,12 +45,17 @@ export function Services({
             
             {/* Features list */}
             <div className="space-y-3 mb-8">
-              {[
+              {(locale === "arm" ? [
+                "Առավելագույն գունային ճշգրտություն",
+                "Պարզ և արագ կիրառություն",
+                "Ջրի և լուծիչների համատեղելիություն",
+                "Վերջնական ծածկույթների լայն տեսականի"
+              ] : [
                 "Maximum color accuracy",
                 "Simple and fast application",
                 "Water and solvent compatibility",
                 "Wide range of finishes"
-              ].map((feature, idx) => (
+              ]).map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#D70000]/10 flex items-center justify-center">
                     <svg className="w-4 h-4 text-[#D70000]" fill="currentColor" viewBox="0 0 20 20">
