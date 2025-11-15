@@ -42,7 +42,7 @@ export function Hero({
               {content.title}
             </h1>
             
-            <p className={`${locale === "arm" ? "text-base md:text-lg" : "text-lg md:text-xl"} text-neutral-800 mb-10 leading-relaxed max-w-2xl drop-shadow-md`}>
+            <p className={`${locale === "arm" ? "text-sm md:text-base" : "text-lg md:text-xl"} text-neutral-800 mb-10 leading-relaxed max-w-2xl drop-shadow-md`}>
               {content.subtitle}
             </p>
           
