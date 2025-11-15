@@ -2,10 +2,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function Header({ locale }: { locale: "arm" | "en" }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
   const isEn = locale === "en";
+
+  const handleLanguageSwitch = (targetLocale: "arm" | "en") => {
+    // Store current scroll position
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+      sessionStorage.setItem("targetLocale", targetLocale);
+    }
+    
+    // Navigate without scrolling to top
+    const targetPath = targetLocale === "arm" ? "/arm" : "/";
+    router.push(targetPath);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200/50 shadow-sm">
@@ -63,8 +77,8 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Link
-              href="/arm"
+            <button
+              onClick={() => handleLanguageSwitch("arm")}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 !isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
@@ -78,9 +92,9 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
                 <rect y="13.33" width="40" height="6.67" fill="#F2A800"/>
               </svg>
               Հայ
-            </Link>
-            <Link
-              href="/"
+            </button>
+            <button
+              onClick={() => handleLanguageSwitch("en")}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 isEn 
                   ? "bg-[#D70000] text-white shadow-md shadow-[#D70000]/20" 
@@ -116,7 +130,7 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
                 <circle cx="12.5" cy="10.15" r="0.8" fill="#FFFFFF"/>
               </svg>
               EN
-            </Link>
+            </button>
             <button
               className="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

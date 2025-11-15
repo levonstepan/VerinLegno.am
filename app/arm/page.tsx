@@ -7,11 +7,13 @@ import { Workshops } from "../components/Workshops";
 import { About } from "../components/About";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
+import { ScrollRestorer } from "../components/ScrollRestorer";
 import { hyContent } from "../shared/content";
 
 export default function HomeArm() {
   return (
     <div className="min-h-screen bg-white">
+      <ScrollRestorer />
       <Header locale="arm" />
       <main>
         <Hero content={hyContent.hero} locale="arm" />

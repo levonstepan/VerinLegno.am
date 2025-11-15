@@ -7,11 +7,13 @@ import { Workshops } from "./components/Workshops";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ScrollRestorer } from "./components/ScrollRestorer";
 import { enContent } from "./shared/content";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
+      <ScrollRestorer />
       <Header locale="en" />
       <main>
         <Hero content={enContent.hero} locale="en" />
