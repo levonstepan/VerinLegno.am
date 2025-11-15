@@ -100,7 +100,7 @@ export const hyContent = {
   },
   contact: {
     title: "Կապ մեզ հետ",
-    badge: "Կապ հաստատել",
+    badge: "Հարցերի դեպքում",
     addressLabel: "Հասցե",
     phoneLabel: "Հեռախոս",
     emailLabel: "Էլ. փոստ",
