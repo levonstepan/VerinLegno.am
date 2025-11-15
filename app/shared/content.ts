@@ -105,7 +105,7 @@ export const hyContent = {
     phoneLabel: "Հեռախոս",
     emailLabel: "Էլ. փոստ",
     rootsTitle: "Roots Furniture LLC",
-    rootsText: "Կահույքի արտադրող Վաղարշապատում",
+    rootsText: "Կահույք արտադրող ընկերություն",
     address: "Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1",
     phone: "+374 91 665520",
     ceoName: "Լևոն Ստեփանյան - Roots LLC-ի գլխավոր տնօրեն",
