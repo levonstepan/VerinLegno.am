@@ -112,7 +112,7 @@ export function Services({
                 
                 {/* Color cards we are working with */}
                 <div>
-                  <div className="text-sm font-semibold text-neutral-700 mb-2">Color cards we are working with</div>
+                  <div className="text-sm font-semibold text-neutral-700 mb-2">{locale === "arm" ? "Մեր կիրառվող գունային քարտերը" : "Color cards we are working with"}</div>
                   <div className="grid grid-cols-2 gap-3">
                     {colorCards.map((card, idx) => (
                       <div 
