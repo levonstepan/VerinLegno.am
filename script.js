@@ -78,7 +78,20 @@ const translations = {
         'legal.disclaimer': 'Disclaimer',
         'legal.disclaimerText': 'Product specifications and information are subject to change. Please contact us for the most current information regarding our products and services. All product images and descriptions are for illustrative purposes only.',
         'legal.verinlegnoInfo': 'VerinLegno S.p.A. is an Italian company founded in Massa e Cozzile in 1975. The company develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. With over 40 years of experience, VerinLegno has distribution in many countries and offers a wide catalogue of products.',
-        'legal.backHome': '← Back to Home'
+        'legal.verinlegnoHeading': 'VerinLegno S.p.A.',
+        'legal.backHome': '← Back to Home',
+        
+        // Footer
+        'footer.companyTitle': 'VerinLegno Armenia',
+        'footer.companyDesc': 'Roots Furniture LLC — Official representative of VerinLegno S.p.A. in Armenia',
+        'footer.quickLinks': 'Quick Links',
+        'footer.contact': 'Contact',
+        'footer.legal': 'Legal',
+        'footer.privacyPolicy': 'Privacy Policy',
+        'footer.termsOfService': 'Terms of Service',
+        'footer.legalNotes': 'Legal Notes',
+        'footer.copyright': '© 2024 Roots Furniture LLC - VerinLegno Armenia. All rights reserved.',
+        'footer.madeWith': 'Made with ❤️ in Armenia'
     },
     hy: {
         // Navigation
@@ -142,7 +155,20 @@ const translations = {
         'legal.disclaimer': 'Հրաժարում',
         'legal.disclaimerText': 'Արտադրանքի բնութագրերը և տեղեկատվությունը կարող են փոխվել: Խնդրում ենք կապ հաստատել մեզ հետ մեր արտադրանքների և ծառայությունների վերաբերյալ ամենավերջին տեղեկատվության համար: Բոլոր արտադրանքի պատկերները և նկարագրությունները նախատեսված են միայն նկարագրական նպատակների համար:',
         'legal.verinlegnoInfo': 'VerinLegno S.p.A.-ը իտալական ընկերություն է, որը հիմնադրվել է Մասսա է Կոզիլեում 1975 թվականին: Ընկերությունը մշակում է բարձր տեխնոլոգիական, հուսալի և ավելի ու ավելի կանաչ ծածկույթներ փայտի, մետաղի, ապակու, ներքին և արտաքին մակերեսների համար: 40 տարուց ավելի փորձառությամբ VerinLegno-ն ունի բաշխում շատ երկրներում և առաջարկում է արտադրանքի լայն կատալոգ:',
-        'legal.backHome': '← Վերադառնալ գլխավոր էջ'
+        'legal.verinlegnoHeading': 'VerinLegno S.p.A.',
+        'legal.backHome': '← Վերադառնալ գլխավոր էջ',
+        
+        // Footer
+        'footer.companyTitle': 'VerinLegno Հայաստան',
+        'footer.companyDesc': 'Roots Furniture LLC — VerinLegno S.p.A.-ի պաշտոնական ներկայացուցիչը Հայաստանում',
+        'footer.quickLinks': 'Արագ հղումներ',
+        'footer.contact': 'Կապ',
+        'footer.legal': 'Իրավական',
+        'footer.privacyPolicy': 'Գաղտնիության Քաղաքականություն',
+        'footer.termsOfService': 'Ծառայությունների Մատուցման Պայմաններ',
+        'footer.legalNotes': 'Իրավական Նշումներ',
+        'footer.copyright': '© 2024 Roots Furniture LLC - VerinLegno Հայաստան: Բոլոր իրավունքները պաշտպանված են:',
+        'footer.madeWith': 'Ստեղծված է ❤️-ով Հայաստանում'
     }
 };
 
