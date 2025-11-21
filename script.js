@@ -14,8 +14,188 @@ navLinks.forEach(link => {
     });
 });
 
+// Translations object
+const translations = {
+    en: {
+        // Navigation
+        'nav.products': 'Products',
+        'nav.manuals': 'Manuals',
+        'nav.services': 'Services',
+        'nav.partnership': 'Partnership',
+        'nav.workshops': 'Workshops',
+        'nav.contact': 'Contact Us',
+        
+        // Legal
+        'legal.badge': 'Legal',
+        
+        // Privacy Policy
+        'privacy.title': 'Privacy Policy',
+        'privacy.subtitle': 'How we handle your information',
+        'privacy.lastUpdated': 'Last Updated:',
+        'privacy.commitment': 'Our Commitment to Privacy',
+        'privacy.commitmentText': 'At VerinLegno Armenia (Roots Furniture LLC), we respect your privacy. This website does not collect, store, or process any personal data from visitors.',
+        'privacy.dataCollection': 'Data Collection',
+        'privacy.dataCollectionText': 'We do not use cookies for tracking purposes, and we do not share any information with third parties. Any information you voluntarily provide through contact forms or email communications is used solely for the purpose of responding to your inquiries.',
+        'privacy.contactInfo': 'Contact Information',
+        'privacy.contactInfoText': 'If you have any questions about this privacy policy, please contact us at:',
+        'privacy.contactEmail': 'Email: info@roots.am',
+        'privacy.contactPhone': 'Phone: +374 91 665520',
+        'privacy.contactAddress': 'Address: 20/1 Ter-Gabrielyan Street, Vagharshapat, Armenia',
+        'privacy.backHome': '← Back to Home',
+        
+        // Terms of Service
+        'terms.title': 'Terms of Service',
+        'terms.subtitle': 'Terms and conditions for using our website',
+        'terms.lastUpdated': 'Last Updated:',
+        'terms.agreement': 'Agreement to Terms',
+        'terms.agreementText': 'By accessing and using this website, you agree to comply with and be bound by the following terms and conditions.',
+        'terms.useOfWebsite': 'Use of Website',
+        'terms.useOfWebsiteText': 'This website is provided for informational purposes only. The content is subject to change without notice. You may use this website for lawful purposes only and in accordance with these Terms of Service.',
+        'terms.intellectualProperty': 'Intellectual Property',
+        'terms.intellectualPropertyText': 'All content, including text, images, logos, and other materials on this website, is the property of VerinLegno Armenia and Roots Furniture LLC and is protected by copyright laws. You may not reproduce, distribute, or use any content from this website without prior written permission.',
+        'terms.limitation': 'Limitation of Liability',
+        'terms.limitationText': 'We are not liable for any damages arising from the use of this website or the information contained herein. The information on this website is provided "as is" without warranty of any kind.',
+        'terms.contactUs': 'Contact Us',
+        'terms.contactUsText': 'If you have any questions about these Terms of Service, please contact us at:',
+        'terms.contactEmail': 'Email: info@roots.am',
+        'terms.contactPhone': 'Phone: +374 91 665520',
+        'terms.backHome': '← Back to Home',
+        
+        // Legal Notes
+        'legal.title': 'Legal Notes',
+        'legal.subtitle': 'Important legal information about our company',
+        'legal.companyInfo': 'Company Information',
+        'legal.companyName': 'Company Name:',
+        'legal.addressLabel': 'Address:',
+        'legal.address': '20/1 Ter-Gabrielyan Street, Vagharshapat, Armenia',
+        'legal.phoneLabel': 'Phone:',
+        'legal.emailLabel': 'Email:',
+        'legal.ceo': 'CEO:',
+        'legal.representation': 'Representation',
+        'legal.representationText': 'Roots Furniture LLC is the official and exclusive representative of VerinLegno S.p.A. in Armenia. The supply of VerinLegno coatings and preparation solutions in Armenia is carried out by Roots Furniture LLC.',
+        'legal.brandInfo': 'Brand Information',
+        'legal.brandInfoText': 'Roots Furniture LLC is represented in the market by the Acobian Furniture brand. Acobian is the brand name, while Roots is the company name (similar to Apple → iPhone).',
+        'legal.disclaimer': 'Disclaimer',
+        'legal.disclaimerText': 'Product specifications and information are subject to change. Please contact us for the most current information regarding our products and services. All product images and descriptions are for illustrative purposes only.',
+        'legal.verinlegnoInfo': 'VerinLegno S.p.A. is an Italian company founded in Massa e Cozzile in 1975. The company develops high-technology, reliable and increasingly green coatings for wood, metal, glass, interiors and exteriors. With over 40 years of experience, VerinLegno has distribution in many countries and offers a wide catalogue of products.',
+        'legal.backHome': '← Back to Home'
+    },
+    hy: {
+        // Navigation
+        'nav.products': 'Ապրանքներ',
+        'nav.manuals': 'Ձեռնարկներ',
+        'nav.services': 'Ծառայություններ',
+        'nav.partnership': 'Գործընկերություն',
+        'nav.workshops': 'Վարպետաց դասեր',
+        'nav.contact': 'Կապ',
+        
+        // Legal
+        'legal.badge': 'Իրավական',
+        
+        // Privacy Policy
+        'privacy.title': 'Գաղտնիության Քաղաքականություն',
+        'privacy.subtitle': 'Գաղտնիությունը մեզ համար',
+        'privacy.lastUpdated': 'Վերջին թարմացում:',
+        'privacy.commitment': 'Գաղտնիությունը մեզ համար',
+        'privacy.commitmentText': 'Մենք հարգում ենք ձեր գաղտնիությունը․ այս կայքը չի հավաքում, չի պահում կամ չի մշակում այցելուներից անձնական տվյալներ:',
+        'privacy.dataCollection': 'Տվյալների Հավաքագրում',
+        'privacy.dataCollectionText': 'Մենք չենք օգտագործում cookies  և չենք կիսվում որևէ տեղեկատվությամբ երրորդ կողմերի հետ: Կոնտակտային ձևերի կամ էլեկտրոնային փոստի հաղորդագրությունների միջոցով կամավոր տրամադրած ցանկացած տեղեկատվություն օգտագործվում է բացառապես ձեր հարցումներին պատասխանելու նպատակով:',
+        'privacy.contactInfo': 'Կոնտակտային Տեղեկատվություն',
+        'privacy.contactInfoText': 'Եթե ունեք հարցեր այս գաղտնիության քաղաքականության վերաբերյալ, խնդրում ենք կապ հաստատել մեզ հետ:',
+        'privacy.contactEmail': 'Էլ. փոստ info@roots.am',
+        'privacy.contactPhone': 'Հեռախոս +374 91 665520',
+        'privacy.contactAddress': 'Հասցե Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1',
+        'privacy.backHome': '← Վերադառնալ գլխավոր էջ',
+        
+        // Terms of Service
+        'terms.title': 'Ծառայությունների Մատուցման Պայմաններ',
+        'terms.subtitle': 'Մեր կայքը օգտագործելու պայմաններ և կանոններ',
+        'terms.lastUpdated': 'Վերջին թարմացում:',
+        'terms.agreement': 'Պայմանների Համաձայնություն',
+        'terms.agreementText': 'Այս կայք մուտք գործելով և օգտագործելով, դուք համաձայնում եք հետևել և պարտավորվում եք հետևյալ պայմաններին և կանոններին:',
+        'terms.useOfWebsite': 'Կայքի Օգտագործում',
+        'terms.useOfWebsiteText': 'Այս կայքը ստեղծվել է բացառապես տեղեկատվական նպատակներով: Բովանդակությունը կարող է փոխվել առանց նախապես ծանուցման: Դուք կարող եք օգտագործել այս կայքը միայն օրինական նպատակներով և այս Ծառայությունների Մատուցման Պայմաններին համապատասխան:',
+        'terms.intellectualProperty': 'Ինտելեկտուալ Սեփականություն',
+        'terms.intellectualPropertyText': 'Այս կայքի ամբողջ բովանդակությունը, ներառյալ տեքստերը, պատկերները, լոգոները և այլ նյութեր, VerinLegno Հայաստանի և Roots Furniture LLC-ի սեփականությունն են և պաշտպանված են հեղինակային իրավունքների օրենքներով: Դուք չեք կարող վերարտադրել, տարածել կամ օգտագործել այս կայքի որևէ բովանդակություն առանց նախապես գրավոր թույլտվության:',
+        'terms.limitation': 'Պատասխանատվության Սահմանափակում',
+        'terms.limitationText': 'Մենք պատասխանատվություն չենք կրում այս կայքը կամ դրա մեջ պարունակվող տեղեկատվությունը օգտագործելուց առաջացած որևէ վնասի համար: Այս կայքի տեղեկատվությունը տրամադրվում է "ինչպես կա"՝ առանց որևէ երաշխիքի:',
+        'terms.contactUs': 'Կապ Մեզ Հետ',
+        'terms.contactUsText': 'Եթե ունեք հարցեր այս Ծառայությունների Մատուցման Պայմանների վերաբերյալ, խնդրում ենք կապ հաստատել մեզ հետ:',
+        'terms.contactEmail': 'Էլ. փոստ info@roots.am',
+        'terms.contactPhone': 'Հեռախոս +374 91 665520',
+        'terms.backHome': '← Վերադառնալ գլխավոր էջ',
+        
+        // Legal Notes
+        'legal.title': 'Իրավական Նշումներ',
+        'legal.subtitle': 'Կարևոր իրավական տեղեկատվություն մեր ընկերության մասին',
+        'legal.companyInfo': 'Ընկերության Տեղեկատվություն',
+        'legal.companyName': 'Ընկերության Անվանում:',
+        'legal.addressLabel': 'Հասցե:',
+        'legal.address': 'Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1',
+        'legal.phoneLabel': 'Հեռախոս:',
+        'legal.emailLabel': 'Էլ. փոստ:',
+        'legal.ceo': 'Գլխավոր Տնօրեն:',
+        'legal.representation': 'Ներկայացում',
+        'legal.representationText': 'Roots Furniture LLC-ն VerinLegno S.p.A.-ի պաշտոնական և բացառիկ ներկայացուցիչն է Հայաստանում: VerinLegno ծածկույթների և նախապատրաստական լուծումների մատակարարումը Հայաստանում իրականացվում է Roots Furniture LLC-ի կողմից:',
+        'legal.brandInfo': 'Ապրանքանիշի Տեղեկատվություն',
+        'legal.brandInfoText': 'Roots Furniture LLC-ն շուկայում ներկայացված է Acobian Furniture ապրանքանիշով: Roots-ը Հայաստանի առաջատար կահույքի արտադրողներից մեկն է՝ տասնամյակների փորձառությամբ ճշգրիտ փայտամշակման, մեքենայացման ավտոմատացման և ժամանակակից արտադրական մեթոդների ոլորտում:',
+        'legal.disclaimer': 'Հրաժարում',
+        'legal.disclaimerText': 'Արտադրանքի բնութագրերը և տեղեկատվությունը կարող են փոխվել: Խնդրում ենք կապ հաստատել մեզ հետ մեր արտադրանքների և ծառայությունների վերաբերյալ ամենավերջին տեղեկատվության համար: Բոլոր արտադրանքի պատկերները և նկարագրությունները նախատեսված են միայն նկարագրական նպատակների համար:',
+        'legal.verinlegnoInfo': 'VerinLegno S.p.A.-ը իտալական ընկերություն է, որը հիմնադրվել է Մասսա է Կոզիլեում 1975 թվականին: Ընկերությունը մշակում է բարձր տեխնոլոգիական, հուսալի և ավելի ու ավելի կանաչ ծածկույթներ փայտի, մետաղի, ապակու, ներքին և արտաքին մակերեսների համար: 40 տարուց ավելի փորձառությամբ VerinLegno-ն ունի բաշխում շատ երկրներում և առաջարկում է արտադրանքի լայն կատալոգ:',
+        'legal.backHome': '← Վերադառնալ գլխավոր էջ'
+    }
+};
+
 // Language Switcher
+let currentLanguage = 'en';
+
 const langButtons = document.querySelectorAll('.lang-btn');
+
+// Function to translate the page
+function translatePage(lang) {
+    currentLanguage = lang;
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+    
+    // Update page title and meta description based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    
+    if (currentPage === 'privacy-policy.html') {
+        if (lang === 'hy') {
+            document.title = 'Գաղտնիության Քաղաքականություն - VerinLegno Հայաստան';
+            if (metaDesc) metaDesc.setAttribute('content', 'VerinLegno Հայաստանի գաղտնիության քաղաքականություն:');
+        } else {
+            document.title = 'Privacy Policy - VerinLegno';
+            if (metaDesc) metaDesc.setAttribute('content', 'Privacy Policy for VerinLegno Armenia website.');
+        }
+    } else if (currentPage === 'terms-of-service.html') {
+        if (lang === 'hy') {
+            document.title = 'Ծառայությունների Մատուցման Պայմաններ - VerinLegno Հայաստան';
+            if (metaDesc) metaDesc.setAttribute('content', 'VerinLegno Հայաստանի կայքի օգտագործման պայմաններ:');
+        } else {
+            document.title = 'Terms of Service - VerinLegno';
+            if (metaDesc) metaDesc.setAttribute('content', 'Terms and conditions for using VerinLegno Armenia website.');
+        }
+    } else if (currentPage === 'legal-notes.html') {
+        if (lang === 'hy') {
+            document.title = 'Իրավական Նշումներ - VerinLegno Հայաստան';
+            if (metaDesc) metaDesc.setAttribute('content', 'VerinLegno Հայաստանի իրավական նշումներ և ընկերության տեղեկատվություն:');
+        } else {
+            document.title = 'Legal Notes - VerinLegno';
+            if (metaDesc) metaDesc.setAttribute('content', 'Legal notes and company information for VerinLegno Armenia.');
+        }
+    }
+}
 
 langButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -28,33 +208,33 @@ langButtons.forEach(button => {
         // Add active class to clicked button
         button.classList.add('active');
         
+        // Translate the page
+        translatePage(lang);
+        
         // Store language preference
         localStorage.setItem('preferredLanguage', lang);
         
         // Update HTML lang attribute
         document.documentElement.lang = lang;
-        
-        // For now, just log the language change
-        // In the future, this will load the Armenian version
-        if (lang === 'hy') {
-            console.log('Armenian version coming soon!');
-            // TODO: Implement language switching
-        }
     });
 });
 
 // Load preferred language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const preferredLang = localStorage.getItem('preferredLanguage');
-    if (preferredLang) {
-        langButtons.forEach(button => {
-            if (button.getAttribute('data-lang') === preferredLang) {
-                button.classList.add('active');
-                document.documentElement.lang = preferredLang;
-            } else {
-                button.classList.remove('active');
-            }
-        });
+    const preferredLang = localStorage.getItem('preferredLanguage') || 'en';
+    
+    // Set active button
+    langButtons.forEach(button => {
+        if (button.getAttribute('data-lang') === preferredLang) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+    
+    // Translate page if not English
+    if (preferredLang !== 'en') {
+        translatePage(preferredLang);
     }
 });
 
