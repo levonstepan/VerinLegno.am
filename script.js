@@ -205,7 +205,26 @@ function translatePage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            // For elements with children (like buttons with SVG), only replace text content
+            // For other elements, replace entire textContent
+            if (element.children.length > 0 && element.tagName === 'BUTTON') {
+                // Find the span or text node and replace only that
+                const textNode = element.querySelector('span[data-i18n]') || Array.from(element.childNodes).find(node => node.nodeType === 3);
+                if (textNode && textNode.nodeType === 3) {
+                    textNode.textContent = translations[lang][key];
+                } else if (element.querySelector('span[data-i18n]')) {
+                    element.querySelector('span[data-i18n]').textContent = translations[lang][key];
+                } else {
+                    // Fallback: replace text but keep HTML structure
+                    const htmlContent = element.innerHTML;
+                    const textMatch = htmlContent.match(/^([^<]*)/);
+                    if (textMatch) {
+                        element.innerHTML = htmlContent.replace(textMatch[0], translations[lang][key]);
+                    }
+                }
+            } else {
+                element.textContent = translations[lang][key];
+            }
         }
     });
     
