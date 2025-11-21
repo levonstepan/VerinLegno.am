@@ -25,6 +25,16 @@ const translations = {
         'nav.workshops': 'Workshops',
         'nav.contact': 'Contact Us',
         
+        // Hero Section
+        'hero.badge': 'Since 1975 • Italian Excellence',
+        'hero.title': 'VerinLegno in Armenia',
+        'hero.subtitle': 'Verinlegno Spa, founded in Massa e Cozzile in 1975 — high-technology, reliable and increasingly green coatings for wood, metal and glass. Roots Furniture LLC — official representative in Armenia.',
+        'hero.btnDiscover': 'Discover more',
+        'hero.btnLearn': 'Learn More',
+        'hero.statYears': 'Years Experience',
+        'hero.statCountries': 'Countries',
+        'hero.statEco': 'Eco-Friendly',
+        
         // Legal
         'legal.badge': 'Legal',
         
@@ -101,6 +111,16 @@ const translations = {
         'nav.partnership': 'Գործընկերություն',
         'nav.workshops': 'Վարպետաց դասեր',
         'nav.contact': 'Կապ',
+        
+        // Hero Section
+        'hero.badge': '1975-ից • Իտալական Գերազանցություն',
+        'hero.title': 'VerinLegno Հայաստանում',
+        'hero.subtitle': 'Verinlegno-ն, հիմնադրված Տոսկանայում 1975թ.-ին, ոլորտում առաջատար իտալական ընկերություն է, որն արտադրում է բարձրորակ ու էկոլոգիապես մաքուր ծածկույթներ՝ փայտի, մետաղի և ապակու համար։ Հայաստանում VerinLegno-ի պաշտոնական և բացառիկ ներկայացուցիչն է Roots Furniture ընկերությունը։',
+        'hero.btnDiscover': 'Ավելին բացահայտել',
+        'hero.btnLearn': 'Ավելին իմանալ',
+        'hero.statYears': 'Տարիների Փորձառություն',
+        'hero.statCountries': 'Երկրներ',
+        'hero.statEco': 'Էկոլոգիապես Մաքուր',
         
         // Legal
         'legal.badge': 'Իրավական',
