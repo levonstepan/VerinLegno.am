@@ -183,7 +183,7 @@ const translations = {
         'footer.companyDesc': 'Roots Furniture LLC — VerinLegno S.p.A.-ի պաշտոնական ներկայացուցիչը Հայաստանում',
         'footer.quickLinks': 'Արագ հղումներ',
         'footer.contact': 'Կապ',
-        'footer.legal': 'Իրավական',
+        'footer.legal': 'Ինֆորմացիա',
         'footer.privacyPolicy': 'Գաղտնիության Քաղաքականություն',
         'footer.termsOfService': 'Ծառայությունների Մատուցման Պայմաններ',
         'footer.legalNotes': 'Իրավական Նշումներ',
