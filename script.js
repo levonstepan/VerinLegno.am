@@ -449,7 +449,7 @@ function ensureAllSectionsVisible() {
         workshopsSection.style.setProperty('visibility', 'visible', 'important');
         workshopsSection.style.setProperty('opacity', '1', 'important');
         workshopsSection.style.setProperty('min-height', '400px', 'important');
-        workshopsSection.style.setProperty('padding', '80px 20px', 'important');
+        workshopsSection.style.setProperty('padding', '50px 20px', 'important');
         workshopsSection.style.setProperty('position', 'relative', 'important');
         workshopsSection.style.setProperty('width', '100%', 'important');
         workshopsSection.style.setProperty('height', 'auto', 'important');
@@ -516,7 +516,9 @@ function initializeNewSection(section) {
     // Ensure section has proper padding if missing
     const computedStyle = getComputedStyle(section);
     if (parseInt(computedStyle.paddingTop) === 0 && parseInt(computedStyle.paddingBottom) === 0) {
-        section.style.padding = '80px 20px';
+        // Use reduced padding for workshops section, standard for others
+        const padding = (section.id === 'workshops' || section.classList.contains('workshops-section')) ? '50px 20px' : '80px 20px';
+        section.style.padding = padding;
     }
     
     // Ensure container exists and is visible
@@ -617,7 +619,7 @@ CSSStyleDeclaration.prototype.setProperty = function(property, value, priority) 
             workshopsSection.style.setProperty('visibility', 'visible', 'important');
             workshopsSection.style.setProperty('opacity', '1', 'important');
             workshopsSection.style.setProperty('min-height', '400px', 'important');
-            workshopsSection.style.setProperty('padding', '80px 20px', 'important');
+            workshopsSection.style.setProperty('padding', '50px 20px', 'important');
             workshopsSection.style.setProperty('position', 'relative', 'important');
             workshopsSection.style.setProperty('width', '100%', 'important');
             workshopsSection.style.setProperty('height', 'auto', 'important');
@@ -696,7 +698,7 @@ const sectionObserver = new MutationObserver((mutations) => {
                         target.style.setProperty('visibility', 'visible', 'important');
                         target.style.setProperty('opacity', '1', 'important');
                         target.style.setProperty('min-height', '400px', 'important');
-                        target.style.setProperty('padding', '80px 20px', 'important');
+                        target.style.setProperty('padding', '50px 20px', 'important');
                         const grid = target.querySelector('.workshops-grid');
                         if (grid) {
                             grid.style.setProperty('display', 'grid', 'important');

@@ -111,7 +111,7 @@ body {
 .lang-switcher {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
     margin-left: 0.5rem;
 }
 
@@ -149,8 +149,16 @@ body {
 }
 
 .flag-icon {
-    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
     line-height: 1;
+}
+
+.flag-img {
+    width: 20px;
+    height: 15px;
+    display: block;
+    border-radius: 2px;
 }
 
 .lang-text {
@@ -777,7 +785,7 @@ section#workshops {
     width: 100% !important;
     overflow: visible !important;
     height: auto !important;
-    padding: 80px 20px !important;
+    padding: 50px 20px !important;
 }
 
 .workshops-section .workshops-grid,
