@@ -119,6 +119,8 @@ export const hyContent = {
     address: "Երևան, Հայաստան",
     email: "info@roots.am",
     phone: "+374 91 665520",
+    contactLabel: "Կապ",
+    informationLabel: "Ինֆորմացիա",
     links: [
       { label: "Գաղտնիության քաղաքականություն", href: "/policies/privacy-policy" },
       { label: "Ծառայությունների պայմաններ", href: "/policies/terms-of-service" },
@@ -249,6 +251,8 @@ export const enContent = {
     address: "Yerevan, Armenia",
     email: "info@roots.am",
     phone: "+374 91 665520",
+    contactLabel: "Contact",
+    informationLabel: "Information",
     links: [
       { label: "Privacy Policy", href: "/policies/privacy-policy" },
       { label: "Terms of Service", href: "/policies/terms-of-service" },

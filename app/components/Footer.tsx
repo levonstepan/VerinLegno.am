@@ -9,6 +9,8 @@ export function Footer({
     address: string;
     email: string;
     phone: string;
+    contactLabel: string;
+    informationLabel: string;
     links: ReadonlyArray<{ label: string; href: string }>;
     copyright: string;
   }>;
@@ -38,7 +40,7 @@ export function Footer({
           {/* Contact */}
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center gap-2">
-              <span>Contact</span>
+              <span>{content.contactLabel}</span>
               <div className="h-px flex-1 bg-neutral-700" />
             </h3>
             <div className="space-y-3 text-sm">
@@ -71,7 +73,7 @@ export function Footer({
           {/* Links */}
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center gap-2">
-              <span>Information</span>
+              <span>{content.informationLabel}</span>
               <div className="h-px flex-1 bg-neutral-700" />
             </h3>
             <ul className="space-y-2 text-sm">
