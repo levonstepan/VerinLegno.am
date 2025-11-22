@@ -2,11 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export function Header({ locale }: { locale: "arm" | "en" }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
   const isEn = locale === "en";
 
   const handleLanguageSwitch = (targetLocale: "arm" | "en") => {
@@ -16,8 +17,47 @@ export function Header({ locale }: { locale: "arm" | "en" }) {
       sessionStorage.setItem("targetLocale", targetLocale);
     }
     
-    // Navigate without scrolling to top
-    const targetPath = targetLocale === "arm" ? "/arm" : "/";
+    // Map policy pages to their corresponding language versions
+    const policyPageMap: Record<string, { en: string; arm: string }> = {
+      "/policies/privacy-policy": {
+        en: "/policies/privacy-policy",
+        arm: "/arm/policies/privacy-policy",
+      },
+      "/arm/policies/privacy-policy": {
+        en: "/policies/privacy-policy",
+        arm: "/arm/policies/privacy-policy",
+      },
+      "/policies/terms-of-service": {
+        en: "/policies/terms-of-service",
+        arm: "/arm/policies/terms-of-service",
+      },
+      "/arm/policies/terms-of-service": {
+        en: "/policies/terms-of-service",
+        arm: "/arm/policies/terms-of-service",
+      },
+      "/policies/legal-notes": {
+        en: "/policies/legal-notes",
+        arm: "/arm/policies/legal-notes",
+      },
+      "/arm/policies/legal-notes": {
+        en: "/policies/legal-notes",
+        arm: "/arm/policies/legal-notes",
+      },
+    };
+
+    // Check if current path is a policy page
+    const currentPath = pathname || "";
+    const policyMapping = policyPageMap[currentPath];
+
+    let targetPath: string;
+    if (policyMapping) {
+      // Navigate to the corresponding policy page in the target language
+      targetPath = targetLocale === "arm" ? policyMapping.arm : policyMapping.en;
+    } else {
+      // For other pages, navigate to main page
+      targetPath = targetLocale === "arm" ? "/arm" : "/";
+    }
+
     router.push(targetPath);
   };
 
