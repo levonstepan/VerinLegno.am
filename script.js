@@ -188,7 +188,7 @@ const translations = {
         'footer.termsOfService': 'Ծառայությունների Մատուցման Պայմաններ',
         'footer.legalNotes': 'Իրավական Նշումներ',
         'footer.copyright': '© 2024 Roots Furniture LLC - VerinLegno Հայաստան: Բոլոր իրավունքները պաշտպանված են:',
-        'footer.madeWith': 'Ստեղծված է ❤️-ով Հայաստանում'
+        'footer.madeWith': 'Պատրաստված է ❤-ով՝ Հայաստանում'
     }
 };
 

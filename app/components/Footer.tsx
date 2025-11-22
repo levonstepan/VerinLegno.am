@@ -13,6 +13,7 @@ export function Footer({
     informationLabel: string;
     links: ReadonlyArray<{ label: string; href: string }>;
     copyright: string;
+    madeWith: string;
   }>;
 }) {
   return (
@@ -95,10 +96,8 @@ export function Footer({
         <div className="border-t border-neutral-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-neutral-500">{content.copyright}</p>
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-neutral-500">Made with</span>
-              <span className="text-[#D70000]">❤</span>
-              <span className="text-xs text-neutral-500">in Armenia</span>
+            <div className="text-xs text-neutral-500">
+              {content.madeWith}
             </div>
           </div>
         </div>
