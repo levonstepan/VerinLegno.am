@@ -122,11 +122,155 @@ export const hyContent = {
     contactLabel: "Կապ",
     informationLabel: "Ինֆորմացիա",
     links: [
-      { label: "Գաղտնիության քաղաքականություն", href: "/policies/privacy-policy" },
-      { label: "Ծառայությունների պայմաններ", href: "/policies/terms-of-service" },
-      { label: "Իրավական նշումներ", href: "/policies/legal-notes" },
+      { label: "Գաղտնիության քաղաքականություն", href: "/arm/policies/privacy-policy" },
+      { label: "Ծառայությունների պայմաններ", href: "/arm/policies/terms-of-service" },
+      { label: "Իրավական նշումներ", href: "/arm/policies/legal-notes" },
     ] as const,
     copyright: `© ${new Date().getFullYear()} Roots Furniture ՍՊԸ - VerinLegno Armenia`,
+  },
+  privacyPolicy: {
+    title: "Գաղտնիության Քաղաքականություն",
+    lastUpdated: "Վերջին թարմացում",
+    sections: {
+      introduction: {
+        title: "1. Ներածություն",
+        content: 'Roots Furniture ՍՊԸ-ն ("մենք", "մեր" կամ "մեզ") գործարկում է verinlegno.am կայքը ("Կայք"): Այս Գաղտնիության Քաղաքականությունը բացատրում է մեր պրակտիկաները մեր Կայքի վերաբերյալ տեղեկատվության վերաբերյալ:',
+      },
+      noDataCollection: {
+        title: "2. Տվյալների Հավաքագրում չկա",
+        content: "Մենք չենք հավաքում, չենք պահում կամ չենք մշակում անձնական տվյալներ մեր Կայք այցելուներից: Մեր Կայքը զուտ տեղեկատվական է և չի ներառում:",
+        items: [
+          "Անձնական տեղեկատվություն հավաքող կոնտակտային ձևեր",
+          "Օգտատիրական հաշիվներ կամ գրանցման համակարգեր",
+          "Նորությունների բաժանորդագրություններ",
+          "Վերլուծություն կամ հետևման cookies",
+          "Երրորդ կողմերի տվյալների հավաքագրման ծառայություններ",
+        ],
+        additionalContent: "Եթե դուք կապ եք հաստատում մեզ հետ ուղղակիորեն էլեկտրոնային փոստով կամ հեռախոսով՝ օգտագործելով մեր Կայքում տրամադրված կոնտակտային տեղեկատվությունը, ցանկացած տեղեկատվություն, որը դուք կիսվում եք, կմշակվի ստանդարտ բիզնես պրակտիկայի համաձայն և չի պահվի մեր Կայքում:",
+      },
+      cookies: {
+        title: "3. Cookies",
+        content: "Մեր Կայքը չի օգտագործում cookies կամ նմանատիպ հետևման տեխնոլոգիաներ: Մեր Կայք այցելությունը չի թողնում որևէ հետևման տեղեկատվություն:",
+      },
+      thirdPartyLinks: {
+        title: "4. Երրորդ Կողմերի Հղումներ",
+        content: "Մեր Կայքը կարող է պարունակել հղումներ երրորդ կողմերի կայքերին (օրինակ՝ PDF փաստաթղթեր կամ արտաքին ռեսուրսներ): Մենք պատասխանատվություն չենք կրում այս արտաքին կայքերի գաղտնիության պրակտիկաների համար: Մենք խրախուսում ենք ձեզ վերանայել ցանկացած երրորդ կողմերի կայքերի գաղտնիության քաղաքականությունները, որոնց դուք այցելում եք:",
+      },
+      changes: {
+        title: "5. Այս Գաղտնիության Քաղաքականության Փոփոխություններ",
+        content: "Մենք կարող ենք ժամանակ առ ժամանակ թարմացնել այս Գաղտնիության Քաղաքականությունը: Մենք ձեզ կտեղեկացնենք ցանկացած փոփոխությունների մասին՝ այս էջում տեղադրելով նոր Գաղտնիության Քաղաքականությունը և թարմացնելով «Վերջին թարմացում» ամսաթիվը:",
+      },
+      contact: {
+        title: "6. Կապ Մեզ Հետ",
+        content: "Եթե ունեք հարցեր այս Գաղտնիության Քաղաքականության վերաբերյալ, խնդրում ենք կապ հաստատել մեզ հետ:",
+        company: "Roots Furniture ՍՊԸ",
+        address: "Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1",
+        city: "Երևան, Հայաստան",
+        email: "info@roots.am",
+        phone: "+374 91 665520",
+      },
+    },
+  },
+  termsOfService: {
+    title: "Ծառայությունների Մատուցման Պայմաններ",
+    lastUpdated: "Վերջին թարմացում",
+    sections: {
+      acceptance: {
+        title: "1. Պայմանների Համաձայնություն",
+        content: 'Roots Furniture ՍՊԸ-ի ("մենք", "մեր" կամ "մեզ") կողմից գործարկվող verinlegno.am կայքը ("Կայք") մուտք գործելով և օգտագործելով, դուք ընդունում և համաձայնում եք հետևել այս Ծառայությունների Մատուցման Պայմաններին ("Պայմաններ"): Եթե դուք չեք համաձայնում այս Պայմաններին, խնդրում ենք չօգտագործել մեր Կայքը:',
+      },
+      useOfWebsite: {
+        title: "2. Կայքի Օգտագործում",
+        content: "Դուք կարող եք օգտագործել մեր Կայքը միայն օրինական, տեղեկատվական նպատակներով: Դուք համաձայնում եք օգտագործել Կայքը բոլոր կիրառելի օրենքների և կանոնակարգերի համաձայն:",
+        agreement: "Դուք համաձայնում եք չանել հետևյալը:",
+        items: [
+          "Օգտագործել Կայքը ցանկացած կերպ, որը խախտում է ցանկացած կիրառելի օրենք կամ կանոնակարգ",
+          "Փոխանցել ցանկացած վնասակար կոդ, վիրուսներ կամ վնասակար բաղադրիչներ",
+          "Փորձել անօրինական մուտք գործել Կայքի ցանկացած մաս",
+          "Արտադրել, կրկնօրինակել, պատճենել կամ շահագործել Կայքի ցանկացած մաս առանց բացահայտ գրավոր թույլտվության",
+        ],
+      },
+      intellectualProperty: {
+        title: "3. Ինտելեկտուալ Սեփականության Իրավունքներ",
+        content: "Այս Կայքի բոլոր բովանդակությունը, ներառյալ, բայց չսահմանափակվելով, տեքստերը, գրաֆիկան, լոգոները, պատկերները և թվային ներբեռնումները, Roots Furniture ՍՊԸ-ի, VerinLegno S.p.A.-ի կամ նրանց համապատասխան բովանդակության մատակարարների սեփականությունն են և պաշտպանված են միջազգային հեղինակային իրավունքների և ապրանքանիշերի օրենքներով:",
+        additionalContent: "Դուք չեք կարող փոփոխել, հրապարակել, փոխանցել կամ ստեղծել ածանցյալ աշխատանքներ ցանկացած բովանդակությունից առանց մեր նախնական գրավոր համաձայնության:",
+      },
+      productInformation: {
+        title: "4. Արտադրանքի Տեղեկատվություն",
+        content: "Մենք ձգտում ենք ապահովել ճշգրիտ արտադրանքի տեղեկատվություն, նկարագրություններ և բնութագրեր: Այնուամենայնիվ, մենք երաշխավորություն չենք տալիս, որ արտադրանքի նկարագրությունները կամ Կայքի այլ բովանդակությունը ճշգրիտ, ամբողջական, հուսալի, ընթացիկ կամ սխալներից զերծ է:",
+        additionalContent: "Արտադրանքի պատկերները նախատեսված են միայն նկարագրական նպատակների համար և կարող են չարտացոլել արտադրանքի ճշգրիտ տեսքը: Գույները և բնութագրերը կարող են տարբերվել:",
+      },
+      thirdPartyLinks: {
+        title: "5. Երրորդ Կողմերի Հղումներ",
+        content: "Մեր Կայքը կարող է պարունակել հղումներ երրորդ կողմերի կայքերին կամ ծառայություններին, որոնք մեզ չեն պատկանում կամ վերահսկվում են: Մենք վերահսկողություն չունենք և պատասխանատվություն չենք կրում ցանկացած երրորդ կողմերի կայքերի կամ ծառայությունների բովանդակության, գաղտնիության քաղաքականությունների կամ պրակտիկաների համար:",
+      },
+      disclaimer: {
+        title: "6. Երաշխիքների Հրաժարում",
+        content: 'ԿԱՅՔԸ ՏՐԱՄԱԴՐՎՈՒՄ Է "ԻՆՉՊԵՍ ԿԱ" ԵՎ "ԻՆՉՊԵՍ ՀՆԱՐՎԱԾ Է" ԱՌԱՆՑ ՑԱՆԿԱՑԱԾ ՏԵՍԱԿԻ ԵՐԱՇՒԻՔՆԵՐԻ, ԿԱՄ ԲԱՑԱՀԱՅՏ, ԿԱՄ ԱՌԱՆՑՊԱՅՄԱՆ: Մենք երաշխավորություն չենք տալիս, որ Կայքը կլինի անխափան, անվտանգ կամ սխալներից զերծ:',
+      },
+      limitation: {
+        title: "7. Պատասխանատվության Սահմանափակում",
+        content: "ԿԻՐԱՌԵԼԻ ՕՐԵՆՔՆԵՐՈՎ ԹՈՒՅԼԱՏՐՎԱԾ ԱՌԱՎԵԼԱԳՈՒՅՆ ՍԱՀՄԱՆՆԵՐԻՆ, ՈՉ ՄԻ ԴԵՊՔՈՒՄ ROOTS FURNITURE ՍՊԸ-ն, ԴՐԱՆՑ ԱՖԻԼԻԱՏՆԵՐԸ ԿԱՄ ՆՐԱՆՑ ՀԱՄԱՊԱՏԱՍԽԱՆ ՊԱՇՏՈՆԱՅԻՆՆԵՐԸ, ՏՆՕՐԵՆՆԵՐԸ, ԱՇԽԱՏԱԿՑՆԵՐԸ ԿԱՄ ԳՈՐԾԱԿԱԼՆԵՐԸ ՊԱՏԱՍԽԱՆԱՏՎՈՒԹՅՈՒՆ ՉԵՆ ԿՐՈՒՄ ԿԱՅՔԸ ՕԳՏԱԳՈՐԾՈՒՄԻՑ ԱՌԱՋԱՑԱԾ ՑԱՆԿԱՑԱԾ ԱՈՒՂԻՂ, ՊԱՐՈՒՆԱԿԱՆ, ՀԱՏՈՒԿ ԿԱՄ ՀԱՄԱՊԱՏԱՍԽԱՆ ՎՆԱՍՆԵՐԻ ՀԱՄԱՐ:",
+      },
+      governingLaw: {
+        title: "8. Կիրառելի Օրենք",
+        content: "Այս Պայմանները կարգավորվում և մեկնաբանվում են Հայաստանի Հանրապետության օրենքներով:",
+      },
+      changes: {
+        title: "9. Պայմանների Փոփոխություններ",
+        content: "Մենք իրավունք ենք վերապահում ցանկացած ժամանակ փոփոխել կամ փոխարինել այս Պայմանները: Ցանկացած փոփոխությունների ուժի մեջ մտնելուց հետո Կայքին մուտք գործելը կամ օգտագործելը շարունակելով, դուք համաձայնում եք հետևել փոփոխված պայմաններին:",
+      },
+    },
+  },
+  legalNotes: {
+    title: "Իրավական Նշումներ",
+    lastUpdated: "Վերջին թարմացում",
+    sections: {
+      companyInfo: {
+        title: "1. Ընկերության Տեղեկատվություն",
+        rootsTitle: "Roots Furniture ՍՊԸ",
+        rootsDescription: "VerinLegno S.p.A.-ի պաշտոնական ներկայացուցիչ Հայաստանում",
+        rootsAddress: "Հասցե: Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1",
+        rootsCity: "Երևան, Հայաստան",
+        rootsEmail: "info@roots.am",
+        rootsPhone: "+374 91 665520",
+        verinlegnoTitle: "VerinLegno S.p.A.",
+        verinlegnoDescription: "Հիմնադրված Մասսա է Կոզիլեում, Իտալիա, 1975",
+        verinlegnoInfo: "Բարձր տեխնոլոգիական ծածկույթներ փայտի, մետաղի և ապակու համար",
+      },
+      websiteOwnership: {
+        title: "2. Կայքի Սեփականություն",
+        content: "Այս կայքը (verinlegno.am) պատկանում և գործարկվում է Roots Furniture ՍՊԸ-ի կողմից: Այս կայքի բոլոր բովանդակությունը, դիզայնը, գրաֆիկան և այլ նյութերը պաշտպանված են հեղինակային իրավունքների, ապրանքանիշերի և այլ ինտելեկտուալ սեփականության օրենքներով:",
+      },
+      trademarks: {
+        title: "3. Ապրանքանիշեր",
+        content: '"VerinLegno" և կապված ապրանքանիշերը, ծառայության նշանները և լոգոները VerinLegno S.p.A.-ի սեփականությունն են և օգտագործվում են թույլտվությամբ: "Roots Furniture" և "Acobian Furniture" ապրանքանիշերն են Roots Furniture ՍՊԸ-ի:',
+        additionalContent: "Այս կայքում նշված բոլոր այլ ապրանքանիշերը, ծառայության նշանները և առևտրային անունները նրանց համապատասխան սեփականատերերի սեփականությունն են:",
+      },
+      productInformation: {
+        title: "4. Արտադրանքի Տեղեկատվություն",
+        content: "Այս կայքում տրամադրված բոլոր արտադրանքի տեղեկատվությունը, տեխնիկական բնութագրերը և փաստաթղթերը նախատեսված են միայն տեղեկատվական նպատակների համար: Մինչ մենք ձգտում ենք ապահովել ճշգրտությունը, մենք երաշխավորություն չենք տալիս, որ բոլոր տեղեկատվությունը ամբողջական, ընթացիկ կամ սխալներից զերծ է:",
+        additionalContent: "Արտադրանքի պատկերները նախատեսված են միայն նկարագրական նպատակների համար և կարող են չարտացոլել իրական արտադրանքը: Գույները, հյուսվածքները և բնութագրերը կարող են տարբերվել:",
+      },
+      limitation: {
+        title: "5. Պատասխանատվության Սահմանափակում",
+        content: "Roots Furniture ՍՊԸ-ն և VerinLegno S.p.A.-ն պատասխանատվություն չեն կրում այս կայքի միջոցով ստացված տեղեկատվության կամ արտադրանքի օգտագործումից առաջացած ցանկացած ուղղակի, անուղղակի, պատահական, հատուկ կամ հետևանքային վնասների համար:",
+        additionalContent: "Օգտատերերը պատասխանատվություն են կրում ապահովելու համար, որ արտադրանքները օգտագործվում են արտադրողի հրահանգների և կիրառելի անվտանգության կանոնակարգերի համաձայն:",
+      },
+      externalLinks: {
+        title: "6. Արտաքին Հղումներ",
+        content: "Այս կայքը կարող է պարունակել հղումներ երրորդ կողմերի կողմից գործարկվող արտաքին կայքերին: Մենք պատասխանատվություն չենք կրում այս արտաքին կայքերի բովանդակության, գաղտնիության պրակտիկաների կամ օգտագործման պայմանների համար: Ցանկացած հղման ներառումը չի նշանակում Roots Furniture ՍՊԸ-ի կամ VerinLegno S.p.A.-ի հավանության:",
+      },
+      applicableLaw: {
+        title: "7. Կիրառելի Օրենք",
+        content: "Այս իրավական նշումները և այս կայքին վերաբերող բոլոր հարցերը կարգավորվում են Հայաստանի Հանրապետության օրենքներով: Այս կայքից առաջացած կամ դրա հետ կապված ցանկացած վեճերը ենթակա են Հայաստանի դատարանների բացառիկ իրավասության:",
+      },
+      modifications: {
+        title: "8. Փոփոխություններ",
+        content: "Roots Furniture ՍՊԸ-ն իրավունք է վերապահում ցանկացած ժամանակ առանց նախապես ծանուցման փոփոխել, կասեցնել կամ դադարեցնել այս կայքի ցանկացած ասպեկտ: Մենք նաև իրավունք ենք վերապահում ցանկացած ժամանակ թարմացնել այս իրավական նշումները:",
+        additionalContent: "Ցանկացած փոփոխություններից հետո կայքի շարունակական օգտագործումը նշանակում է փոփոխված իրավական նշումների ընդունում:",
+      },
+    },
   },
 } as const;
 
@@ -259,5 +403,149 @@ export const enContent = {
       { label: "Legal Notes", href: "/policies/legal-notes" },
     ] as const,
     copyright: `© ${new Date().getFullYear()} Roots Furniture LLC - VerinLegno Armenia`,
+  },
+  privacyPolicy: {
+    title: "Privacy Policy",
+    lastUpdated: "Last Updated",
+    sections: {
+      introduction: {
+        title: "1. Introduction",
+        content: 'Roots Furniture LLC ("we," "our," or "us") operates the website verinlegno.am (the "Website"). This Privacy Policy explains our practices regarding information on our Website.',
+      },
+      noDataCollection: {
+        title: "2. No Data Collection",
+        content: "We do not collect, store, or process any personal data from visitors to our Website. Our Website is purely informational and does not include:",
+        items: [
+          "Contact forms that collect personal information",
+          "User accounts or registration systems",
+          "Newsletter subscriptions",
+          "Analytics or tracking cookies",
+          "Third-party data collection services",
+        ],
+        additionalContent: "If you contact us directly via email or phone using the contact information provided on our Website, any information you share will be handled in accordance with standard business practices and will not be stored on our Website.",
+      },
+      cookies: {
+        title: "3. Cookies",
+        content: "Our Website does not use cookies or similar tracking technologies. Your visit to our Website does not leave any tracking information.",
+      },
+      thirdPartyLinks: {
+        title: "4. Third-Party Links",
+        content: "Our Website may contain links to third-party websites (such as PDF documents or external resources). We are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.",
+      },
+      changes: {
+        title: "5. Changes to This Privacy Policy",
+        content: "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last Updated\" date.",
+      },
+      contact: {
+        title: "6. Contact Us",
+        content: "If you have any questions about this Privacy Policy, please contact us:",
+        company: "Roots Furniture LLC",
+        address: "20/1 Ter-Gabrielyan Street, Vagharshapat",
+        city: "Yerevan, Armenia",
+        email: "info@roots.am",
+        phone: "+374 91 665520",
+      },
+    },
+  },
+  termsOfService: {
+    title: "Terms of Service",
+    lastUpdated: "Last Updated",
+    sections: {
+      acceptance: {
+        title: "1. Acceptance of Terms",
+        content: 'By accessing and using the website verinlegno.am (the "Website"), operated by Roots Furniture LLC ("we," "our," or "us"), you accept and agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Website.',
+      },
+      useOfWebsite: {
+        title: "2. Use of the Website",
+        content: "You may use our Website for lawful, informational purposes only. You agree to use the Website in accordance with all applicable laws and regulations.",
+        agreement: "You agree not to:",
+        items: [
+          "Use the Website in any way that violates any applicable law or regulation",
+          "Transmit any malicious code, viruses, or harmful components",
+          "Attempt to gain unauthorized access to any portion of the Website",
+          "Reproduce, duplicate, copy, or exploit any portion of the Website without express written permission",
+        ],
+      },
+      intellectualProperty: {
+        title: "3. Intellectual Property Rights",
+        content: "All content on this Website, including but not limited to text, graphics, logos, images, and digital downloads, is the property of Roots Furniture LLC, VerinLegno S.p.A., or their respective content suppliers and is protected by international copyright and trademark laws.",
+        additionalContent: "You may not modify, publish, transmit, or create derivative works from any of the content without our prior written consent.",
+      },
+      productInformation: {
+        title: "4. Product Information",
+        content: "We strive to provide accurate product information, descriptions, and specifications. However, we do not warrant that product descriptions or other content on the Website is accurate, complete, reliable, current, or error-free.",
+        additionalContent: "Product images are for illustrative purposes only and may not reflect the exact appearance of the product. Colors and specifications may vary.",
+      },
+      thirdPartyLinks: {
+        title: "5. Third-Party Links",
+        content: "Our Website may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.",
+      },
+      disclaimer: {
+        title: "6. Disclaimer of Warranties",
+        content: 'THE WEBSITE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. We do not warrant that the Website will be uninterrupted, secure, or error-free.',
+      },
+      limitation: {
+        title: "7. Limitation of Liability",
+        content: "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ROOTS FURNITURE LLC, ITS AFFILIATES, OR THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES RESULTING FROM YOUR USE OF THE WEBSITE.",
+      },
+      governingLaw: {
+        title: "8. Governing Law",
+        content: "These Terms shall be governed by and construed in accordance with the laws of the Republic of Armenia.",
+      },
+      changes: {
+        title: "9. Changes to Terms",
+        content: "We reserve the right to modify or replace these Terms at any time. By continuing to access or use our Website after any revisions become effective, you agree to be bound by the revised terms.",
+      },
+    },
+  },
+  legalNotes: {
+    title: "Legal Notes",
+    lastUpdated: "Last Updated",
+    sections: {
+      companyInfo: {
+        title: "1. Company Information",
+        rootsTitle: "Roots Furniture LLC",
+        rootsDescription: "Official representative of VerinLegno S.p.A. in Armenia",
+        rootsAddress: "Address: 20/1 Ter-Gabrielyan Street, Vagharshapat",
+        rootsCity: "Yerevan, Armenia",
+        rootsEmail: "info@roots.am",
+        rootsPhone: "+374 91 665520",
+        verinlegnoTitle: "VerinLegno S.p.A.",
+        verinlegnoDescription: "Founded in Massa e Cozzile, Italy, 1975",
+        verinlegnoInfo: "High-technology coatings for wood, metal, and glass",
+      },
+      websiteOwnership: {
+        title: "2. Website Ownership",
+        content: "This website (verinlegno.am) is owned and operated by Roots Furniture LLC. All content, design, graphics, and other materials on this website are protected by copyright, trademark, and other intellectual property laws.",
+      },
+      trademarks: {
+        title: "3. Trademarks",
+        content: '"VerinLegno" and related trademarks, service marks, and logos are the property of VerinLegno S.p.A. and are used with permission. "Roots Furniture" and "Acobian Furniture" are trademarks of Roots Furniture LLC.',
+        additionalContent: "All other trademarks, service marks, and trade names referenced on this website are the property of their respective owners.",
+      },
+      productInformation: {
+        title: "4. Product Information",
+        content: "All product information, technical specifications, and documentation provided on this website are for informational purposes only. While we strive to ensure accuracy, we do not guarantee that all information is complete, current, or error-free.",
+        additionalContent: "Product images are for illustrative purposes only and may not accurately represent the actual product. Colors, textures, and specifications may vary.",
+      },
+      limitation: {
+        title: "5. Limitation of Liability",
+        content: "Roots Furniture LLC and VerinLegno S.p.A. shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use of information or products obtained through this website.",
+        additionalContent: "Users are responsible for ensuring that products are used in accordance with manufacturer instructions and applicable safety regulations.",
+      },
+      externalLinks: {
+        title: "6. External Links",
+        content: "This website may contain links to external websites operated by third parties. We are not responsible for the content, privacy practices, or terms of use of these external websites. The inclusion of any link does not imply endorsement by Roots Furniture LLC or VerinLegno S.p.A.",
+      },
+      applicableLaw: {
+        title: "7. Applicable Law",
+        content: "These legal notes and all matters relating to this website shall be governed by the laws of the Republic of Armenia. Any disputes arising from or related to this website shall be subject to the exclusive jurisdiction of the courts of Armenia.",
+      },
+      modifications: {
+        title: "8. Modifications",
+        content: "Roots Furniture LLC reserves the right to modify, suspend, or discontinue any aspect of this website at any time without prior notice. We also reserve the right to update these legal notes at any time.",
+        additionalContent: "Continued use of the website after any changes constitutes acceptance of the modified legal notes.",
+      },
+    },
   },
 } as const;
