@@ -23,8 +23,7 @@ export default function LegalNotes() {
               <p className="text-neutral-700 mb-2">Official representative of VerinLegno S.p.A. in Armenia</p>
               <p className="text-neutral-700 mb-2">Address: 20/1 Ter-Gabrielyan Street, Vagharshapat</p>
               <p className="text-neutral-700 mb-2">Yerevan, Armenia</p>
-              <p className="text-neutral-700 mb-2">Email: <a href="mailto:info@roots.am" className="text-[#D70000] hover:underline">info@roots.am</a></p>
-              <p className="text-neutral-700">Phone: <a href="tel:+37491665520" className="text-[#D70000] hover:underline">+374 91 665520</a></p>
+              <p className="text-neutral-700">Email: <a href="mailto:info@roots.am" className="text-[#D70000] hover:underline">info@roots.am</a></p>
             </div>
             <div className="bg-neutral-50 p-6 rounded-lg">
               <p className="text-neutral-700 mb-2"><strong>VerinLegno S.p.A.</strong></p>

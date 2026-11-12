@@ -49,7 +49,6 @@ const translations = {
         'privacy.contactInfo': 'Contact Information',
         'privacy.contactInfoText': 'If you have any questions about this privacy policy, please contact us at:',
         'privacy.contactEmail': 'Email: info@roots.am',
-        'privacy.contactPhone': 'Phone: +374 91 665520',
         'privacy.contactAddress': 'Address: 20/1 Ter-Gabrielyan Street, Vagharshapat, Armenia',
         'privacy.backHome': '← Back to Home',
         
@@ -68,7 +67,6 @@ const translations = {
         'terms.contactUs': 'Contact Us',
         'terms.contactUsText': 'If you have any questions about these Terms of Service, please contact us at:',
         'terms.contactEmail': 'Email: info@roots.am',
-        'terms.contactPhone': 'Phone: +374 91 665520',
         'terms.backHome': '← Back to Home',
         
         // Legal Notes
@@ -78,7 +76,6 @@ const translations = {
         'legal.companyName': 'Company Name:',
         'legal.addressLabel': 'Address:',
         'legal.address': '20/1 Ter-Gabrielyan Street, Vagharshapat, Armenia',
-        'legal.phoneLabel': 'Phone:',
         'legal.emailLabel': 'Email:',
         'legal.ceo': 'CEO:',
         'legal.representation': 'Representation',
@@ -136,7 +133,6 @@ const translations = {
         'privacy.contactInfo': 'Կոնտակտային Տեղեկատվություն',
         'privacy.contactInfoText': 'Եթե ունեք հարցեր այս գաղտնիության քաղաքականության վերաբերյալ, խնդրում ենք կապ հաստատել մեզ հետ:',
         'privacy.contactEmail': 'Էլ. փոստ info@roots.am',
-        'privacy.contactPhone': 'Հեռախոս +374 91 665520',
         'privacy.contactAddress': 'Հասցե Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1',
         'privacy.backHome': '← Վերադառնալ գլխավոր էջ',
         
@@ -155,7 +151,6 @@ const translations = {
         'terms.contactUs': 'Կապ Մեզ Հետ',
         'terms.contactUsText': 'Եթե ունեք հարցեր այս Ծառայությունների Մատուցման Պայմանների վերաբերյալ, խնդրում ենք կապ հաստատել մեզ հետ:',
         'terms.contactEmail': 'Էլ. փոստ info@roots.am',
-        'terms.contactPhone': 'Հեռախոս +374 91 665520',
         'terms.backHome': '← Վերադառնալ գլխավոր էջ',
         
         // Legal Notes
@@ -165,7 +160,6 @@ const translations = {
         'legal.companyName': 'Ընկերության Անվանում:',
         'legal.addressLabel': 'Հասցե:',
         'legal.address': 'Վաղարշապատ, Տեր-Գաբրիելյան փողոց 20/1',
-        'legal.phoneLabel': 'Հեռախոս:',
         'legal.emailLabel': 'Էլ. փոստ:',
         'legal.ceo': 'Գլխավոր Տնօրեն:',
         'legal.representation': 'Ներկայացում',

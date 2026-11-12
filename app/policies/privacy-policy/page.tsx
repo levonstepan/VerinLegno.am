@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
               <li>Third-party data collection services</li>
             </ul>
             <p className="text-neutral-700">
-              If you contact us directly via email or phone using the contact information provided on our Website, any information you share will be handled in accordance with standard business practices and will not be stored on our Website.
+              If you contact us directly via email using the contact information provided on our Website, any information you share will be handled in accordance with standard business practices and will not be stored on our Website.
             </p>
           </section>
 
@@ -70,8 +70,7 @@ export default function PrivacyPolicy() {
               <p className="text-neutral-700 mb-2"><strong>Roots Furniture LLC</strong></p>
               <p className="text-neutral-700 mb-2">20/1 Ter-Gabrielyan Street, Vagharshapat</p>
               <p className="text-neutral-700 mb-2">Yerevan, Armenia</p>
-              <p className="text-neutral-700 mb-2">Email: <a href="mailto:info@roots.am" className="text-[#D70000] hover:underline">info@roots.am</a></p>
-              <p className="text-neutral-700">Phone: <a href="tel:+37491665520" className="text-[#D70000] hover:underline">+374 91 665520</a></p>
+              <p className="text-neutral-700">Email: <a href="mailto:info@roots.am" className="text-[#D70000] hover:underline">info@roots.am</a></p>
             </div>
           </section>
         </div>

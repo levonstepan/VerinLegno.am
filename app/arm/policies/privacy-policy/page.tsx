@@ -71,7 +71,6 @@ export default function PrivacyPolicyArm() {
               <p className="text-neutral-700 mb-2">{content.sections.contact.address}</p>
               <p className="text-neutral-700 mb-2">{content.sections.contact.city}</p>
               <p className="text-neutral-700 mb-2">Էլ. փոստ: <a href={`mailto:${content.sections.contact.email}`} className="text-[#D70000] hover:underline">{content.sections.contact.email}</a></p>
-              <p className="text-neutral-700">Հեռախոս: <a href={`tel:${content.sections.contact.phone.replace(/\s/g, '')}`} className="text-[#D70000] hover:underline">{content.sections.contact.phone}</a></p>
             </div>
           </section>
         </div>

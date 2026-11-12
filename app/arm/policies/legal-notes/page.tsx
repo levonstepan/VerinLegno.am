@@ -26,7 +26,6 @@ export default function LegalNotesArm() {
               <p className="text-neutral-700 mb-2">{content.sections.companyInfo.rootsAddress}</p>
               <p className="text-neutral-700 mb-2">{content.sections.companyInfo.rootsCity}</p>
               <p className="text-neutral-700 mb-2">Էլ. փոստ: <a href={`mailto:${content.sections.companyInfo.rootsEmail}`} className="text-[#D70000] hover:underline">{content.sections.companyInfo.rootsEmail}</a></p>
-              <p className="text-neutral-700">Հեռախոս: <a href={`tel:${content.sections.companyInfo.rootsPhone.replace(/\s/g, '')}`} className="text-[#D70000] hover:underline">{content.sections.companyInfo.rootsPhone}</a></p>
             </div>
             <div className="bg-neutral-50 p-6 rounded-lg">
               <p className="text-neutral-700 mb-2"><strong>{content.sections.companyInfo.verinlegnoTitle}</strong></p>
